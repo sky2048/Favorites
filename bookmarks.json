@@ -4,8 +4,9 @@
     "lastUpdated": "2025-05-25T04:33:50.431Z",
     "lastSynced": "2025-05-25T04:33:54.748Z",
     "totalBookmarks": 17,
-    "syncStatus": "syncing"
+    "syncStatus": "synced"
   },
+  "favoriteBookmarks": [],
   "categories": [
     {
       "name": "搜索引擎",
@@ -15,19 +16,22 @@
           "id": "google",
           "title": "Google",
           "url": "https://www.google.com",
-          "icon": "🔍"
+          "icon": "🔍",
+          "isFavorite": false
         },
         {
           "id": "baidu",
           "title": "百度",
           "url": "https://www.baidu.com",
-          "icon": "🔍"
+          "icon": "🔍",
+          "isFavorite": false
         },
         {
           "id": "bing",
           "title": "Bing",
           "url": "https://www.bing.com",
-          "icon": "🔍"
+          "icon": "🔍",
+          "isFavorite": false
         }
       ]
     },
@@ -39,25 +43,29 @@
           "id": "github",
           "title": "GitHub",
           "url": "https://github.com",
-          "icon": "🐙"
+          "icon": "🐙",
+          "isFavorite": false
         },
         {
           "id": "stackoverflow",
           "title": "Stack Overflow",
           "url": "https://stackoverflow.com",
-          "icon": "📚"
+          "icon": "📚",
+          "isFavorite": false
         },
         {
           "id": "codepen",
           "title": "CodePen",
           "url": "https://codepen.io",
-          "icon": "✏️"
+          "icon": "✏️",
+          "isFavorite": false
         },
         {
           "id": "vscode",
           "title": "VS Code",
           "url": "https://code.visualstudio.com",
-          "icon": "💻"
+          "icon": "💻",
+          "isFavorite": false
         }
       ]
     },
@@ -69,19 +77,22 @@
           "id": "zhihu",
           "title": "知乎",
           "url": "https://www.zhihu.com",
-          "icon": "🤔"
+          "icon": "🤔",
+          "isFavorite": false
         },
         {
           "id": "weibo",
           "title": "微博",
           "url": "https://weibo.com",
-          "icon": "📱"
+          "icon": "📱",
+          "isFavorite": false
         },
         {
           "id": "reddit",
           "title": "Reddit",
           "url": "https://www.reddit.com",
-          "icon": "🤖"
+          "icon": "🤖",
+          "isFavorite": false
         }
       ]
     },
@@ -93,19 +104,22 @@
           "id": "taobao",
           "title": "淘宝",
           "url": "https://www.taobao.com",
-          "icon": "🛍️"
+          "icon": "🛍️",
+          "isFavorite": false
         },
         {
           "id": "jd",
           "title": "京东",
           "url": "https://www.jd.com",
-          "icon": "🛒"
+          "icon": "🛒",
+          "isFavorite": false
         },
         {
           "id": "amazon",
           "title": "Amazon",
           "url": "https://www.amazon.com",
-          "icon": "📦"
+          "icon": "📦",
+          "isFavorite": false
         }
       ]
     },
@@ -117,19 +131,22 @@
           "id": "youtube",
           "title": "YouTube",
           "url": "https://www.youtube.com",
-          "icon": "📺"
+          "icon": "📺",
+          "isFavorite": false
         },
         {
           "id": "netflix",
           "title": "Netflix",
           "url": "https://www.netflix.com",
-          "icon": "🎬"
+          "icon": "🎬",
+          "isFavorite": false
         },
         {
           "id": "spotify",
           "title": "Spotify",
           "url": "https://www.spotify.com",
-          "icon": "🎵"
+          "icon": "🎵",
+          "isFavorite": false
         }
       ]
     },
@@ -141,7 +158,8 @@
           "id": "bookmark_1748146787393_eybtpd4b3",
           "title": "poe",
           "url": "https://poedb.tw/cn/",
-          "icon": "🔗"
+          "icon": "🔗",
+          "isFavorite": false
         }
       ]
     }
@@ -157,6 +175,7 @@
       "username": "sky2048",
       "repository": "Favorites",
       "configured": true
-    }
+    },
+    "viewMode": "card"
   }
 }
