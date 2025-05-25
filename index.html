@@ -1280,6 +1280,9 @@
                 <button class="backup-btn" onclick="openImportModal()" style="background: rgba(76, 175, 80, 0.8);">
                     📥 导入书签
                 </button>
+                <button class="backup-btn" onclick="startLinkValidation()" style="background: rgba(156, 39, 176, 0.8);">
+                    🔍 检测失效链接
+                </button>
                 <button class="edit-btn" id="editBtn" onclick="toggleEditMode()">
                     ✏️ 编辑模式
                 </button>
@@ -1536,6 +1539,59 @@
 
             <div class="form-actions">
                 <button class="btn-secondary" onclick="closeImportModal()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 链接检测模态框 -->
+    <div id="linkValidationModal" class="modal">
+        <div class="modal-content" style="max-width: 700px;">
+            <div class="modal-header">
+                <h3 class="modal-title">🔍 链接检测结果</h3>
+                <button class="close-btn" onclick="closeLinkValidationModal()">&times;</button>
+            </div>
+            
+            <div id="validationProgress" style="margin-bottom: 20px;">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="validationProgressFill"></div>
+                    </div>
+                    <div class="progress-text" id="validationProgressText">准备检测...</div>
+                </div>
+            </div>
+
+            <div id="validationResults" style="display: none;">
+                <div style="margin-bottom: 20px;">
+                    <div style="display: flex; gap: 20px; margin-bottom: 15px;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 24px; font-weight: bold; color: #4caf50;" id="validLinksCount">0</div>
+                            <div style="font-size: 12px; color: #666;">正常链接</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 24px; font-weight: bold; color: #f44336;" id="invalidLinksCount">0</div>
+                            <div style="font-size: 12px; color: #666;">失效链接</div>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 24px; font-weight: bold; color: #ff9800;" id="timeoutLinksCount">0</div>
+                            <div style="font-size: 12px; color: #666;">超时链接</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="invalidLinksSection" style="display: none;">
+                    <h4 style="color: #f44336; margin-bottom: 15px;">❌ 失效链接</h4>
+                    <div id="invalidLinksList" style="max-height: 300px; overflow-y: auto; margin-bottom: 20px;"></div>
+                </div>
+
+                <div id="timeoutLinksSection" style="display: none;">
+                    <h4 style="color: #ff9800; margin-bottom: 15px;">⏰ 超时链接</h4>
+                    <div id="timeoutLinksList" style="max-height: 200px; overflow-y: auto; margin-bottom: 20px;"></div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-secondary" onclick="closeLinkValidationModal()">关闭</button>
+                <button class="btn-primary" onclick="deleteInvalidLinks()" id="deleteInvalidBtn" style="display: none; background: #f44336;">删除失效链接</button>
             </div>
         </div>
     </div>
@@ -2597,6 +2653,7 @@
             const bookmarkModal = document.getElementById('bookmarkModal');
             const categoryModal = document.getElementById('categoryModal');
             const importModal = document.getElementById('importModal');
+            const linkValidationModal = document.getElementById('linkValidationModal');
             
             if (event.target === bookmarkModal) {
                 closeBookmarkModal();
@@ -2606,6 +2663,9 @@
             }
             if (event.target === importModal) {
                 closeImportModal();
+            }
+            if (event.target === linkValidationModal) {
+                closeLinkValidationModal();
             }
         }
 
@@ -2617,6 +2677,7 @@
                 closeConfigModal();
                 closeBackupModal();
                 closeImportModal();
+                closeLinkValidationModal();
                 if (isQuickActionsOpen) {
                     toggleQuickActions();
                 }
@@ -3692,6 +3753,366 @@
 
             closeBookmarkModal();
             alert('书签添加成功！');
+        }
+
+        // ==================== 链接检测功能 ====================
+        
+        let validationInProgress = false;
+        let validationResults = {
+            valid: [],
+            invalid: [],
+            timeout: []
+        };
+
+        async function startLinkValidation() {
+            if (validationInProgress) {
+                alert('检测正在进行中，请稍候...');
+                return;
+            }
+
+            if (!bookmarksData || !bookmarksData.categories) {
+                alert('没有可检测的书签数据');
+                return;
+            }
+
+            // 收集所有书签
+            const allBookmarks = [];
+            bookmarksData.categories.forEach(category => {
+                category.bookmarks.forEach(bookmark => {
+                    allBookmarks.push({
+                        ...bookmark,
+                        categoryName: category.name
+                    });
+                });
+            });
+
+            if (allBookmarks.length === 0) {
+                alert('没有找到任何书签');
+                return;
+            }
+
+            // 显示检测模态框
+            openLinkValidationModal();
+            
+            // 重置结果
+            validationResults = {
+                valid: [],
+                invalid: [],
+                timeout: []
+            };
+
+            validationInProgress = true;
+            
+            try {
+                await validateAllLinks(allBookmarks);
+                showValidationResults();
+            } catch (error) {
+                console.error('链接检测失败:', error);
+                alert('检测过程中出现错误：' + error.message);
+            } finally {
+                validationInProgress = false;
+            }
+        }
+
+        async function validateAllLinks(bookmarks) {
+            const total = bookmarks.length;
+            let completed = 0;
+
+            updateValidationProgress(0, `开始检测 ${total} 个链接...`);
+
+            // 并发检测，但限制并发数量以避免过载
+            const concurrency = 5;
+            const chunks = [];
+            
+            for (let i = 0; i < bookmarks.length; i += concurrency) {
+                chunks.push(bookmarks.slice(i, i + concurrency));
+            }
+
+            for (const chunk of chunks) {
+                const promises = chunk.map(async (bookmark) => {
+                    try {
+                        const isValid = await validateSingleLink(bookmark.url);
+                        const result = {
+                            bookmark,
+                            status: isValid ? 'valid' : 'invalid'
+                        };
+                        
+                        if (isValid) {
+                            validationResults.valid.push(result);
+                        } else {
+                            validationResults.invalid.push(result);
+                        }
+                        
+                        completed++;
+                        const progress = Math.round((completed / total) * 100);
+                        updateValidationProgress(progress, `已检测 ${completed}/${total} 个链接...`);
+                        
+                        return result;
+                    } catch (error) {
+                        const result = {
+                            bookmark,
+                            status: 'timeout',
+                            error: error.message
+                        };
+                        
+                        validationResults.timeout.push(result);
+                        
+                        completed++;
+                        const progress = Math.round((completed / total) * 100);
+                        updateValidationProgress(progress, `已检测 ${completed}/${total} 个链接...`);
+                        
+                        return result;
+                    }
+                });
+
+                await Promise.all(promises);
+                
+                // 添加小延迟以避免过于频繁的请求
+                await new Promise(resolve => setTimeout(resolve, 100));
+            }
+
+            updateValidationProgress(100, '检测完成！');
+        }
+
+        async function validateSingleLink(url) {
+            return new Promise((resolve, reject) => {
+                const timeout = 10000; // 10秒超时
+                const controller = new AbortController();
+                
+                const timeoutId = setTimeout(() => {
+                    controller.abort();
+                    reject(new Error('请求超时'));
+                }, timeout);
+
+                // 使用fetch进行检测，但由于CORS限制，我们使用一个代理方法
+                // 这里我们尝试创建一个Image对象来检测链接
+                const img = new Image();
+                
+                img.onload = () => {
+                    clearTimeout(timeoutId);
+                    resolve(true);
+                };
+                
+                img.onerror = () => {
+                    clearTimeout(timeoutId);
+                    // 如果图片加载失败，尝试使用fetch检测
+                    fetch(url, { 
+                        method: 'HEAD', 
+                        mode: 'no-cors',
+                        signal: controller.signal
+                    })
+                    .then(() => {
+                        resolve(true);
+                    })
+                    .catch(() => {
+                        resolve(false);
+                    });
+                };
+
+                // 设置图片源，如果是网站首页，可能会有favicon
+                try {
+                    const urlObj = new URL(url);
+                    img.src = `${urlObj.protocol}//${urlObj.host}/favicon.ico`;
+                } catch (e) {
+                    // 如果URL无效，直接返回false
+                    clearTimeout(timeoutId);
+                    resolve(false);
+                }
+
+                // 同时尝试fetch检测
+                fetch(url, { 
+                    method: 'HEAD', 
+                    mode: 'no-cors',
+                    signal: controller.signal
+                })
+                .then(() => {
+                    clearTimeout(timeoutId);
+                    resolve(true);
+                })
+                .catch((error) => {
+                    if (error.name === 'AbortError') {
+                        reject(new Error('请求超时'));
+                    } else {
+                        // 对于CORS错误，我们假设链接是有效的
+                        if (error.message.includes('CORS') || error.message.includes('cors')) {
+                            clearTimeout(timeoutId);
+                            resolve(true);
+                        } else {
+                            clearTimeout(timeoutId);
+                            resolve(false);
+                        }
+                    }
+                });
+            });
+        }
+
+        function openLinkValidationModal() {
+            document.getElementById('linkValidationModal').style.display = 'block';
+            document.getElementById('validationProgress').style.display = 'block';
+            document.getElementById('validationResults').style.display = 'none';
+        }
+
+        function closeLinkValidationModal() {
+            document.getElementById('linkValidationModal').style.display = 'none';
+            validationInProgress = false;
+        }
+
+        function updateValidationProgress(percentage, text) {
+            document.getElementById('validationProgressFill').style.width = percentage + '%';
+            document.getElementById('validationProgressText').textContent = text;
+        }
+
+        function showValidationResults() {
+            document.getElementById('validationProgress').style.display = 'none';
+            document.getElementById('validationResults').style.display = 'block';
+
+            // 更新统计数据
+            document.getElementById('validLinksCount').textContent = validationResults.valid.length;
+            document.getElementById('invalidLinksCount').textContent = validationResults.invalid.length;
+            document.getElementById('timeoutLinksCount').textContent = validationResults.timeout.length;
+
+            // 显示失效链接列表
+            if (validationResults.invalid.length > 0) {
+                document.getElementById('invalidLinksSection').style.display = 'block';
+                document.getElementById('deleteInvalidBtn').style.display = 'inline-block';
+                renderInvalidLinks();
+            } else {
+                document.getElementById('invalidLinksSection').style.display = 'none';
+                document.getElementById('deleteInvalidBtn').style.display = 'none';
+            }
+
+            // 显示超时链接列表
+            if (validationResults.timeout.length > 0) {
+                document.getElementById('timeoutLinksSection').style.display = 'block';
+                renderTimeoutLinks();
+            } else {
+                document.getElementById('timeoutLinksSection').style.display = 'none';
+            }
+        }
+
+        function renderInvalidLinks() {
+            const container = document.getElementById('invalidLinksList');
+            container.innerHTML = '';
+
+            validationResults.invalid.forEach(result => {
+                const linkItem = document.createElement('div');
+                linkItem.style.cssText = `
+                    padding: 10px;
+                    border: 1px solid #f44336;
+                    border-radius: 8px;
+                    margin-bottom: 8px;
+                    background: rgba(244, 67, 54, 0.1);
+                `;
+                
+                linkItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1; min-width: 0;">
+                            <div style="font-weight: bold; color: #333; margin-bottom: 4px;">${result.bookmark.title}</div>
+                            <div style="font-size: 12px; color: #4facfe; word-break: break-all; cursor: pointer; text-decoration: underline;" 
+                                 onclick="window.open('${result.bookmark.url}', '_blank')" 
+                                 title="点击在新窗口中打开">${result.bookmark.url}</div>
+                            <div style="font-size: 11px; color: #999; margin-top: 2px;">分类: ${result.bookmark.categoryName}</div>
+                        </div>
+                        <button onclick="deleteSpecificBookmark('${result.bookmark.id}')" 
+                                style="padding: 4px 8px; background: #f44336; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">
+                            删除
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(linkItem);
+            });
+        }
+
+        function renderTimeoutLinks() {
+            const container = document.getElementById('timeoutLinksList');
+            container.innerHTML = '';
+
+            validationResults.timeout.forEach(result => {
+                const linkItem = document.createElement('div');
+                linkItem.style.cssText = `
+                    padding: 10px;
+                    border: 1px solid #ff9800;
+                    border-radius: 8px;
+                    margin-bottom: 8px;
+                    background: rgba(255, 152, 0, 0.1);
+                `;
+                
+                linkItem.innerHTML = `
+                    <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <div style="flex: 1; min-width: 0;">
+                            <div style="font-weight: bold; color: #333; margin-bottom: 4px;">${result.bookmark.title}</div>
+                            <div style="font-size: 12px; color: #4facfe; word-break: break-all; cursor: pointer; text-decoration: underline;" 
+                                 onclick="window.open('${result.bookmark.url}', '_blank')" 
+                                 title="点击在新窗口中打开">${result.bookmark.url}</div>
+                            <div style="font-size: 11px; color: #999; margin-top: 2px;">分类: ${result.bookmark.categoryName} | 错误: ${result.error}</div>
+                        </div>
+                        <button onclick="deleteSpecificBookmark('${result.bookmark.id}')" 
+                                style="padding: 4px 8px; background: #ff9800; color: white; border: none; border-radius: 4px; cursor: pointer; margin-left: 10px;">
+                            删除
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(linkItem);
+            });
+        }
+
+        function deleteInvalidLinks() {
+            if (validationResults.invalid.length === 0) {
+                alert('没有失效链接需要删除');
+                return;
+            }
+
+            if (!confirm(`确定要删除 ${validationResults.invalid.length} 个失效链接吗？此操作不可撤销。`)) {
+                return;
+            }
+
+            const deletedCount = validationResults.invalid.length;
+            
+            validationResults.invalid.forEach(result => {
+                removeBookmarkById(result.bookmark.id);
+            });
+
+            // 清空失效链接列表
+            validationResults.invalid = [];
+            
+            // 更新显示
+            document.getElementById('invalidLinksCount').textContent = '0';
+            document.getElementById('invalidLinksSection').style.display = 'none';
+            document.getElementById('deleteInvalidBtn').style.display = 'none';
+
+            alert(`已成功删除 ${deletedCount} 个失效链接！`);
+        }
+
+        function deleteSpecificBookmark(bookmarkId) {
+            if (!confirm('确定要删除这个书签吗？')) {
+                return;
+            }
+
+            removeBookmarkById(bookmarkId);
+
+            // 从结果中移除
+            validationResults.invalid = validationResults.invalid.filter(result => result.bookmark.id !== bookmarkId);
+            validationResults.timeout = validationResults.timeout.filter(result => result.bookmark.id !== bookmarkId);
+
+            // 重新渲染列表
+            if (validationResults.invalid.length > 0) {
+                renderInvalidLinks();
+                document.getElementById('invalidLinksCount').textContent = validationResults.invalid.length;
+            } else {
+                document.getElementById('invalidLinksSection').style.display = 'none';
+                document.getElementById('deleteInvalidBtn').style.display = 'none';
+                document.getElementById('invalidLinksCount').textContent = '0';
+            }
+
+            if (validationResults.timeout.length > 0) {
+                renderTimeoutLinks();
+                document.getElementById('timeoutLinksCount').textContent = validationResults.timeout.length;
+            } else {
+                document.getElementById('timeoutLinksSection').style.display = 'none';
+                document.getElementById('timeoutLinksCount').textContent = '0';
+            }
         }
 
         // 页面加载完成后初始化
