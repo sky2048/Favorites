@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2024-01-01T12:00:00Z",
-    "lastSynced": null,
-    "totalBookmarks": 20,
-    "syncStatus": "local"
+    "lastUpdated": "2025-05-25T04:33:50.431Z",
+    "lastSynced": "2025-05-25T04:33:54.748Z",
+    "totalBookmarks": 17,
+    "syncStatus": "syncing"
   },
   "categories": [
     {
@@ -132,15 +132,31 @@
           "icon": "🎵"
         }
       ]
+    },
+    {
+      "name": "游戏分类",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748146787393_eybtpd4b3",
+          "title": "poe",
+          "url": "https://poedb.tw/cn/",
+          "icon": "🔗"
+        }
+      ]
     }
   ],
-  "customCategories": [],
+  "customCategories": [
+    {
+      "name": "游戏分类",
+      "icon": "📁"
+    }
+  ],
   "settings": {
     "github": {
-      "username": "",
-      "repository": "",
-      "token": "",
-      "configured": false
+      "username": "sky2048",
+      "repository": "Favorites",
+      "configured": true
     }
   }
-} 
+}
