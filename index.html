@@ -40,48 +40,6 @@
             opacity: 0.9;
         }
 
-        .data-source-indicator {
-            margin-top: 15px;
-            padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 20px;
-            display: inline-block;
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .indicator-text {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .indicator-text::before {
-            content: "📊";
-            font-size: 1rem;
-        }
-
-        .data-source-indicator.source-local {
-            background: rgba(76, 175, 80, 0.3);
-            border-color: rgba(76, 175, 80, 0.5);
-        }
-
-        .data-source-indicator.source-json {
-            background: rgba(33, 150, 243, 0.3);
-            border-color: rgba(33, 150, 243, 0.5);
-        }
-
-        .data-source-indicator.source-default {
-            background: rgba(255, 193, 7, 0.3);
-            border-color: rgba(255, 193, 7, 0.5);
-        }
-
-        .data-source-indicator.source-error {
-            background: rgba(244, 67, 54, 0.3);
-            border-color: rgba(244, 67, 54, 0.5);
-        }
-
         .search-box {
             background: rgba(255, 255, 255, 0.1);
             -webkit-backdrop-filter: blur(10px);
@@ -383,30 +341,6 @@
             background: linear-gradient(45deg, #ffecd2, #fcb69f);
         }
 
-        .quick-export {
-            background: linear-gradient(45deg, #a8edea, #fed6e3);
-        }
-
-        .quick-backup {
-            background: linear-gradient(45deg, #ffecd2, #fcb69f);
-        }
-
-        .quick-import-file {
-            background: linear-gradient(45deg, #d299c2, #fef9d7);
-        }
-
-        .quick-reload {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-        }
-
-        .quick-reset {
-            background: linear-gradient(45deg, #ff9a9e, #fecfef);
-        }
-
-        .quick-clear {
-            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-        }
-
         .modal {
             display: none;
             position: fixed;
@@ -542,9 +476,6 @@
         <div class="header">
             <h1>🔖 我的书签导航</h1>
             <p>快速访问您最喜爱的网站</p>
-            <div class="data-source-indicator" id="dataSourceIndicator">
-                <span class="indicator-text">数据来源：加载中...</span>
-            </div>
         </div>
 
         <div class="search-box">
@@ -562,7 +493,113 @@
         </div>
 
         <div class="categories" id="categories">
-            <!-- 分类将通过JavaScript动态加载 -->
+            <div class="category">
+                <div class="category-controls">
+                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                </div>
+                <div class="category-title">
+                    <div class="category-icon">🔍</div>
+                    搜索引擎
+                </div>
+                <div class="bookmarks">
+                    <a href="https://www.google.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">G</div>
+                        <div class="bookmark-title">Google</div>
+                        <div class="bookmark-url">google.com</div>
+                    </a>
+                    <a href="https://www.baidu.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">百</div>
+                        <div class="bookmark-title">百度</div>
+                        <div class="bookmark-url">baidu.com</div>
+                    </a>
+                    <a href="https://www.bing.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">B</div>
+                        <div class="bookmark-title">必应</div>
+                        <div class="bookmark-url">bing.com</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-controls">
+                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                </div>
+                <div class="category-title">
+                    <div class="category-icon">💻</div>
+                    开发工具
+                </div>
+                <div class="bookmarks">
+                    <a href="https://github.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">📂</div>
+                        <div class="bookmark-title">GitHub</div>
+                        <div class="bookmark-url">github.com</div>
+                    </a>
+                    <a href="https://stackoverflow.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">📚</div>
+                        <div class="bookmark-title">Stack Overflow</div>
+                        <div class="bookmark-url">stackoverflow.com</div>
+                    </a>
+                    <a href="https://codepen.io" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">✏️</div>
+                        <div class="bookmark-title">CodePen</div>
+                        <div class="bookmark-url">codepen.io</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-controls">
+                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                </div>
+                <div class="category-title">
+                    <div class="category-icon">📰</div>
+                    新闻资讯
+                </div>
+                <div class="bookmarks">
+                    <a href="https://news.qq.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">Q</div>
+                        <div class="bookmark-title">腾讯新闻</div>
+                        <div class="bookmark-url">news.qq.com</div>
+                    </a>
+                    <a href="https://www.163.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">网</div>
+                        <div class="bookmark-title">网易</div>
+                        <div class="bookmark-url">163.com</div>
+                    </a>
+                    <a href="https://www.sina.com.cn" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">新</div>
+                        <div class="bookmark-title">新浪</div>
+                        <div class="bookmark-url">sina.com.cn</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="category">
+                <div class="category-controls">
+                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                </div>
+                <div class="category-title">
+                    <div class="category-icon">🛒</div>
+                    购物网站
+                </div>
+                <div class="bookmarks">
+                    <a href="https://www.taobao.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">淘</div>
+                        <div class="bookmark-title">淘宝</div>
+                        <div class="bookmark-url">taobao.com</div>
+                    </a>
+                    <a href="https://www.jd.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">京</div>
+                        <div class="bookmark-title">京东</div>
+                        <div class="bookmark-url">jd.com</div>
+                    </a>
+                    <a href="https://www.tmall.com" class="bookmark" target="_blank" rel="noopener">
+                        <div class="bookmark-icon">天</div>
+                        <div class="bookmark-title">天猫</div>
+                        <div class="bookmark-url">tmall.com</div>
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -571,12 +608,6 @@
             <button class="quick-action quick-bookmark" onclick="openBookmarkModal()" title="添加书签">🔖</button>
             <button class="quick-action quick-category" onclick="openCategoryModal()" title="新增分类">📁</button>
             <button class="quick-action quick-import" onclick="quickAddFromClipboard()" title="从剪贴板添加">📋</button>
-            <button class="quick-action quick-export" onclick="exportBookmarks()" title="导出为bookmarks.json">💾</button>
-            <button class="quick-action quick-backup" onclick="exportBackup()" title="导出备份文件">📦</button>
-            <button class="quick-action quick-import-file" onclick="importBookmarks()" title="从文件导入数据">📂</button>
-            <button class="quick-action quick-reload" onclick="reloadFromJson()" title="从JSON文件重载">🔄</button>
-            <button class="quick-action quick-reset" onclick="resetToDefault()" title="重置为默认数据">🏠</button>
-            <button class="quick-action quick-clear" onclick="clearAllData()" title="清除所有数据">🗑️</button>
         </div>
         <button class="add-bookmark" onclick="toggleQuickActions()" id="mainButton">+</button>
     </div>
@@ -634,440 +665,41 @@
     <script>
         let bookmarksData = {};
         let isQuickActionsOpen = false;
+        let customCategories = [];
         let hiddenCategories = new Set();
         let activeFilters = new Set();
 
-        // 默认数据
-        const defaultBookmarksData = {
-            "categories": [
-                {
-                    "id": "search-engines",
-                    "name": "搜索引擎",
-                    "icon": "🔍",
-                    "isCustom": false,
-                    "bookmarks": [
-                        {
-                            "id": "google",
-                            "title": "Google",
-                            "url": "https://www.google.com",
-                            "icon": "G",
-                            "displayUrl": "google.com"
-                        },
-                        {
-                            "id": "baidu",
-                            "title": "百度",
-                            "url": "https://www.baidu.com",
-                            "icon": "百",
-                            "displayUrl": "baidu.com"
-                        },
-                        {
-                            "id": "bing",
-                            "title": "必应",
-                            "url": "https://www.bing.com",
-                            "icon": "B",
-                            "displayUrl": "bing.com"
-                        }
-                    ]
-                },
-                {
-                    "id": "dev-tools",
-                    "name": "开发工具",
-                    "icon": "💻",
-                    "isCustom": false,
-                    "bookmarks": [
-                        {
-                            "id": "github",
-                            "title": "GitHub",
-                            "url": "https://github.com",
-                            "icon": "📂",
-                            "displayUrl": "github.com"
-                        },
-                        {
-                            "id": "stackoverflow",
-                            "title": "Stack Overflow",
-                            "url": "https://stackoverflow.com",
-                            "icon": "📚",
-                            "displayUrl": "stackoverflow.com"
-                        },
-                        {
-                            "id": "codepen",
-                            "title": "CodePen",
-                            "url": "https://codepen.io",
-                            "icon": "✏️",
-                            "displayUrl": "codepen.io"
-                        }
-                    ]
-                },
-                {
-                    "id": "news",
-                    "name": "新闻资讯",
-                    "icon": "📰",
-                    "isCustom": false,
-                    "bookmarks": [
-                        {
-                            "id": "qq-news",
-                            "title": "腾讯新闻",
-                            "url": "https://news.qq.com",
-                            "icon": "Q",
-                            "displayUrl": "news.qq.com"
-                        },
-                        {
-                            "id": "netease",
-                            "title": "网易",
-                            "url": "https://www.163.com",
-                            "icon": "网",
-                            "displayUrl": "163.com"
-                        },
-                        {
-                            "id": "sina",
-                            "title": "新浪",
-                            "url": "https://www.sina.com.cn",
-                            "icon": "新",
-                            "displayUrl": "sina.com.cn"
-                        }
-                    ]
-                },
-                {
-                    "id": "shopping",
-                    "name": "购物网站",
-                    "icon": "🛒",
-                    "isCustom": false,
-                    "bookmarks": [
-                        {
-                            "id": "taobao",
-                            "title": "淘宝",
-                            "url": "https://www.taobao.com",
-                            "icon": "淘",
-                            "displayUrl": "taobao.com"
-                        },
-                        {
-                            "id": "jd",
-                            "title": "京东",
-                            "url": "https://www.jd.com",
-                            "icon": "京",
-                            "displayUrl": "jd.com"
-                        },
-                        {
-                            "id": "tmall",
-                            "title": "天猫",
-                            "url": "https://www.tmall.com",
-                            "icon": "天",
-                            "displayUrl": "tmall.com"
-                        }
-                    ]
-                }
-            ],
-            "settings": {
-                "hiddenCategories": [],
-                "activeFilters": ["搜索引擎", "开发工具", "新闻资讯", "购物网站"]
-            }
-        };
-
-        // localStorage 数据管理
-        async function loadBookmarksData() {
-            const indicator = document.getElementById('dataSourceIndicator');
-            
-            try {
-                // 首先尝试从localStorage加载用户数据
-                const savedData = localStorage.getItem('bookmarksData');
-                
-                if (savedData) {
-                    // 如果有用户数据，直接使用
-                    bookmarksData = JSON.parse(savedData);
-                    console.log('从localStorage加载用户数据');
-                    updateDataSourceIndicator('localStorage', '本地存储');
-                } else {
-                    // 如果没有用户数据，尝试从JSON文件加载默认数据
-                    try {
-                        const response = await fetch('./bookmarks.json');
-                        if (response.ok) {
-                            bookmarksData = await response.json();
-                            console.log('从bookmarks.json加载默认数据');
-                            updateDataSourceIndicator('json', 'bookmarks.json');
-                        } else {
-                            throw new Error('无法加载JSON文件');
-                        }
-                    } catch (fetchError) {
-                        // 如果JSON文件加载失败，使用内置默认数据
-                        console.warn('无法从JSON文件加载数据，使用内置默认数据:', fetchError);
-                        bookmarksData = JSON.parse(JSON.stringify(defaultBookmarksData));
-                        updateDataSourceIndicator('default', '内置默认');
-                    }
-                    
-                    // 首次加载后保存到localStorage
-                    saveBookmarksData();
-                }
-                
-                // 从设置中恢复状态
-                if (bookmarksData.settings) {
-                    hiddenCategories = new Set(bookmarksData.settings.hiddenCategories || []);
-                    activeFilters = new Set(bookmarksData.settings.activeFilters || []);
-                }
-                
-                renderCategories();
-                updateFilterTags();
-                applyFilters();
-                
-                console.log('书签数据加载成功');
-            } catch (error) {
-                console.error('加载书签数据失败:', error);
-                // 如果所有方法都失败，使用内置默认数据
-                bookmarksData = JSON.parse(JSON.stringify(defaultBookmarksData));
-                updateDataSourceIndicator('error', '加载失败，使用默认');
-                saveBookmarksData();
-                loadBookmarksData();
-            }
-        }
-
-        function saveBookmarksData() {
-            try {
-                // 更新设置
-                bookmarksData.settings = {
-                    hiddenCategories: Array.from(hiddenCategories),
-                    activeFilters: Array.from(activeFilters)
-                };
-
-                localStorage.setItem('bookmarksData', JSON.stringify(bookmarksData));
-                updateDataSourceIndicator('localStorage', '本地存储');
-                console.log('书签数据保存成功');
-            } catch (error) {
-                console.error('保存书签数据失败:', error);
-                alert('保存书签数据失败，可能是存储空间不足');
-            }
-        }
-
-        // 从JSON文件重新加载默认数据
-        async function reloadFromJson() {
-            if (!confirm('确定要从bookmarks.json文件重新加载数据吗？这将覆盖当前所有修改。')) {
-                return;
-            }
-            
-            try {
-                const response = await fetch('./bookmarks.json?t=' + Date.now()); // 添加时间戳避免缓存
-                if (!response.ok) {
-                    throw new Error('无法加载JSON文件');
-                }
-                
-                const jsonData = await response.json();
-                
-                // 验证数据格式
-                if (!jsonData.categories || !Array.isArray(jsonData.categories)) {
-                    throw new Error('JSON文件格式不正确');
-                }
-                
-                bookmarksData = jsonData;
-                
-                // 恢复状态
-                if (bookmarksData.settings) {
-                    hiddenCategories = new Set(bookmarksData.settings.hiddenCategories || []);
-                    activeFilters = new Set(bookmarksData.settings.activeFilters || []);
-                } else {
-                    hiddenCategories.clear();
-                    activeFilters.clear();
-                    bookmarksData.categories.forEach(category => {
-                        activeFilters.add(category.name);
-                    });
-                }
-                
-                saveBookmarksData();
-                renderCategories();
-                updateFilterTags();
-                applyFilters();
-                
-                alert('已成功从bookmarks.json重新加载数据！');
-            } catch (error) {
-                console.error('从JSON文件加载失败:', error);
-                alert('从JSON文件加载失败：' + error.message);
-            }
-        }
-
-        // 导出数据到JSON文件
-        function exportBookmarks() {
-            try {
-                const dataStr = JSON.stringify(bookmarksData, null, 2);
-                const dataBlob = new Blob([dataStr], {type: 'application/json'});
-                const url = URL.createObjectURL(dataBlob);
-                
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'bookmarks.json';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-                
-                alert('书签数据导出成功！\n\n💡 提示：您可以用导出的文件替换根目录的bookmarks.json文件，\n然后使用"从JSON重载"功能来永久保存更改。');
-            } catch (error) {
-                console.error('导出失败:', error);
-                alert('导出失败');
-            }
-        }
-
-        // 导出为带时间戳的备份文件
-        function exportBackup() {
-            try {
-                const dataStr = JSON.stringify(bookmarksData, null, 2);
-                const dataBlob = new Blob([dataStr], {type: 'application/json'});
-                const url = URL.createObjectURL(dataBlob);
-                
-                const link = document.createElement('a');
-                link.href = url;
-                link.download = 'bookmarks-backup-' + new Date().toISOString().split('T')[0] + '.json';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                URL.revokeObjectURL(url);
-                
-                alert('备份文件导出成功！');
-            } catch (error) {
-                console.error('导出备份失败:', error);
-                alert('导出备份失败');
-            }
-        }
-
-        // 从文件导入数据
-        function importBookmarks() {
-            const input = document.createElement('input');
-            input.type = 'file';
-            input.accept = '.json';
-            input.onchange = function(event) {
-                const file = event.target.files[0];
-                if (!file) return;
-                
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    try {
-                        const importedData = JSON.parse(e.target.result);
-                        
-                        // 验证数据格式
-                        if (!importedData.categories || !Array.isArray(importedData.categories)) {
-                            throw new Error('无效的数据格式');
-                        }
-                        
-                        if (confirm('确定要导入新的书签数据吗？这将覆盖当前所有数据。')) {
-                            bookmarksData = importedData;
-                            
-                            // 恢复状态
-                            if (bookmarksData.settings) {
-                                hiddenCategories = new Set(bookmarksData.settings.hiddenCategories || []);
-                                activeFilters = new Set(bookmarksData.settings.activeFilters || []);
-                            } else {
-                                hiddenCategories.clear();
-                                activeFilters.clear();
-                                bookmarksData.categories.forEach(category => {
-                                    activeFilters.add(category.name);
-                                });
-                            }
-                            
-                            saveBookmarksData();
-                            renderCategories();
-                            updateFilterTags();
-                            applyFilters();
-                            
-                            alert('书签数据导入成功！');
-                        }
-                    } catch (error) {
-                        console.error('导入失败:', error);
-                        alert('导入失败：文件格式不正确');
-                    }
-                };
-                reader.readAsText(file);
-            };
-            input.click();
-        }
-
-        // 重置为内置默认数据
-        function resetToDefault() {
-            if (confirm('确定要重置为内置默认数据吗？这将删除所有自定义书签和分类。')) {
-                bookmarksData = JSON.parse(JSON.stringify(defaultBookmarksData));
-                hiddenCategories.clear();
-                activeFilters.clear();
-                bookmarksData.categories.forEach(category => {
-                    activeFilters.add(category.name);
-                });
-                
-                saveBookmarksData();
-                renderCategories();
-                updateFilterTags();
-                applyFilters();
-                
-                alert('已重置为内置默认数据');
-            }
-        }
-
-        // 清除所有数据
-        function clearAllData() {
-            if (confirm('确定要清除所有数据吗？这将删除localStorage中的所有书签数据。\n\n建议在清除前先导出备份。')) {
-                localStorage.removeItem('bookmarksData');
-                alert('所有数据已清除！页面将重新加载。');
-                location.reload();
-            }
-        }
-
-        // 渲染分类
-        function renderCategories() {
-            const categoriesContainer = document.getElementById('categories');
-            categoriesContainer.innerHTML = '';
-
-            bookmarksData.categories.forEach(category => {
-                const categoryElement = createCategoryElement(category);
-                categoriesContainer.appendChild(categoryElement);
-            });
-        }
-
-        // 创建分类元素
-        function createCategoryElement(category) {
-            const categoryElement = document.createElement('div');
-            categoryElement.className = 'category';
-            categoryElement.setAttribute('data-category-id', category.id);
-            
-            const bookmarksHtml = category.bookmarks.map(bookmark => `
-                <a href="${bookmark.url}" class="bookmark" target="_blank" rel="noopener" data-bookmark-id="${bookmark.id}">
-                    <div class="bookmark-icon">${bookmark.icon}</div>
-                    <div class="bookmark-title">${bookmark.title}</div>
-                    <div class="bookmark-url">${bookmark.displayUrl}</div>
-                </a>
-            `).join('');
-
-            categoryElement.innerHTML = `
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                </div>
-                <div class="category-title">
-                    <div class="category-icon">${category.icon}</div>
-                    ${category.name}
-                </div>
-                <div class="bookmarks">
-                    ${bookmarksHtml}
-                </div>
-            `;
-
-            return categoryElement;
-        }
-
         // 初始化筛选标签
         function initializeFilterTags() {
-            // 如果没有设置，默认全部选中
-            if (activeFilters.size === 0) {
-                bookmarksData.categories.forEach(category => {
-                    activeFilters.add(category.name);
-                });
-            }
+            // 默认全部选中
+            const categories = document.querySelectorAll('.category');
+            categories.forEach(category => {
+                const titleElement = category.querySelector('.category-title');
+                const categoryName = titleElement.textContent.trim();
+                activeFilters.add(categoryName);
+            });
             updateFilterTags();
         }
 
         // 更新筛选标签
         function updateFilterTags() {
             const filterContainer = document.getElementById('filterTags');
+            const categories = document.querySelectorAll('.category');
+            
             filterContainer.innerHTML = '';
             
-            bookmarksData.categories.forEach(category => {
+            categories.forEach(category => {
+                const titleElement = category.querySelector('.category-title');
+                const iconElement = category.querySelector('.category-icon');
+                const categoryName = titleElement.textContent.trim();
+                const categoryIcon = iconElement.textContent.trim();
+                
                 const filterTag = document.createElement('div');
                 filterTag.className = 'filter-tag';
-                filterTag.setAttribute('data-category', category.name);
+                filterTag.setAttribute('data-category', categoryName);
                 
-                const isHidden = hiddenCategories.has(category.name);
-                const isActive = activeFilters.has(category.name);
+                const isHidden = hiddenCategories.has(categoryName);
+                const isActive = activeFilters.has(categoryName);
                 
                 if (isHidden) {
                     filterTag.classList.add('hidden');
@@ -1076,8 +708,9 @@
                     filterTag.classList.add('active');
                 }
                 
-                filterTag.innerHTML = `<span>${category.name}</span>`;
-                filterTag.onclick = () => toggleCategoryFilter(category.name);
+                filterTag.innerHTML = `<span>${categoryName}</span>`;
+                
+                filterTag.onclick = () => toggleCategoryFilter(categoryName);
                 filterContainer.appendChild(filterTag);
             });
         }
@@ -1092,33 +725,37 @@
             
             applyFilters();
             updateFilterTags();
-            saveBookmarksData(); // 保存状态
         }
 
         // 应用筛选
         function applyFilters() {
             const categories = document.querySelectorAll('.category');
             
-            categories.forEach(category => {
-                const titleElement = category.querySelector('.category-title');
-                const categoryName = titleElement.textContent.trim();
-                
-                if (activeFilters.size === 0) {
-                    // 如果没有激活的筛选，显示所有非隐藏的分类
+            if (activeFilters.size === 0) {
+                // 如果没有激活的筛选，显示所有非隐藏的分类
+                categories.forEach(category => {
+                    const titleElement = category.querySelector('.category-title');
+                    const categoryName = titleElement.textContent.trim();
+                    
                     if (hiddenCategories.has(categoryName)) {
                         category.style.display = 'none';
                     } else {
                         category.style.display = 'block';
                     }
-                } else {
-                    // 只显示被筛选的分类
+                });
+            } else {
+                // 只显示被筛选的分类
+                categories.forEach(category => {
+                    const titleElement = category.querySelector('.category-title');
+                    const categoryName = titleElement.textContent.trim();
+                    
                     if (activeFilters.has(categoryName) && !hiddenCategories.has(categoryName)) {
                         category.style.display = 'block';
                     } else {
                         category.style.display = 'none';
                     }
-                }
-            });
+                });
+            }
         }
 
         // 切换分类可见性
@@ -1141,7 +778,6 @@
             
             applyFilters();
             updateFilterTags();
-            saveBookmarksData(); // 保存状态
         }
 
         // 显示所有分类
@@ -1149,9 +785,12 @@
             hiddenCategories.clear();
             
             // 默认全部选中
+            const categories = document.querySelectorAll('.category');
             activeFilters.clear();
-            bookmarksData.categories.forEach(category => {
-                activeFilters.add(category.name);
+            categories.forEach(category => {
+                const titleElement = category.querySelector('.category-title');
+                const categoryName = titleElement.textContent.trim();
+                activeFilters.add(categoryName);
             });
             
             // 更新所有控制按钮
@@ -1162,16 +801,18 @@
             
             applyFilters();
             updateFilterTags();
-            saveBookmarksData(); // 保存状态
         }
 
         // 隐藏所有分类
         function hideAllCategories() {
+            const categories = document.querySelectorAll('.category');
             hiddenCategories.clear();
             activeFilters.clear();
             
-            bookmarksData.categories.forEach(category => {
-                hiddenCategories.add(category.name);
+            categories.forEach(category => {
+                const titleElement = category.querySelector('.category-title');
+                const categoryName = titleElement.textContent.trim();
+                hiddenCategories.add(categoryName);
             });
             
             // 更新所有控制按钮
@@ -1182,19 +823,20 @@
             
             applyFilters();
             updateFilterTags();
-            saveBookmarksData(); // 保存状态
         }
 
         // 重置筛选
         function resetFilters() {
             // 默认全部选中
+            const categories = document.querySelectorAll('.category');
             activeFilters.clear();
-            bookmarksData.categories.forEach(category => {
-                activeFilters.add(category.name);
+            categories.forEach(category => {
+                const titleElement = category.querySelector('.category-title');
+                const categoryName = titleElement.textContent.trim();
+                activeFilters.add(categoryName);
             });
             applyFilters();
             updateFilterTags();
-            saveBookmarksData(); // 保存状态
         }
 
         // 搜索功能
@@ -1264,7 +906,7 @@
             document.getElementById('bookmarkTitle').value = '';
             document.getElementById('bookmarkUrl').value = '';
             document.getElementById('bookmarkIcon').value = '';
-            document.getElementById('bookmarkCategory').value = bookmarksData.categories[0]?.name || '';
+            document.getElementById('bookmarkCategory').value = '搜索引擎';
         }
 
         // 分类模态框控制
@@ -1286,9 +928,17 @@
         // 更新分类选项
         function updateCategoryOptions() {
             const select = document.getElementById('bookmarkCategory');
-            select.innerHTML = '';
+            // 清空现有选项，保留默认分类
+            select.innerHTML = `
+                <option value="搜索引擎">搜索引擎</option>
+                <option value="开发工具">开发工具</option>
+                <option value="新闻资讯">新闻资讯</option>
+                <option value="购物网站">购物网站</option>
+                <option value="其他">其他</option>
+            `;
             
-            bookmarksData.categories.forEach(category => {
+            // 添加自定义分类
+            customCategories.forEach(category => {
                 const option = document.createElement('option');
                 option.value = category.name;
                 option.textContent = category.name;
@@ -1307,32 +957,17 @@
             }
 
             // 检查分类是否已存在
-            if (bookmarksData.categories.find(cat => cat.name === name)) {
+            if (findCategoryByTitle(name)) {
                 alert('该分类已存在');
                 return;
             }
 
-            // 创建新分类
-            const newCategory = {
-                id: 'custom-' + Date.now(),
-                name: name,
-                icon: icon,
-                isCustom: true,
-                bookmarks: []
-            };
+            // 记录自定义分类
+            customCategories.push({ name, icon });
 
-            bookmarksData.categories.push(newCategory);
+            // 创建新分类
+            const categoryElement = createNewCategory(name, icon);
             
-            // 重新渲染
-            renderCategories();
-            updateFilterTags();
-            
-            // 自动选中新分类
-            activeFilters.add(name);
-            applyFilters();
-            updateFilterTags();
-            
-            saveBookmarksData();
             closeCategoryModal();
         }
 
@@ -1376,7 +1011,7 @@
             const title = document.getElementById('bookmarkTitle').value.trim();
             const url = document.getElementById('bookmarkUrl').value.trim();
             const icon = document.getElementById('bookmarkIcon').value.trim() || '🔗';
-            const categoryName = document.getElementById('bookmarkCategory').value;
+            const category = document.getElementById('bookmarkCategory').value;
 
             if (!title || !url) {
                 alert('请填写网站名称和地址');
@@ -1397,30 +1032,66 @@
                 displayUrl = url;
             }
 
-            // 找到目标分类
-            const targetCategory = bookmarksData.categories.find(cat => cat.name === categoryName);
-            if (!targetCategory) {
-                alert('找不到指定分类');
-                return;
+            // 找到或创建分类
+            let categoryElement = findCategoryByTitle(category);
+            if (!categoryElement) {
+                // 如果是自定义分类，使用对应图标
+                const customCategory = customCategories.find(c => c.name === category);
+                const categoryIcon = customCategory ? customCategory.icon : '📁';
+                categoryElement = createNewCategory(category, categoryIcon);
             }
 
-            // 创建新书签
-            const newBookmark = {
-                id: 'bookmark-' + Date.now(),
-                title: title,
-                url: formattedUrl,
-                icon: icon,
-                displayUrl: displayUrl
-            };
+            // 创建新书签元素
+            const bookmarkElement = document.createElement('a');
+            bookmarkElement.href = formattedUrl;
+            bookmarkElement.target = '_blank';
+            bookmarkElement.rel = 'noopener';
+            bookmarkElement.className = 'bookmark';
+            bookmarkElement.innerHTML = `
+                <div class="bookmark-icon">${icon}</div>
+                <div class="bookmark-title">${title}</div>
+                <div class="bookmark-url">${displayUrl}</div>
+            `;
 
-            targetCategory.bookmarks.push(newBookmark);
-            
-            // 重新渲染
-            renderCategories();
-            applyFilters();
-            
-            saveBookmarksData();
+            // 添加到分类中
+            categoryElement.querySelector('.bookmarks').appendChild(bookmarkElement);
+
             closeBookmarkModal();
+        }
+
+        function findCategoryByTitle(categoryTitle) {
+            const categories = document.querySelectorAll('.category');
+            for (let category of categories) {
+                const titleElement = category.querySelector('.category-title');
+                if (titleElement.textContent.trim().includes(categoryTitle)) {
+                    return category;
+                }
+            }
+            return null;
+        }
+
+        function createNewCategory(categoryTitle, categoryIcon = '📁') {
+            const categoriesContainer = document.getElementById('categories');
+            const categoryElement = document.createElement('div');
+            categoryElement.className = 'category';
+            
+            categoryElement.innerHTML = `
+                <div class="category-controls">
+                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                </div>
+                <div class="category-title">
+                    <div class="category-icon">${categoryIcon}</div>
+                    ${categoryTitle}
+                </div>
+                <div class="bookmarks"></div>
+            `;
+            
+            categoriesContainer.appendChild(categoryElement);
+            
+            // 更新筛选标签
+            updateFilterTags();
+            
+            return categoryElement;
         }
 
         // 点击模态框外部关闭
@@ -1469,37 +1140,8 @@
 
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', function() {
-            loadBookmarksData();
+            initializeFilterTags();
         });
-
-        // 更新数据来源指示器
-        function updateDataSourceIndicator(source, text) {
-            const indicator = document.getElementById('dataSourceIndicator');
-            const indicatorText = indicator.querySelector('.indicator-text');
-            
-            // 移除之前的类
-            indicator.className = 'data-source-indicator';
-            
-            // 添加对应的类和文本
-            switch(source) {
-                case 'localStorage':
-                    indicator.classList.add('source-local');
-                    indicatorText.textContent = `数据来源：${text} (已修改)`;
-                    break;
-                case 'json':
-                    indicator.classList.add('source-json');
-                    indicatorText.textContent = `数据来源：${text} (原始)`;
-                    break;
-                case 'default':
-                    indicator.classList.add('source-default');
-                    indicatorText.textContent = `数据来源：${text}`;
-                    break;
-                case 'error':
-                    indicator.classList.add('source-error');
-                    indicatorText.textContent = `数据来源：${text}`;
-                    break;
-            }
-        }
     </script>
 </body>
 </html>
