@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-25T04:33:50.431Z",
+    "lastUpdated": "2025-05-25T23:47:33.655Z",
     "lastSynced": "2025-05-25T04:33:54.748Z",
-    "totalBookmarks": 16,
-    "syncStatus": "synced"
+    "totalBookmarks": 486,
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [],
   "categories": [
@@ -18,12 +18,19 @@
           "url": "https://www.google.com",
           "icon": "🔍",
           "isFavorite": false
-        },      
+        },
         {
           "id": "bing",
           "title": "Bing",
           "url": "https://www.bing.com",
           "icon": "🔍",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_82f9qn8x6",
+          "title": "英雄榜2.0-SniiBow-流放之路官方网站-腾讯游戏",
+          "url": "https://poe.qq.com/act/a202010118poena/challenge/rwdata.html?%E5%AF%92%E9%9C%9Ci&SniiBow&i=0&search=skill%3D%E5%85%89%E8%B0%B1%E4%B9%8B%E5%85%83%E7%B4%A0%E6%89%93%E5%87%BB&sai=s25_normal",
+          "icon": "🔗",
           "isFavorite": false
         }
       ]
@@ -59,6 +66,34 @@
           "url": "https://code.visualstudio.com",
           "icon": "💻",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_zfrp27778",
+          "title": "元炁BUG收集表",
+          "url": "https://docs.qq.com/smartsheet/DTXlxdklaTG1sYkNJ?tab=tZmM06&viewId=vJ33gA",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_wv3lltc0b",
+          "title": "游戏开发技巧 Archives - Buildbox |游戏制作工具 |视频游戏软件",
+          "url": "https://www.buildbox.com/category/game-dev-tips/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_lo3tm5tfm",
+          "title": "基于官方API的中转服务 - GPTMeta API",
+          "url": "https://api.mygptmeta.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_hwh2208wi",
+          "title": "anthropics/anthropic-cookbook: A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
+          "url": "https://github.com/anthropics/anthropic-cookbook",
+          "icon": "🔗",
+          "isFavorite": false
         }
       ]
     },
@@ -85,6 +120,13 @@
           "title": "Reddit",
           "url": "https://www.reddit.com",
           "icon": "🤖",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w28lzm9rh",
+          "title": "Godot: The open source game engine",
+          "url": "https://www.reddit.com/r/godot/?f=flair_name%3A%22Tutorial%22",
+          "icon": "🔗",
           "isFavorite": false
         }
       ]
@@ -140,6 +182,188 @@
           "url": "https://www.spotify.com",
           "icon": "🎵",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_2ku5fuwx3",
+          "title": "【慢时间】",
+          "url": "http://www.manshijian.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_u78dfrlyg",
+          "title": "【果壳网】",
+          "url": "http://www.guokr.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_u03jmhdwv",
+          "title": "【seo培训】",
+          "url": "http://www.dabingseo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w5v3291jd",
+          "title": "【星火英语】",
+          "url": "http://www.sparke.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w89q5zdc0",
+          "title": "【沪江英语】",
+          "url": "http://www.hjenglish.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_m4rszjmp8",
+          "title": "【拓词toWords - 上瘾背单词】",
+          "url": "http://towords.com/register.jsp",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_rf5l3jree",
+          "title": "【聚巧网】",
+          "url": "http://www.diyju.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_58d81cttd",
+          "title": "【CGwell游戏美术论坛】",
+          "url": "http://bbs.cgwell.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_gt69ighul",
+          "title": "【微妙动画网】",
+          "url": "http://wmiao.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_z1vtgrp8t",
+          "title": "【9秒社团】-开源社区",
+          "url": "http://www.9miao.com/forum.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_voo88orvy",
+          "title": "【考试网】",
+          "url": "http://kaoshi.yjbys.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_z0zhe71jk",
+          "title": "【牛客网】",
+          "url": "http://www.nowcoder.com/491366",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_6k4rsyp0s",
+          "title": "【Fenby】",
+          "url": "http://www.fenby.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_bp6l5pmsm",
+          "title": "【探索 - GitCafe】",
+          "url": "https://gitcafe.com/explore",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_osgavub9c",
+          "title": "【GitHub】",
+          "url": "https://github.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_thqgt3cc0",
+          "title": "【汇智网】",
+          "url": "http://www.hubwiz.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_lii53x8hf",
+          "title": "【极客学院】",
+          "url": "http://www.jikexueyuan.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_xznrsxeo0",
+          "title": "学习 | Codecademy",
+          "url": "https://www.codecademy.com/zh/learn",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_qlbbweeu8",
+          "title": "【网易云课堂】",
+          "url": "http://study.163.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_n58ykc8hq",
+          "title": "【doyoudo】",
+          "url": "http://www.doyoudo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_qj13ivenh",
+          "title": "微博、秒拍、绿洲、小咖秀视频图片解析下载 - 保存视频图片到电脑、手机",
+          "url": "https://weibo.iiilab.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_nu2neq6ep",
+          "title": "天翼云直链解析 - 涟漪",
+          "url": "https://189.ly93.cc/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_8sagrjpbt",
+          "title": "与熊论道/熊曰加密 - PcMoe!",
+          "url": "http://hi.pcmoe.net/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_ycf5sf327",
+          "title": "IT熊猫-计算机书籍下载",
+          "url": "https://itpanda.net/book/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_g2rpjq47d",
+          "title": "‌⁢​⁤​﻿﻿​⁢⁡⁢⁡​⁢‌‬‌​​​⁢​﻿﻿‬﻿⁡⁡‌﻿​‌‌​⁢⁣⁣⁡⁢⁢⁣‍⁢‬‍﻿​​⁣‌通往 AGI 之路 - 飞书云文档",
+          "url": "https://waytoagi.feishu.cn/wiki/QPe5w5g7UisbEkkow8XcDmOpn8e",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w097yqv9h",
+          "title": "GameKee | 游戏百科攻略",
+          "url": "https://www.gamekee.com/",
+          "icon": "🔗",
+          "isFavorite": false
         }
       ]
     },
@@ -155,11 +379,3317 @@
           "isFavorite": false
         }
       ]
+    },
+    {
+      "name": "视频娱乐",
+      "icon": "🎬",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721118_sokc748bt",
+          "title": "【4K珍藏】英雄联盟《Legends Never Die》神现场！琴弹得不错~-小屋主人-好听的音乐合集-哔哩哔哩视频",
+          "url": "https://www.bilibili.com/list/ml3187431502?spm_id_from=333.999.0.0&oid=474632094&bvid=BV1fK411U7K2",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "学习教育",
+      "icon": "📚",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721118_4wvijvx5u",
+          "title": "如何免费使用平台的服务 | CloseAI",
+          "url": "https://doc.closeai-asia.com/tutorial/commission.html#%E4%BC%98%E7%A7%80%E6%A1%88%E4%BE%8B%E5%8F%82%E8%80%83",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "游戏",
+      "icon": "🎮",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721118_andawqenp",
+          "title": "风灵月影修改器",
+          "url": "https://flingtrainer.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_lt8m71yye",
+          "title": "Koyso",
+          "url": "https://koyso.com/?&order=uploadtime",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_iwm3c8vcy",
+          "title": "Download the latest indie games - itch.io",
+          "url": "https://itch.io/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_8dmwjgqof",
+          "title": "Koyso",
+          "url": "https://koyso.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "每日必看",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721118_cp0ds8ne0",
+          "title": "城通推广联盟-城通网盘",
+          "url": "https://union.ctfile.com/home.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_qbkd33cmo",
+          "title": "福利吧-分享你的福利吧",
+          "url": "https://fuliba2023.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_f274nk54c",
+          "title": "不死鸟 - 分享为王官网",
+          "url": "https://iui.su/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_p5wyh9iyj",
+          "title": "GGAC数字艺术平台",
+          "url": "https://www.ggac.com/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_cbuihuk8f",
+          "title": "链滴 - 记录生活，连接点滴",
+          "url": "https://ld246.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "综合类",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721118_uwiu2051p",
+          "title": "【好知网】",
+          "url": "http://www.howzhi.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_wy8s8vdnf",
+          "title": "【多贝公开课】",
+          "url": "http://www.duobei.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_uz3zkp2lv",
+          "title": "【软酷网】",
+          "url": "http://www.ruanko.com/portal/cloud!toCourseList.action?courseType=1",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_jtfpe9dae",
+          "title": "【腾讯精品课】",
+          "url": "http://class.qq.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w9a2m8ik3",
+          "title": "【Useit 知识库】",
+          "url": "http://www.useit.com.cn/forum-286-1.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_rqbcsu1xc",
+          "title": "【朱峰社区】",
+          "url": "http://www.zf3d.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_67bx9bww9",
+          "title": "【万门大学】",
+          "url": "http://www.wanmen.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_5br3904bh",
+          "title": "【好学网】",
+          "url": "http://www.haoxue.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_05v1kqjcg",
+          "title": "【全民终身学习课程平台】",
+          "url": "http://www.jingpinke.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_w0ew9s73q",
+          "title": "【汇智网】",
+          "url": "http://hubwiz.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721118_1byp3ebyy",
+          "title": "【环球网校论坛】",
+          "url": "http://bbs.edu24ol.com/forum.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_sc08eer7k",
+          "title": "【慕课网】",
+          "url": "http://www.imooc.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4ovntyahe",
+          "title": "【网易公开课】",
+          "url": "http://open.163.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0upzhr09z",
+          "title": "【51CTO.COM】",
+          "url": "http://www.51cto.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_89s8i3td1",
+          "title": "【51CTO学院】",
+          "url": "http://edu.51cto.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cxpsmqqkv",
+          "title": "【实验楼】",
+          "url": "https://www.shiyanlou.com/courses/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dlkeexj3e",
+          "title": "【计蒜客】",
+          "url": "http://www.jisuanke.com/course",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_u8ufzbr1u",
+          "title": "砍柴网_探索科技与商业的逻辑",
+          "url": "http://www.ikanchai.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_825u901xk",
+          "title": "极客网 | 科技金融新媒体意见领袖- FromGeek.com",
+          "url": "http://www.fromgeek.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_o9zds021v",
+          "title": "学堂在线-最大的中文慕课(MOOC)平台",
+          "url": "http://www.xuetangx.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "CG类",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_vw1k0ql5o",
+          "title": "【火熊网】",
+          "url": "http://www.cgartt.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bzjsufuj2",
+          "title": "【CG窝】",
+          "url": "http://www.cgvoo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ts84jp141",
+          "title": "【蓝铅笔】",
+          "url": "http://www.lanqb.com/tutorials.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2b7wk8cf1",
+          "title": "【CG部落】",
+          "url": "http://forums.cgbolo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dbe024m4s",
+          "title": "【XRCG学院官网】",
+          "url": "http://www.xrcg.cn/page337",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3lfhgk27q",
+          "title": "【CG帮】",
+          "url": "http://www.cgboo.com/portal.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_101tjo28t",
+          "title": "【cg谷】",
+          "url": "http://www.cggo.org/por.jsp?_php=0_388_4",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_11o8hkv17",
+          "title": "【爱CG网】",
+          "url": "http://www.aicg.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wdkh4hvkl",
+          "title": "【爱游美术资源网】",
+          "url": "http://iugame.me/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_jpl63z63l",
+          "title": "【CGwell CG薇儿论坛】",
+          "url": "http://bbs.cgwell.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_sx3ojfisi",
+          "title": "【CG绘画学习网】",
+          "url": "http://www.cghuihua.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "前端开发",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_83kvwkntn",
+          "title": "【优设-UISDC】",
+          "url": "http://www.uisdc.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2m7lw3h1j",
+          "title": "【前端乱炖】",
+          "url": "http://www.html-js.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vyy6qd2dv",
+          "title": "【前端社区(JQSite)】",
+          "url": "http://www.jqsite.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_d3mix98h4",
+          "title": "【w3school 在线教程】",
+          "url": "http://www.w3school.com.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0eee722t6",
+          "title": "【萌码】",
+          "url": "http://www.mengma.com/volumes",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_p53ke72hs",
+          "title": "动态网站制作指南_www.knowsky.com",
+          "url": "http://www.knowsky.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "图片相关",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_3rzl40rpj",
+          "title": "waifu2x",
+          "url": "https://waifu2x.udp.jp/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4epmxqofd",
+          "title": "Bigjpg - AI人工智能圖片無損放大 - 使用人工智能深度卷積神經網絡(CNN)無損放大圖片",
+          "url": "https://bigjpg.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gyqltyt1p",
+          "title": "图片拼接——免费在线拼接多个图片成长图",
+          "url": "http://www.zuohaotu.com/image-merge.aspx",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zk3gvh7am",
+          "title": "【在线PS软件】在线PS图片（照片）处理工具_在线制作编辑图片ps精简版",
+          "url": "https://www.uupoop.com/#/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_oxc83wemc",
+          "title": "多功能图片转换器无需上传文件",
+          "url": "http://www.imagestool.cn/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3z1prdyel",
+          "title": "TinyPNG – Compress WebP, PNG and JPEG images intelligently",
+          "url": "https://tinypng.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "生成相关",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_y4z6i7g54",
+          "title": "在线身份证号码生成器",
+          "url": "http://sfz.uzuzuz.com/?region=510121&birthday=19960307&sex=2&num=5&r=75",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_90qx89l35",
+          "title": "九歌——人工智能诗歌写作系统",
+          "url": "http://jiuge.thunlp.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_odytz3b6p",
+          "title": "WantQuotes 据意查句",
+          "url": "https://wantquotes.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_armwjmqb4",
+          "title": "pixeldudesmaker by 0x72",
+          "url": "https://0x72.itch.io/pixeldudesmaker",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_74x5ihoyq",
+          "title": "在线身份证号码生成器",
+          "url": "http://sfz.uzuzuz.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5jbzn2ayh",
+          "title": "设想",
+          "url": "https://www.scenario.gg/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_99pxvhd7r",
+          "title": "Leonardo.ai",
+          "url": "https://leonardo.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "工具类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_38x7zxpyi",
+          "title": "GWB腾讯游戏创意大赛-腾讯游戏学堂",
+          "url": "https://gwb.tencent.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ze0b6u96c",
+          "title": "Vega AI 创作平台",
+          "url": "https://rightbrain.art/text2Image",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wuoiynunu",
+          "title": "控制台-面包多",
+          "url": "https://mianbaoduo.com/app",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dzcpnjq4l",
+          "title": "KGitHub Help",
+          "url": "https://help.kgithub.com/#kgithub",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_raob9etr4",
+          "title": "https://platform.openai.com/",
+          "url": "https://platform.openai.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_axxg7a82a",
+          "title": "首页 - 城通网赚网盘 - 知名的下载赚钱网盘",
+          "url": "https://union.ctfile.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_pqy5lav04",
+          "title": "即时工具-致力打造即用即走型在线工具箱",
+          "url": "https://www.67tool.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wi81rt2nd",
+          "title": "ChatGPT",
+          "url": "https://chat.openai.com/chat",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_z61mjp2pj",
+          "title": "555电影网-555dy-影视大全-韩国电影免费观看-555dy永久地址发布页，收藏我回家不迷路！",
+          "url": "https://www.555kan.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ya89htn00",
+          "title": "Account API Keys - OpenAI API",
+          "url": "https://beta.openai.com/account/api-keys",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tcbbtcbu1",
+          "title": "OpenAI",
+          "url": "https://openai.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_662et3pnk",
+          "title": "Mixamo",
+          "url": "https://www.mixamo.com/#/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4gmskwody",
+          "title": "创梦天地 | Fanbook，一站式粉丝服务工具",
+          "url": "http://fanbook.idreamsky.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_c932mhf7o",
+          "title": "微信对话生成器2022版小工具在线使用_免安装下载 - 工具123",
+          "url": "http://www.gjw123.com/tools-weixinduihua2019",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_aqmlcjbmv",
+          "title": "33台词 - 通过台词找影片素材",
+          "url": "https://33.agilestudio.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_thheyjeko",
+          "title": "My WiFi Sign",
+          "url": "https://www.mywifisign.com/zh-hans",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_slggurxvq",
+          "title": "FlightAware - 航班跟踪/航班状态/飞行跟踪",
+          "url": "https://zh.flightaware.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mp4qkk30i",
+          "title": "下载您的文件 — Convertio",
+          "url": "https://convertio.co/zh/download/a368c380558d7350cd9b947fa0f6e54b9f4338/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4tvz8faxo",
+          "title": "huang1111网盘",
+          "url": "https://pan.huang1111.cn/connect",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cxrg6xnh8",
+          "title": "文叔叔 - 传文件，找文叔叔（大文件、永不限速）",
+          "url": "https://www.wenshushu.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3wsyp3qvq",
+          "title": "WinXray – 你与世界的桥梁！",
+          "url": "https://www.qv2ray.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ypr04t27h",
+          "title": "SteamDB",
+          "url": "https://steamdb.info/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dqez0f39q",
+          "title": "文小站",
+          "url": "https://www.wenxiaozhan.com/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_lp4g00w15",
+          "title": "Qwerty Learner",
+          "url": "https://qwerty.kaiyi.cool/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ia6xzstsf",
+          "title": "下载-github文件代下载",
+          "url": "https://d.serctl.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_v8r8udsr8",
+          "title": "易制地图-架空世界地图、小说地图、游戏地图制作工具。",
+          "url": "https://www.makeamap.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rrjg6ccv7",
+          "title": "免费的ChatGPT镜像网站 | 西园公子的科研百宝箱",
+          "url": "https://study.zwjjiaozhu.top/posts/chatgpt-mirror-sites.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cf5d29axg",
+          "title": "最近打开 - boardmix",
+          "url": "https://boardmix.cn/app/my-space",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nkpxueohx",
+          "title": "仅用于开发学习交流",
+          "url": "https://chat.yqcloud.top/#/chat/1679294391188",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_c42ryivgw",
+          "title": "花禾",
+          "url": "https://huahualuzi.com/user/tutorial",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qibnmekfg",
+          "title": "Home | FastGit UK",
+          "url": "https://hub.fastgit.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_lkg1fyb6q",
+          "title": "服务合作伙伴 | 虚幻引擎 - Unreal Engine",
+          "url": "https://www.unrealengine.com/zh-CN/service-partners",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_s6l318kto",
+          "title": "机核 GCORES",
+          "url": "https://www.gcores.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_szn991oqk",
+          "title": "组件世界/WidgetStore - 丰富的嵌入式小组件库、动态图标库、可视化图表库",
+          "url": "https://cn.widgetstore.net/#/voucher",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xnll0f01j",
+          "title": "汉字转拼音",
+          "url": "https://www.lddgo.net/convert/pinyin",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_i8808b09t",
+          "title": "bilibili B站无水印解析高清下载-yiuios",
+          "url": "https://www.yiuios.com/tool/bilibili#parse",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ug8aixej1",
+          "title": "暗黑4可交互地图 | 暗黑核",
+          "url": "https://www.d2core.com/d4/map#id=ecc42e19-2c01-4708-81e4-33f4bcefec07",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_pqu5dcarp",
+          "title": "在线JSON校验格式化工具（Be JSON）",
+          "url": "https://www.bejson.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tm44imw37",
+          "title": "小说生成漫画Midjourney提示词 - Powered by Dify",
+          "url": "https://udify.app/completion/IOTvNsyo6EedK1Ck",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vtk8en0wq",
+          "title": "微PE工具箱 - 超好用的装机维护工具",
+          "url": "https://www.wepe.com.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ewv7mhlgl",
+          "title": "AiShort 介绍 | AiShort(ChatGPT Shortcut)-Tag filtering, keyword search, and one-click copy prompts",
+          "url": "https://www.aishort.top/docs",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8jo7oaine",
+          "title": "bilibili封面提取 - 好用的B站视频封面在线提取工具",
+          "url": "https://bilicover.magecorn.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bsopkvyae",
+          "title": "视频 - 超音速",
+          "url": "https://supersonic.com/learn/videos/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_m6cydhqew",
+          "title": "WordPress主题开发，从入门到精通。 - 知乎",
+          "url": "https://zhuanlan.zhihu.com/p/539644132",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gcmvyyfp9",
+          "title": "HTML格式化 HTML在线解析工具 iP138在线工具",
+          "url": "https://tool.ip138.com/html/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ho7ivpdn0",
+          "title": "批量打开网址、网页、网站（网址、超链接批量打开工具，如何批量一键快速打开多个网站、网页）",
+          "url": "http://www.ab173.com/gongju/zhanzhang/openurls.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_iyxtl0lvw",
+          "title": "GitHub - THUDM/ChatGLM2-6B: ChatGLM2-6B: An Open Bilingual Chat LLM | 开源双语对话语言模型",
+          "url": "https://github.com/THUDM/ChatGLM2-6B",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hi4brq7oo",
+          "title": "从PDF文件提取图像 - 迅捷，在线，免费 - PDF24 Tools",
+          "url": "https://tools.pdf24.org/zh/extract-images",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_lug8gcinf",
+          "title": "UI Notes - 真实产品 UI 设计灵感库",
+          "url": "https://uinotes.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0ynomxica",
+          "title": "Vega AI 创作平台",
+          "url": "https://rightbrain.art/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_h8ch5po2u",
+          "title": "山月记分享",
+          "url": "https://www.syjshare.com/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8ptoz7g69",
+          "title": "Login | Scenario",
+          "url": "https://app.scenario.com/login",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0f16tttnn",
+          "title": "【内测】超好用的AI文本转视频系统：让小说蜕变成令人惊叹的动画世界！内测版本重磅发布！_哔哩哔哩_bilibili",
+          "url": "https://www.bilibili.com/video/BV1xs4y1r7tF/?spm_id_from=333.851.b_7265636f6d6d656e64.6&vd_source=6ab711e99a60accea2fa370addd3c367",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_v2ui86ybx",
+          "title": "AIGC导航 | 1500+全品类AIGC创作工具_探索更多可能！",
+          "url": "https://www.aigc.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_69xd8f2g5",
+          "title": "Welcome to Bito Academy - BITO - 10x Dev with Bito AI",
+          "url": "https://docs.bito.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ehduuaf8c",
+          "title": "AI提示语 | 以提示语为纽带，连接各类 AI 模型快速构建 AI 应用",
+          "url": "https://www.tishi.top/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_glrvmpoes",
+          "title": "Yandex",
+          "url": "https://yandex.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_e10php25r",
+          "title": "Dify - LLMOps platform, Define your AI-native apps",
+          "url": "https://dify.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3ws5zvo32",
+          "title": "在线工具 - 首页",
+          "url": "https://www.toolhelper.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_jqoxtwny5",
+          "title": "在线免费文字转语音 - TTSMaker | 马克配音",
+          "url": "https://ttsmaker.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tcqsxg0kl",
+          "title": "登录 - Motiff",
+          "url": "https://motiff.com/login",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1j8r7ugd5",
+          "title": "BingAI - 聊天",
+          "url": "https://baipiaojun-bpjai.hf.space/web/#/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_28vozprnx",
+          "title": "uniAD微信小程序广告开通指南 - DCloud问答",
+          "url": "https://ask.dcloud.net.cn/article/39928",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zviv93nuy",
+          "title": "个人资料 | 小微码支付",
+          "url": "https://epay.lanfucai.com/user/editinfo.php?start=1",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cg8zy8v9l",
+          "title": "用户中心 | 小微码支付",
+          "url": "https://epay.lanfucai.com/user/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_93m99p936",
+          "title": "lizhipay/acg-faka: 个人发卡源码，发卡系统，二次元发卡系统，二次元发卡源码，发卡程序，动漫发卡，PHP发卡源码，异次元发卡",
+          "url": "https://github.com/lizhipay/acg-faka",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vcz9m7z4c",
+          "title": "Claude",
+          "url": "https://chat.claudeai.ai/chat/3aaacc4b-40bf-4398-b3ec-d723503f7886",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_767qdhs0f",
+          "title": "AIchatOS",
+          "url": "https://chat9.aichatos.xyz/#/chat/1691552292782",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5nb0j4n7z",
+          "title": "使用信号 — Godot Engine (stable) 简体中文文档",
+          "url": "https://docs.godotengine.org/zh_CN/stable/getting_started/step_by_step/signals.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_jklfn0xzy",
+          "title": "方格音乐",
+          "url": "http://morin.vin/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_6lu5rjo0f",
+          "title": "2D Tower Defense In Godot 4.0 - YouTube",
+          "url": "https://www.youtube.com/playlist?list=PLPuNhh82sRgk7S85quXb2_XI8b_jbmruB",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_up22e5yk2",
+          "title": "中华典藏",
+          "url": "https://www.zhonghuadiancang.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mnrspcldg",
+          "title": "游戏推荐小本本儿",
+          "url": "https://docs.qq.com/sheet/DVmhqaWdFenVqVHJT?_t=1695779692917&tab=BB08J2&u=d58c512143144ad7b486aa69c4b80f7f",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0zczdvybn",
+          "title": "Bard",
+          "url": "https://bard.google.com/chat",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g49nczo1i",
+          "title": "交易 - 流放之路",
+          "url": "https://poe.game.qq.com/trade/search/S23%E8%B5%9B%E5%AD%A3",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_6gymliinn",
+          "title": "PromptPerfect - 提示词优化",
+          "url": "https://promptperfect.jinaai.cn/prompts",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9vh8fmptn",
+          "title": "易采集EasySpider：无代码可视化爬虫软件",
+          "url": "https://www.easyspider.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9wrzy50il",
+          "title": "AiShort (ChatGPT Shortcut) - AI提示词",
+          "url": "https://www.aishort.top/?tags=ai",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3kosbs7a4",
+          "title": "在线字数统计工具-统计字符字节汉字数字标点符号-计算word文章字数",
+          "url": "https://www.eteste.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vvr41uqlb",
+          "title": "Discover Card Info Generator",
+          "url": "https://chuchen.aust001.com/card2.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9rpf1ps3u",
+          "title": "控制台",
+          "url": "https://console.closeai-asia.com/dashboard",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hli3zaoh1",
+          "title": "apkpure.com",
+          "url": "https://apkpure.com/cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_esa4pq142",
+          "title": "Untitled space – new.space",
+          "url": "https://new.space/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_y0heube72",
+          "title": "FindText()9.2中文版 – 屏幕抓字生成字库工具与找字函数 – AutoAHK",
+          "url": "https://www.autoahk.com/archives/28493",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_98sl0vcj1",
+          "title": "AutoAHK – 让电脑更懂你！",
+          "url": "https://www.autoahk.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_pgyhjpqia",
+          "title": "spine-ue4 运行时文档",
+          "url": "http://zh.esotericsoftware.com/spine-ue4#",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bpidnxxx6",
+          "title": "Kimi Chat - AI工具",
+          "url": "https://kimi.moonshot.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vhs9bwkk6",
+          "title": "游戏相关推荐书单 - 飞书云文档",
+          "url": "https://ludostudio.feishu.cn/wiki/AOXZwgwj2iitkgkZdDfc70X6nkh",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_giwzef6c1",
+          "title": "海艺 Seaart.ai | 安卓苹果PC均能用的免费AI绘图软件！",
+          "url": "https://www.seaart.me/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_uacfhicsv",
+          "title": "👉随机名称生成器✍️ | Namegentool",
+          "url": "https://namegentool.com/zh-hans",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zvghfml8n",
+          "title": "流放之路国服物价榜",
+          "url": "https://price.filtereditor.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_7v0yqdxou",
+          "title": "Releases · zzzgydi/clash-verge",
+          "url": "https://github.com/zzzgydi/clash-verge/releases",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_te8xw40w9",
+          "title": "体验引导-新手指南-天涯明月刀官方资料站-腾讯游戏-电影网游新艺术，这就是武侠",
+          "url": "https://wuxia.qq.com/guide/experience.shtml",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hh5fkguug",
+          "title": "#遊戲編劇 🕹玩遊戲 🔧做遊戲 😉聊遊戲 – 摩訶聖 StM4H4",
+          "url": "https://stm4h4.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_kyqk9kgi2",
+          "title": "bilibili B站无水印解析高清下载-6li6在线工具箱",
+          "url": "https://6li6.com/bilibili#/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_u7e9bsc36",
+          "title": "APT_CN - OneDrive",
+          "url": "https://onedrive.live.com/?authkey=%21AAnnDSuP%2DYwMUgA&id=83308FFAE299EDDC%21129&cid=83308FFAE299EDDC",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cuwtgxkuk",
+          "title": "46+ 个免费游戏素材网站整理：2D、3D、人物、模型等免费下载 | Eagle 博客",
+          "url": "https://cn.eagle.cool/blog/post/free-game-assets",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rsgfnh2zw",
+          "title": "Temporary mail - Temporary mail to receive email in 10 seconds",
+          "url": "https://deepyinc.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qr5dvzpc0",
+          "title": "GPTsCopilot",
+          "url": "https://gptscopilot.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hksegjite",
+          "title": "知数云 | 数字化服务的智慧之选",
+          "url": "https://data.zhishuyun.com/services",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_p1e3sa90l",
+          "title": "Typing | 一个简约风格的可自定义主题的打字记录和键盘测试网站。",
+          "url": "https://typing.yasinchan.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_h0qo05jmg",
+          "title": "AI生成LOGO",
+          "url": "https://ai-icon.top/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5e05ytts9",
+          "title": "svn blame - SVN中文网",
+          "url": "http://www.svn.org.cn/1097.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gpdrw25a8",
+          "title": "FandCode-互联网创意池",
+          "url": "https://fandcode.com/idea",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zxwfo2gck",
+          "title": "AI搜索引擎",
+          "url": "http://explorer.globe.engineer/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q0affuadg",
+          "title": "天工超能AI — 江苏卫视《最强大脑》特约合作伙伴",
+          "url": "https://search.tiangong.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zs34z7ord",
+          "title": "LiblibAI·哩布哩布AI - 中国领先的AI创作平台",
+          "url": "https://www.liblib.art/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_oyav2enoz",
+          "title": "AppFlowy.IO",
+          "url": "https://www.appflowy.io/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_makchux39",
+          "title": "节假日倒计时 - 组件世界",
+          "url": "https://cn.widgetstore.net/#/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_276nrsulv",
+          "title": "清华大学开源软件镜像站 | Tsinghua Open Source Mirror",
+          "url": "https://mirrors.tuna.tsinghua.edu.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rfmkb10yu",
+          "title": "AOSP | 镜像站使用帮助 | 清华大学开源软件镜像站 | Tsinghua Open Source Mirror",
+          "url": "https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9q0fj2scg",
+          "title": "易词云 - 词云生成器",
+          "url": "https://www.yciyun.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_m8zlui2de",
+          "title": "国家企业信用信息公示系统",
+          "url": "https://shiming.gsxt.gov.cn/socialuser-use-rllogin.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bzp3qh5rj",
+          "title": "免抠图片网|免抠素材|透明背景图片|免费图片素材|png图片|透明背景素材|设计素材",
+          "url": "https://miankoutupian.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nnai8gnll",
+          "title": "Timeless Jewel Calculator",
+          "url": "https://vilsol.github.io/timeless-jewels/tree",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zjqmfl1m0",
+          "title": "Level 95 Crit Rejuvenation Totem Hierophant [3.23]",
+          "url": "https://pobb.in/Of4SI-eDQ_Py",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_6rf3w4fut",
+          "title": "Xe: Currency Exchange Rates and International Money Transfers",
+          "url": "https://www.xe.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_jwwokpwfs",
+          "title": "Easy Scraper",
+          "url": "https://easyscraper.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5qnksfxd6",
+          "title": "秘塔AI搜索",
+          "url": "https://metaso.cn/search/8459378756682657792",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xqbb2043a",
+          "title": "IDC: The premier global market intelligence firm.",
+          "url": "https://www.idc.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q9s3z12e8",
+          "title": "运行监测协调局",
+          "url": "https://www.miit.gov.cn/jgsj/yxj/jgzz/art/2020/art_28be63712322426788b6e1b519a6dc60.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_45kjhkr4n",
+          "title": "莫高 原型设计",
+          "url": "https://mastergo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_p7pjn279a",
+          "title": "口袋方舟论坛｜创作者社区｜面向全年龄的UGC互动内容平台与交流社",
+          "url": "https://forum.ark.online/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_so26o65ya",
+          "title": "m3u8在线播放器 - M3U8 Player",
+          "url": "https://m3u8player.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2ho9ymd1p",
+          "title": "Path of Pathing",
+          "url": "https://www.pathofpathing.com/?v=3.24.0-atlas#AAAABgAACgkABaQM8zjycXV46oYwr5rSdPvOcXUAAA==",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_imz2uu0te",
+          "title": "RaiDrive - 像 USB 驱动器一样安装云存储",
+          "url": "https://www.raidrive.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_huuxo46x1",
+          "title": "Stable Diffusion 法术解析 / 解析图片是否是AI图片",
+          "url": "https://spell.novelai.dev/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_svixy4nd9",
+          "title": "iconfont-阿里巴巴矢量图标库",
+          "url": "https://www.iconfont.cn/?spm=a313x.home_index.i3.d4d0a486a.416e3a81Z0kMZY",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gcog1mdcv",
+          "title": "官网快聘-各大公司官网优质招聘信息一站通",
+          "url": "https://www.guanwangkuaipin.com/#/index/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q5kpxf8rh",
+          "title": "UE4 中GameInstance、GameMode、GameState、PlayerState和PlayerController的关系_ue中的gameinstance-CSDN博客",
+          "url": "https://blog.csdn.net/zhangxiao13627093203/article/details/118385657",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gcbgi8elk",
+          "title": "PlantUML Web Server| uml代码转图",
+          "url": "https://www.plantuml.com/plantuml/uml/SyfFKj2rKt3CoKnELR1Io4ZDoSa70000",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nadhcv2xy",
+          "title": "AES加密/解密工具 - 在线免费AES加密/解密工具-优工具",
+          "url": "https://www.uutils.com/enc/aes.htm",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5q2s0uez1",
+          "title": "cocos工程师 - Coze AI Bot",
+          "url": "https://www.coze.com/store/bot/7373076206171996165?panel=1&bid=6ckkan28o6g06",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ehrza2cev",
+          "title": "Clipchamp - free video editor & video maker",
+          "url": "https://app.clipchamp.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ns7cin98r",
+          "title": "Awesome Wallpapers - wallhaven.cc",
+          "url": "https://wallhaven.cc/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_389uxhhvm",
+          "title": "KREA AI - Enhancer（AI绘画工具）",
+          "url": "https://www.krea.ai/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xjwop34vd",
+          "title": "巨日禄AI故事绘图，一站式生成小说漫画推文、儿童故事、民间故事等",
+          "url": "https://ai.jurilu.com/?from=phpcms9.com#/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_pv93atfpm",
+          "title": "开搜AI问答搜索_免费无广告直达结果",
+          "url": "https://kaisouai.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_70esu6gv8",
+          "title": "【新提醒】软件游戏 - ZMX - IT技术交流论坛 - 无限Perfect，追求梦想 - itzmx.com",
+          "url": "https://bbs.itzmx.com/forum-41-1.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g1xv6l66t",
+          "title": "【新提醒】ROMEX PrimoCache v4.2.0 & Primo Ramdisk v6.6.0(WIN 7 10 11 x64) 服务器破解版(2023.05新增蓝屏修复) - 软件游戏 - ZMX - IT技术交流论坛 - 无限Perfect，追求梦想 - itzmx.com",
+          "url": "https://bbs.itzmx.com/thread-102717-1-1.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_562v2tk9y",
+          "title": "在线图片无损放大尺寸修改工具 - 爱图工具箱",
+          "url": "https://www.itutool.com/tools/image-enlarger#google_vignette",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4jpvekw05",
+          "title": "BlueAD",
+          "url": "https://media.bluead.ai/dashboard/workplace",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zmshacke2",
+          "title": "Game Developer | Game Industry News, Deep Dives, and Developer Blogs",
+          "url": "https://www.gamedeveloper.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cy0lw2v44",
+          "title": "在线post请求- HTTP GET/POST模拟请求测试工具",
+          "url": "http://www.iotsi.net/it/http/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ogmwgl3lh",
+          "title": "虫部落快搜 - 搜索快人一步 - Google",
+          "url": "https://search.chongbuluo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_a0rcvj1g7",
+          "title": "悦音配音_免费在线配音-AI智能配音-机器配音-配音软件-配音工具-制片帮|悦音",
+          "url": "https://yueyin3602.zhipianbang.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_thk0jw73s",
+          "title": "Steam 硬件和软件调查",
+          "url": "https://store.steampowered.com/hwsurvey/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_k4mru3ptp",
+          "title": "方格音乐",
+          "url": "http://fonger.top/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_aespo27es",
+          "title": "购买 Eagle 序列号 | Eagle",
+          "url": "https://cn.eagle.cool/store",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5c3r6h99l",
+          "title": "免费在线文字转语音工具 | edge-tts 在线体验",
+          "url": "https://ai.bingal.com/cn/ai-tts/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_51l2vz6lq",
+          "title": "独立游戏共建知识百科",
+          "url": "https://docs.qq.com/sheet/DWWtxbVFWZ25OZWJU?tab=BB08J2",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9hgps5vpc",
+          "title": "源动力",
+          "url": "https://zysub.catni.cn/home",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tx3kyuepe",
+          "title": "Remove Background - 0v0.ai - 移除背景",
+          "url": "https://0v0.ai/rmbg/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_15g6ig6bs",
+          "title": "有用经验",
+          "url": "https://yyjingyan.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_eth6c9aat",
+          "title": "Unity解包 GitHub - AssetRipper/AssetRipper: GUI Application to work with engine assets, asset bundles, and serialized files",
+          "url": "https://github.com/AssetRipper/AssetRipper",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zt94goi1o",
+          "title": "Gamalytic-销量预测",
+          "url": "https://gamalytic.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nktjkznkd",
+          "title": "Palworld Steam stats – Video Game Insights - 销量预测",
+          "url": "https://vginsights.com/game/palworld",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_89vgosrsn",
+          "title": "YOPmail : 临时、匿名的免费邮箱地址。",
+          "url": "https://yopmail.net/zh/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_u4uutphc5",
+          "title": "Yandex — 俄罗斯搜索引擎",
+          "url": "https://yandex.eu/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_a1uggdkbx",
+          "title": "茶杯狐 cupfox官网-最新电影电视剧免费在线观看",
+          "url": "https://www.cupfox2025.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9xt6sgop6",
+          "title": "LocalSend：向附近设备分享文件",
+          "url": "https://localsend.org/zh-CN",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hfc4w3zr6",
+          "title": "PayPal: 账户首页",
+          "url": "https://www.paypal.com/myaccount/summary",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_yihkjb99x",
+          "title": "一键抠图_在线抠图_图片去除背景 | RemovePhotos",
+          "url": "https://remove.photos/zh-cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9cbvhe84y",
+          "title": "流放2天赋树",
+          "url": "https://p2.710421059.xyz/?a=gemling&p=Q",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3pbcsu721",
+          "title": "在线文本删除标点符号—LZL在线工具",
+          "url": "https://lzltool.cn/Toolkit/RemoveStringPunctuation",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_u9nihlcph",
+          "title": "识典古籍-古籍在线阅读平台",
+          "url": "https://www.shidianguji.com/?page_from=reading_page",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9q1xsg0ou",
+          "title": "「税后工资计算器」个税_五险一金计算公式-BOSS直聘",
+          "url": "https://www.zhipin.com/wage/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8oq5ux7f1",
+          "title": "工作日计算器",
+          "url": "https://www.lddgo.net/common/workday",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bnk2iffyj",
+          "title": "labs.google-AI",
+          "url": "https://labs.google/fx/zh",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_s0lw8qf2b",
+          "title": "PoE2 Trade - Path of Exile",
+          "url": "https://www.pathofexile.com/trade2/search/poe2/Standard/Z2GdLORfQ",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_lv82pwad8",
+          "title": "DeepSeek - 探索未至之境",
+          "url": "https://chat.deepseek.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_p1t3duz4v",
+          "title": "Untitled0.ipynb - Colab",
+          "url": "https://colab.research.google.com/drive/1QZxWU_HeBnvP-O5lvASTGv5Zumu0tGvT#scrollTo=_orKdL-Vykp1",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2h54y2gtc",
+          "title": "问卷星_不止问卷调查/在线考试",
+          "url": "https://www.wjx.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ufs0tryv2",
+          "title": "资源包管理 - 知识引擎原子能力 - 控制台",
+          "url": "https://console.cloud.tencent.com/lkeap/packages",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tylh1cu0t",
+          "title": "阿里云百炼",
+          "url": "https://bailian.console.aliyun.com/#/data-analysis",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5feu2nihu",
+          "title": "✔ 将图像转换为PDF - 迅捷，在线，免费 - PDF24",
+          "url": "https://tools.pdf24.org/zh/images-to-pdf#s=1739203696851",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ug1dqsceg",
+          "title": "CleverPDF - 44个功能强大的免费在线PDF转换器和工具",
+          "url": "https://www.cleverpdf.com/cn",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_6xu95sarj",
+          "title": "金鹰资源采集网",
+          "url": "https://jinyingzy.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nmnvw1ytv",
+          "title": "MGX-AI",
+          "url": "https://mgx.dev/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dz1e3n7if",
+          "title": "站长资源站Pro|站长资源|建站教程 | 收录站长需要的影视资源采集,X站资源采集和站长所需的各种工具于网站",
+          "url": "https://www.zzzypro.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_93ztqymr",
+          "title": "极简设计的在线 Todo List 清单 - 无需注册登录 | Ricocc",
+          "url": "https://ricocc.com/todo/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_16bpavdet",
+          "title": "Core Values Decoder - 核心价值观解码",
+          "url": "https://sym233.github.io/core-values-encoder/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0xlysfwpk",
+          "title": "腾讯工蜂研发管理解决方案",
+          "url": "https://code.tencent.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_laxmda995",
+          "title": "getman.cn",
+          "url": "https://getman.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "接码相关",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_xxdcsdew0",
+          "title": "获取虚拟手机号码。短期手机号码。手机短信激活服务",
+          "url": "https://sms-activate.org/cn/getNumber",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8gikl8iz6",
+          "title": "临时邮箱- 马建军大学免费教育邮箱",
+          "url": "https://mail.mjj.edu.ge/?btwaf=51723624",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xemdbxpe7",
+          "title": "云际云短信 -- 真正的免费云短信平台 | Receive SMS | Cloud SMS",
+          "url": "https://yunjisms.xyz/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bsgvcy9k5",
+          "title": "在线接收短信验证码，临时手机号，虚拟电话号码",
+          "url": "https://jiemahao.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rccojw9av",
+          "title": "云短信 - 短信接收 - SMS Receive - 第1页 - 在线短信接收",
+          "url": "https://www.storytrain.info/?page=1",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "资源类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_to9prt6i4",
+          "title": "源仓库",
+          "url": "http://www.yckceo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8ods953j3",
+          "title": "微元素,游戏资源下载,游戏原画,手机游戏资源,游戏开发资源 - Element3ds.com!",
+          "url": "https://www.element3ds.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_22y14i3ei",
+          "title": "首页 - 福利吧论坛/万能的福利吧 - Powered by Discuz!",
+          "url": "https://www.wnflb2023.com/forum.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mq0nu2stb",
+          "title": "ArtStation - Explore",
+          "url": "https://www.artstation.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_23c0fz27t",
+          "title": "魔法盒-专业的游戏特效学习、分享、灵感捕获的cg网站",
+          "url": "https://www.magesbox.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9jjcccpja",
+          "title": "爱看剧_追剧不花一分钱！",
+          "url": "https://www.ikanju.vip/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_yxl36uxa7",
+          "title": "Beyond Compare 4.3.7.25118 x64_单文件版 12M - 『精品软件区』 - 吾爱破解 - LCG - LSG |安卓破解|病毒分析|www.52pojie.cn",
+          "url": "https://www.52pojie.cn/thread-1278468-1-1.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_o5c65cp0u",
+          "title": "GitHub - bstt/AutoNodeArranger：Auto Node Arranger UE4 插件文档。",
+          "url": "https://github.com/bstt/AutoNodeArranger",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ne86we2x6",
+          "title": "Introduction | AList文档",
+          "url": "https://alist.nn.ci/zh/guide/#support-storage",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bcqoca9oq",
+          "title": "BD资源整合商务平台 - 找甲方 - 找渠道 - 异业合作 - BD邦",
+          "url": "https://www.bd.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zhvn4brde",
+          "title": "30tool-可能是最好的工具网",
+          "url": "https://www.30aitool.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xqfy8l102",
+          "title": "CocDrive网赚云盘",
+          "url": "https://cocdrive.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gfs7i9wyx",
+          "title": "YuFile-您身边的网赚专家",
+          "url": "https://yufile.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_b8okwhuy1",
+          "title": "BT之家1LOU站永久地址发布页",
+          "url": "https://www.1lou.cc/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rfq46hgh3",
+          "title": "Tap4 AI - Meet Your Best & Latest AI Tools 2024",
+          "url": "https://tap4.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_f65cp98xs",
+          "title": "飞语影视",
+          "url": "http://feiyutv.top/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nkhmo8w1k",
+          "title": "合集网 | 信息资源大全",
+          "url": "https://233heji.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_z4ot2nrqe",
+          "title": "【星川游戏菌】七日世界互动地图_最全七日世界攻略_七日世界查询工具_七日世界攻略站",
+          "url": "https://qrsj-map.lzhailalu.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1ep5dfy7l",
+          "title": "爱给网_音效配乐_3D模型_视频素材_免费下载",
+          "url": "https://www.aigei.com/#:~:text=%E4%B8%AD%E5%9B%BD%E6%9C%80%E5%A4%A7%E7%9A%84%E6%95%B0",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_s35x36ytk",
+          "title": "「阅读」APP 精品书源 — 每日更新",
+          "url": "https://yuedu.xiu2.xyz/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_70s3oz3c9",
+          "title": "大同搜索",
+          "url": "https://datong.info/ui/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "软件",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_2gfbu29mc",
+          "title": "轮回阁 - 思考、修身、生活，编织生活的零散记忆，分享各类优惠活动、学习课程、精品软件、VPS优惠等干货",
+          "url": "https://www.chenbo.info/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_kqoulk7p9",
+          "title": "腾龙工作室 - TenlonStudio.Com",
+          "url": "https://www.tenlonstudio.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qrrsmbq6w",
+          "title": "Freerename批量改名v5.2单文件优化版 - 轮回阁",
+          "url": "https://www.chenbo.info/6441.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ehw5bnmt4",
+          "title": "克隆窝|助互联网玩家寻找每一条道路",
+          "url": "https://www.uy5.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_72c75p4to",
+          "title": "果核剥壳 - 互联网的净土",
+          "url": "https://www.ghxi.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ljcepargg",
+          "title": "克隆窝|助互联网玩家寻找每一条道路",
+          "url": "https://www.kelongwo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vap07oikp",
+          "title": "mefcl'blog - 分享纯净好资源",
+          "url": "https://www.mefcl.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wdsplt7hs",
+          "title": "缙哥哥-分享缙哥哥的中医药心得、武术笔记、趣闻杂谈、软件分享、无损音乐、视频短片、技术教程、摄影图片、旅游攻略、购物优惠。",
+          "url": "https://www.dujin.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "论坛",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_vubysphsj",
+          "title": "精品软件分享论坛-汇聚全网软件爱好者_乐愚社区",
+          "url": "https://bbs.leyuz.net/f/ruanjian",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_45vbaelz8",
+          "title": "欢迎来到 ZMX - 茵蒂克丝官网 - 魔道书图书馆 - IT技术交流论坛 - 完美幸福 - 追求梦想 - itzmx.com",
+          "url": "https://www.itzmx.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_an2lhkvlk",
+          "title": "论坛 - 远景论坛 - 前沿科技与智慧生态的极客社区",
+          "url": "https://bbs.pcbeta.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "模型资源",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_sgfik8fs2",
+          "title": "Quaternius • Free Game Assets",
+          "url": "https://quaternius.com/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mamwgl0hx",
+          "title": "OpenGameArt.org |",
+          "url": "https://opengameart.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5qj6lb45m",
+          "title": "免费3D模型 - Free3D.com",
+          "url": "https://free3d.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q7w5bouer",
+          "title": "模型 • Poly Haven",
+          "url": "https://polyhaven.com/zh/models",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_6s2lhsgcm",
+          "title": "Sketchfab - The best 3D viewer on the web",
+          "url": "https://sketchfab.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_7dzbqoxm7",
+          "title": "付费阅读创作者内测申请",
+          "url": "https://bytedance.larkoffice.com/share/base/form/shrcn8opm4LgA7gL19ueNtgQXgb",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "临时存放",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_srcguxg7t",
+          "title": "Wings - 先进组织都在用的目标管理工具",
+          "url": "http://oa.hzyotoy.com/desk?secondLevel=workbench",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cod9fkenv",
+          "title": "情绪心理学-傅小兰-微信读书",
+          "url": "https://weread.qq.com/web/reader/e04327105cd087e047af284k13f32f302e013fe9d843f64",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mujcd88ew",
+          "title": "我说的是真的，我居然用ZeroTier把村里各家的电脑整成了一个“局域网”！ - 知乎",
+          "url": "https://zhuanlan.zhihu.com/p/504767015",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dxl4ayzcx",
+          "title": "【元炁】限量测试招募问卷",
+          "url": "https://www.wjx.cn/vm/eOeamHO.aspx",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_j3tv2pgbs",
+          "title": "E5 自动订阅程序 – 浅忆博客",
+          "url": "https://blog.curlc.com/archives/687.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_vga04nc71",
+          "title": "- 枫叶小屋存储库",
+          "url": "https://file.fyxw.club/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3rad7fknj",
+          "title": "Microsoft - Office 开发人员中心 - 个人资料",
+          "url": "https://developer.microsoft.com/zh-cn/office/profile",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1nr1wh0xw",
+          "title": "外网 枫叶小屋",
+          "url": "https://ymxw.github.io/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_01u73n7vf",
+          "title": "生成版本 代号:元炁 (1957540)",
+          "url": "https://partner.steamgames.com/apps/builds/1957540",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_638aoioa7",
+          "title": "生成版本 代号:元炁 (1957540)",
+          "url": "https://partner.steamgames.com/apps/builds/1957540?submittedbuild=9619273",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_f98t3omva",
+          "title": "最新开发讨论话题 - Obsidian 中文论坛",
+          "url": "https://forum-zh.obsidian.md/c/9-category/9",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_o1nlqm2eh",
+          "title": "Epic Developer Community",
+          "url": "https://dev.epicgames.com/community/?application=unreal_engine",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_w8tqu9iwn",
+          "title": "Unreal Engine 5热门小游戏开发实战课程|ABOUTCG教程| ABOUTCG视频教程",
+          "url": "https://www.aboutcg.org/courseDetails/1705/introduce",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9lpcxo70f",
+          "title": "Unreal Engine 5蓝图c++小游戏开发案例合集教学| ABOUTCG视频教程",
+          "url": "https://www.aboutcg.org/courseDetails/1620/introduce",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g5wfcgy2v",
+          "title": "G12 spine角色怪物龙骨骨骼动画序列帧 网页手机游戏素材-角色序列-微元素 - Element3ds.com!",
+          "url": "https://www.element3ds.com/forum.php?mod=viewthread&tid=456081",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5uems4tfb",
+          "title": "死神觉醒全套素材人物加怪加特效-特效素材-微元素 - Element3ds.com!",
+          "url": "https://www.element3ds.com/forum.php?mod=viewthread&tid=236427",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_249yd0ioc",
+          "title": "【我是死神】死神手游游戏UI素材资源 246MB-2D成套集合-微元素 - Element3ds.com!",
+          "url": "https://www.element3ds.com/forum.php?mod=viewthread&tid=441119",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_w5gzglnhs",
+          "title": "Cocos Store资源大整理——插件工具篇 - Store - Cocos中文社区",
+          "url": "https://forum.cocos.org/t/topic/131241",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tlyas0gqr",
+          "title": "游戏人生启示录 - 知乎",
+          "url": "https://www.zhihu.com/column/c_47781217",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dgn6i0bnt",
+          "title": "02-宝石蓝图创建_哔哩哔哩_bilibili",
+          "url": "https://www.bilibili.com/video/BV1Qb41177NB?p=3&vd_source=6ab711e99a60accea2fa370addd3c367",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_i4q7bkwoh",
+          "title": "UE5-UMG学习笔记（更新中） - 知乎",
+          "url": "https://zhuanlan.zhihu.com/p/566576897",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g5pon52zi",
+          "title": "宝塔Windows面板",
+          "url": "http://47.117.139.198:8888/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9zz9xmvem",
+          "title": "介绍 | uView 2.0 - 全面兼容nvue的uni-app生态框架 - uni-app UI框架",
+          "url": "https://www.uviewui.com/components/intro.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8q1jgd6u9",
+          "title": "为Unity开发者准备的虚幻引擎指南 | 虚幻引擎5.1文档",
+          "url": "https://docs.unrealengine.com/5.1/zh-CN/unreal-engine-for-unity-developers/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rgl06p7as",
+          "title": "蓝图可视化脚本 | 虚幻引擎5.1文档",
+          "url": "https://docs.unrealengine.com/5.1/zh-CN/blueprints-visual-scripting-in-unreal-engine/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_s6zk2szpf",
+          "title": "Hello 算法",
+          "url": "https://www.hello-algo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_73h5hclzk",
+          "title": "一个游戏是如何被设计和开发出来的 - 知乎",
+          "url": "https://zhuanlan.zhihu.com/p/25292463",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dx2ly8zid",
+          "title": "UE4GamePlayFramework笔记_a1406215966的博客-CSDN博客_ue gameframewor",
+          "url": "https://blog.csdn.net/a1406215966/article/details/121908114?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167690390316800186542235%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=167690390316800186542235&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-6-121908114-null-null.142^v73^pc_search_v2,201^v4^add_ask,239^v2^insert_chatgpt&utm_term=ue4%20%E5%8D%A1%E7%89%8C%E6%B8%B8%E6%88%8F&spm=1018.2226.3001.4187",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_x0e2g77te",
+          "title": "📚 游戏策划",
+          "url": "https://www.yuque.com/mfrt/10/a00",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xr16jicz1",
+          "title": "SmsKoc小店",
+          "url": "https://www.smskoc.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_e8la634mp",
+          "title": "Releases · alist-org/alist · GitHub",
+          "url": "https://github.com/alist-org/alist/releases",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_sl4vznnpq",
+          "title": "【S21判官正火】萌新向开荒指南",
+          "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ffa582cs5",
+          "title": "云售",
+          "url": "https://yunshou.snscz.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ffmxck4ne",
+          "title": "仪表盘 ‹ 枫叶小屋 — WordPress",
+          "url": "https://www.fyxw.club/wp-admin/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2o64l7n2c",
+          "title": "GameRes游资网",
+          "url": "https://www.gameres.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_locx92fxq",
+          "title": "游戏开发论坛 - Powered by Discuz!",
+          "url": "https://bbs.gameres.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xnhmqzwkt",
+          "title": "GitHub - JimmyLv/BibiGPT: BibiGPT · One-click summary for video & audio content: Bilibili | YouTube | Websites丨Podcasts | Meetings | Local files, etc. 音视频内容一键总结：哔哩哔哩丨YouTube丨网页丨播客丨会议丨本地文件等 (原 BiliGPT 省流神器 & 课代表)",
+          "url": "https://github.com/JimmyLv/BibiGPT",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ges4k9ysd",
+          "title": "AskGPT AI智能问答",
+          "url": "https://askgptai.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "查询类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_mp7mzkgam",
+          "title": "中国政府网_中央人民政府门户网站",
+          "url": "http://www.gov.cn/index.htm",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mb7qxw55u",
+          "title": "SteamSpy - All the data and stats about Steam games",
+          "url": "https://steamspy.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_brpxncylw",
+          "title": "装饰器使用 · Cocos Creator",
+          "url": "http://docs.cocos.com/creator/manual/zh/scripting/decorator.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_uh2iu2q9y",
+          "title": "FlowGPT: Amplify your workflow with best prompts",
+          "url": "https://flowgpt.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zuccf87c9",
+          "title": "字节跳动小程序开发者平台 - Creating future with excellent developers",
+          "url": "https://microapp.bytedance.com/homepage",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_7zubyz3th",
+          "title": "Interface In Game | Collection of video games UI | Screenshots and videos",
+          "url": "https://interfaceingame.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_7wihh9ymx",
+          "title": "桌面CPU性能天梯图",
+          "url": "https://www.mydrivers.com/zhuanti/tianti/cpu/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_miudcwylj",
+          "title": "桌面显卡性能天梯图",
+          "url": "https://www.mydrivers.com/zhuanti/tianti/gpu/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_24f8871wd",
+          "title": "WantWords 反向词典",
+          "url": "https://wantwords.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_k1q7lhc3n",
+          "title": "NO404 - 让天下不再有消失的网站！",
+          "url": "https://www.no404.me/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gem7pod39",
+          "title": "挂失公告网-身份证挂失声明 挂失身份证 身份证丢失了怎么办 身份证丢失声明 身份证作废声明 身份证挂失声明 营业执照挂失 企业营业执照丢失 票据丢失声明",
+          "url": "http://www.gsggw.net/index.asp",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_clohhglcp",
+          "title": "Game UI Database | Welcome",
+          "url": "https://www.gameuidatabase.com/index.php",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_m25ndpf70",
+          "title": "新经济倒闭公司数据库 | IT桔子",
+          "url": "https://www.itjuzi.com/deathCompany",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2ay77t3lc",
+          "title": "虚幻引擎项目中推荐的资产命名规范。 | 虚幻引擎5.1文档",
+          "url": "https://docs.unrealengine.com/5.1/zh-CN/recommended-asset-naming-conventions-in-unreal-engine-projects/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_62v71yf9u",
+          "title": "萌娘百科 万物皆可萌的百科全书 - zh.moegirl.org.cn",
+          "url": "https://zh.moegirl.org.cn/Mainpage",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ea6enuqn1",
+          "title": "七麦数据 -专业移动产品商业分析平台-关键词优化-ASA优化-七麦科技",
+          "url": "https://www.qimai.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mq8pu1ko6",
+          "title": "网站排行榜 - 站长之家",
+          "url": "https://top.chinaz.com/index.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ruro6di86",
+          "title": "GAMEUI(GameUI.net)-游戏UI/UX学习、交流、分享平台",
+          "url": "https://www.gameui.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ojppi9e44",
+          "title": "pinterest",
+          "url": "https://www.pinterest.ca/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ioj8g3e44",
+          "title": "美叶- 优质灵感辑录",
+          "url": "https://www.meiye.art/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3h2d1v1oz",
+          "title": "新闻 - 流放之路 - 一款免费的在线动作角色扮演游戏",
+          "url": "https://www.pathofexile.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_m7ap5myxc",
+          "title": "雷神Steam游戏节，必得50元+精品游戏-雷神加速器活动专区",
+          "url": "https://www.leigod.com/activitys/steamGameFestival.html",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "交流类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_homxl1ohj",
+          "title": "独立精神 | indienova 独立游戏",
+          "url": "https://indienova.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_m8jcv7tc2",
+          "title": "POE流放之路",
+          "url": "https://www.caimogu.cc/circle/329.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_y0olyvpgr",
+          "title": "博客园 - 开发者的网上家园",
+          "url": "https://www.cnblogs.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ztg0xk81m",
+          "title": "(有私信)动态 - 奶牛关",
+          "url": "https://cowlevel.net/feed",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ds0ws7iv8",
+          "title": "SegmentFault 思否",
+          "url": "https://segmentfault.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_owqvh1h2b",
+          "title": "Godot Forums",
+          "url": "https://godotforums.org/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_gzuy3qmv1",
+          "title": "Maxroll - News, Guides & Tools for Diablo 4, Lost Ark, PoE & more",
+          "url": "https://maxroll.gg/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "导航类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_qe8c2icp4",
+          "title": "每日福利导航 - 每天都有新福利",
+          "url": "https://mrfldh.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_i6c646mbx",
+          "title": "爱达杂货铺回家地址页",
+          "url": "https://adzhp.vip/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5crhl9cjy",
+          "title": "自媒体家园 | 专业自媒体导航，专注自媒体人效率、资源、技能提升！",
+          "url": "https://www.zmthome.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5zsvjz9v5",
+          "title": "第一福利导航 - fuli.one",
+          "url": "https://xn--fiqy0hdzah33i.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_j28csknuz",
+          "title": "Hack街-黑客街-黑客技术入门-黑客零基础入门导航-网络安全爱好者的安全导航 | 黑客",
+          "url": "https://www.hackjie.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_im97kb997",
+          "title": "终极导航-优质的资源网址导航收藏夹",
+          "url": "https://www.zjnav.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ty30mte4s",
+          "title": "福利吧导航 | 福利世界一触即达",
+          "url": "https://fuliba123.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mnlpku7s9",
+          "title": "考拉新媒体导航——新媒体人的专属门户网站",
+          "url": "https://www.kaolamedia.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_kedqn8hvb",
+          "title": "我的书签",
+          "url": "https://it-cxy.top/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_yotpecaq5",
+          "title": "首页-书签地球-中国首家浏览器书签共享搜索引擎平台",
+          "url": "https://www.bookmarkearth.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "平台类书签",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_ej6k5fp6v",
+          "title": "创作中心 - 知乎",
+          "url": "https://www.zhihu.com/creator",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_czkr8avu9",
+          "title": "枫叶小屋_小屋主人_CSDN博客-unity,软件分享,游戏策划领域博主",
+          "url": "https://blog.csdn.net/hjdh70",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q7dh9aox9",
+          "title": "LOFTER（乐乎） - 让兴趣，更有趣",
+          "url": "https://www.lofter.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3p6vhi07p",
+          "title": "头条号",
+          "url": "https://mp.toutiao.com/profile_v4/xigua/content-manage",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_dyrag525e",
+          "title": "华为游戏中心 - 华为开发者联盟",
+          "url": "https://developer.huawei.com/consumer/cn/gamecenter",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ygut3q9jh",
+          "title": "阿里应用分发开放平台",
+          "url": "https://aligames.open.uc.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_q0lgvwvl8",
+          "title": "Dashboard - 开发者中心 | TapTap 发现好游戏",
+          "url": "https://www.taptap.com/developer/dashboard/19474",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_89wx5v10w",
+          "title": "微信公众平台",
+          "url": "https://mp.weixin.qq.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_nrdn5yh5k",
+          "title": "小米开放平台",
+          "url": "https://dev.mi.com/console/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_b2ufz5ol6",
+          "title": "手机中国论坛-专业、有态度的综合性手机论坛",
+          "url": "http://bbs.cnmo.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_yc7rfbj08",
+          "title": "我的图书馆",
+          "url": "http://www.360doc.com/myfiles.aspx?app=1&cid=6",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ghlafjfm6",
+          "title": "写文章-CSDN创作中心",
+          "url": "https://mp.csdn.net/mp_blog/creation/editor?spm=1001.2014.3001.5352",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "游戏数据库",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_oznooyzm9",
+          "title": "天赋模拟器-魔兽世界11.0地心之战",
+          "url": "https://www.damijing.com/playable/specialization/talent-11.0/12/581",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1md92w7am",
+          "title": "踩蘑菇互动地图站",
+          "url": "https://map.caimogu.cc/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_56lxw9xka",
+          "title": "幻兽帕鲁全配种工具",
+          "url": "https://palworld.caimogu.cc/breed.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ld0k8i83r",
+          "title": "帕鲁群岛 - 幻兽帕鲁互动地图 - 踩蘑菇社区",
+          "url": "https://map.caimogu.cc/palworld/paru_islands.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3g4usa6ht",
+          "title": "暗黑破坏神3官网合作站_暗黑3国服_暗黑3攻略 - 游民星空",
+          "url": "https://ol.gamersky.com/z/diablo3/data/active.shtml",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "收藏夹栏",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_tp2sz1v1p",
+          "title": "Aizex 合租面板",
+          "url": "https://aizex.net/proPool",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ic7bamqr7",
+          "title": "SakuraFrp",
+          "url": "https://www.natfrp.com/user/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_iru192kzk",
+          "title": "GitHub - xx025/carrot: 这儿收集了一些免费好用的ChatGPT镜像站和其他AI站点，当前：76个站点",
+          "url": "https://github.com/xx025/carrot",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wkjawkpi7",
+          "title": "AI音乐",
+          "url": "https://app.suno.ai/create/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wd976vdqu",
+          "title": "流亡编年史, Path of Exile Wiki",
+          "url": "https://poedb.tw/cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zan6xlahj",
+          "title": "对话",
+          "url": "https://open-assistant.io/zh/chat/06443ef5-98b7-77ab-8000-95afabbbc2f3",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_fp57kthda",
+          "title": "稀土掘金",
+          "url": "https://juejin.cn/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ws8c9wyyy",
+          "title": "Upscayl，免费开源的AI图像超分辨率工具，让模糊图片变清晰！-科技匣子",
+          "url": "https://www.acg47.com/10317.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_e06gr3d6z",
+          "title": "任务学习 - SiKi学院|SiKi学堂 - unity|u3d|虚幻|ue4/5|java|python|人工智能|视频教程|在线课程",
+          "url": "https://www.sikiedu.com/course/1379/task/111184/show#",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qjqd2agbp",
+          "title": "GitHub - 非常花式裤子/hs2_blender_export",
+          "url": "https://github.com/veryfancypants/hs2_blender_export",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_al6ganvyh",
+          "title": "金管局",
+          "url": "https://massgrave.dev/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4ku4440pq",
+          "title": "Win11系统(专业版）激活教程 - 知乎",
+          "url": "https://zhuanlan.zhihu.com/p/629124034",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qpcfe567f",
+          "title": "Microsoft Copilot",
+          "url": "https://copilot.microsoft.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g38pvqeg5",
+          "title": "Builds - Affliction - poe.ninja",
+          "url": "https://poe.ninja/builds/affliction",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_3tcgj1db5",
+          "title": "Bots - Coze",
+          "url": "https://www.coze.com/space/7314172048899735570/bot",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_xmtcdympm",
+          "title": "IDM Activation Script",
+          "url": "https://massgrave.dev/idm-activation-script.html#IDM_Activation_Script",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cqmcbch3r",
+          "title": "一元机场",
+          "url": "https://xn--4gq62f52gdss.art/#/plan/7",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_404xf6fgx",
+          "title": "Discord Developer Portal — My Applications",
+          "url": "https://discord.com/developers/applications",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_088i3etvb",
+          "title": "Dashboard - Runway",
+          "url": "https://app.runwayml.com/video-tools/teams/sky70old/dashboard",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_g8dch7846",
+          "title": "独立游戏共建知识百科",
+          "url": "https://docs.qq.com/sheet/DWWtxbVFWZ25OZWJU?tab=0b6xj3",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ibsjfbttk",
+          "title": "【Unity】元气骑士开发教程_哔哩哔哩_bilibili",
+          "url": "https://www.bilibili.com/video/BV1cu4y1K7Pu/?spm_id_from=333.337.search-card.all.click&vd_source=6ab711e99a60accea2fa370addd3c367",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_r1hvtr5v0",
+          "title": "雷蓓蓓的项目管理实战课",
+          "url": "https://time.geekbang.org/column/intro/245?utm_term=zeusY8N1U&utm_source=tower&utm_medium=kuaisurumen&tab=intro",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1nvpzjzss",
+          "title": "我想使用unity开发一款类似土豆兄弟+魔法工艺的游戏",
+          "url": "https://www.perplexity.ai/search/wo-xiang-shi-yong-unitykai-fa-gVLCA1TXQ0KR_XQVh3j8XA",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_7oworfnci",
+          "title": "Perplexity AI",
+          "url": "https://www.perplexity.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_8btbnhiwp",
+          "title": "Ryan Laley - YouTube",
+          "url": "https://www.youtube.com/@RyanLaley",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_d7b71dqy2",
+          "title": "IDM正版永久激活工具 - 发现之门 - 福利吧论坛/万能的福利吧 - Powered by Discuz!",
+          "url": "https://www.wnflb2023.com/thread-242485-1-1.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_v3j574yxj",
+          "title": "ChatGPT",
+          "url": "https://www.chatopens.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_bnqx4degs",
+          "title": "选车",
+          "url": "https://www.chatopens.com/list",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_cg2aprp4q",
+          "title": "【流放之路】S26圣宗怒火自走COC—先解放个双手再说！_网络游戏热门视频",
+          "url": "https://www.bilibili.com/video/BV1LTpjeXE5n/?spm_id_from=333.337.search-card.all.click&vd_source=6ab711e99a60accea2fa370addd3c367",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_jeym6x9w8",
+          "title": "S26  圣宗大法师冰霜新星  暗金人版【搬运自ninja国际服英雄榜】 - 流放之路 - 踩蘑菇社区",
+          "url": "https://www.caimogu.cc/post/1356651.html?reply_id=6767063&to_reply=1",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_mt0psnuu7",
+          "title": "大脸怪制作_哔哩哔哩_bilibili",
+          "url": "https://www.bilibili.com/video/BV19t421M791?p=6&vd_source=6ab711e99a60accea2fa370addd3c367",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ohdxgb7n6",
+          "title": "任务学习 - SiKi学院|SiKi学堂 - unity|u3d|虚幻|ue4/5|java|python|人工智能|视频教程|在线课程",
+          "url": "https://www.sikiedu.com/course/1788/task/129914/show",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_oxrj8i9rc",
+          "title": "Turn-Based Combat in Unity - YouTube",
+          "url": "https://www.youtube.com/watch?v=_1pz_ohupPs",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_68082r362",
+          "title": "Builds - poe2.ninja",
+          "url": "https://poe2.ninja/builds/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_ic086priy",
+          "title": "MCP Servers",
+          "url": "https://mcp.so/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "AI相关",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_9izylrl8p",
+          "title": "Picazor - ZH",
+          "url": "https://picazor.com/zh",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_2x44tdk25",
+          "title": "提示精灵-主页",
+          "url": "http://www.promptgenius.site/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_1p1tpl1ex",
+          "title": "Kimi Chat - 帮你看更大的世界",
+          "url": "https://kimi.moonshot.cn/?source=%2F",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_0vwzodck6",
+          "title": "AI Prompts",
+          "url": "https://aipromptlibrary.org/library.html",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9sn7bzjnf",
+          "title": "PromptPort -提示词",
+          "url": "https://promptport.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4g8rayavs",
+          "title": "司马阅(SmartRead)，基于新一代人工智能技术，可快速提取、总结PDF文档信息。 通过聊天互动形式，精准、灵活地获取关键信息及灵感。高效应用于工作、学习场景，如读行业市场报告、产品手册、法律文档、论文文献、电子书等。AI智能革命已经到来，这只是一个开始！",
+          "url": "https://doc.smartread.cc/#/upload/BX",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_w3pa2kj23",
+          "title": "Prompt library 提示词",
+          "url": "https://docs.anthropic.com/claude/prompt-library",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_lifn390lc",
+          "title": "Suno AI - AI音乐",
+          "url": "https://www.suno.ai/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_5koblrb5v",
+          "title": "Claude",
+          "url": "https://claude.ai/chat/b9a4015a-1118-455b-8756-d231f097245b",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zd2bizvp8",
+          "title": "SMS-Activate是在线接受短信的虚拟号码服务",
+          "url": "https://sms-activate.io/cn",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_hi0cff8ka",
+          "title": "NotebookLM",
+          "url": "https://notebooklm.google.com/?_gl=1*6uxom8*_ga*MTc1NTg2NzQ1MS4xNzE5MjM2OTgx*_ga_W0LDH41ZCB*MTcxOTIzNjk4MC4xLjAuMTcxOTIzNjk4MC42MC4wLjA.&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_r30a93ga1",
+          "title": "Aizex 合租面板",
+          "url": "https://aizex.net/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_9k8f6bty2",
+          "title": "图转提示 - 免费快速将图像转换为提示",
+          "url": "https://imagetoprompt.org/zh",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "特殊",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748216721119_16rz1c165",
+          "title": "🔥 Free leakes ONLYFANS PATREON TWITCH Photos & Videos - OSOSEDKI.COM",
+          "url": "https://ososedki.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_tzxsatydk",
+          "title": "MissAV.com",
+          "url": "https://missav.ws/cn",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_66uyqz7w5",
+          "title": "風流雜誌 – 最新最全模特、網紅、私拍、Coser等美女寫真集",
+          "url": "https://trendszine.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_itwt0pfpz",
+          "title": "日式JK",
+          "url": "https://www.jk.rs/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_wmtm4flge",
+          "title": "HotAsiaGirl - Share erotic Asian girl picture & livestream",
+          "url": "https://hotgirl.asia/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_98t0pfwi6",
+          "title": "下载适用于 Windows/Mac 的 ComfyUI",
+          "url": "https://www.comfy.org/waitlist",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_4ityx9xww",
+          "title": "科斯布莱",
+          "url": "https://cosblay.com/",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_rvu52gud0",
+          "title": "EVERIA.CLUB – EVERIA.CLUB",
+          "url": "https://everia.club/",
+          "icon": "🔗",
+          "isFavorite": false
+        }
+      ]
     }
   ],
   "customCategories": [
     {
       "name": "游戏分类",
+      "icon": "📁"
+    },
+    {
+      "name": "视频娱乐",
+      "icon": "🎬"
+    },
+    {
+      "name": "学习教育",
+      "icon": "📚"
+    },
+    {
+      "name": "游戏",
+      "icon": "🎮"
+    },
+    {
+      "name": "每日必看",
+      "icon": "📁"
+    },
+    {
+      "name": "综合类",
+      "icon": "📁"
+    },
+    {
+      "name": "CG类",
+      "icon": "📁"
+    },
+    {
+      "name": "前端开发",
+      "icon": "📁"
+    },
+    {
+      "name": "图片相关",
+      "icon": "📁"
+    },
+    {
+      "name": "生成相关",
+      "icon": "📁"
+    },
+    {
+      "name": "工具类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "接码相关",
+      "icon": "📁"
+    },
+    {
+      "name": "资源类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "软件",
+      "icon": "📁"
+    },
+    {
+      "name": "论坛",
+      "icon": "📁"
+    },
+    {
+      "name": "模型资源",
+      "icon": "📁"
+    },
+    {
+      "name": "临时存放",
+      "icon": "📁"
+    },
+    {
+      "name": "查询类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "交流类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "导航类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "平台类书签",
+      "icon": "📁"
+    },
+    {
+      "name": "游戏数据库",
+      "icon": "📁"
+    },
+    {
+      "name": "收藏夹栏",
+      "icon": "📁"
+    },
+    {
+      "name": "AI相关",
+      "icon": "📁"
+    },
+    {
+      "name": "特殊",
       "icon": "📁"
     }
   ],
