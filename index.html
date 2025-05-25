@@ -3,8 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的书签导航</title>
+    <title>我的导航 | 发现更大的世界</title>
     <style>
+        :root {
+            --mainColor: #4f46e5;
+            --secondaryColor: #7c3aed;
+            --accentColor: #06b6d4;
+            --backgroundColor: #f8fafc;
+            --cardBackground: #ffffff;
+            --textColor: #1e293b;
+            --textSecondary: #64748b;
+            --borderColor: #e2e8f0;
+            --shadowColor: rgba(15, 23, 42, 0.08);
+            --hoverShadow: rgba(79, 70, 229, 0.15);
+            --gradientPrimary: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #06b6d4 100%);
+            --gradientSecondary: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            --successColor: #10b981;
+            --warningColor: #f59e0b;
+            --errorColor: #ef4444;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,110 +31,390 @@
 
         body {
             font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
+            background: var(--backgroundColor);
+            color: var(--textColor);
+            line-height: 1.6;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1600px;
             margin: 0 auto;
+            padding: 20px;
         }
 
+        /* 头部样式 */
         .header {
-            text-align: center;
-            margin-bottom: 40px;
+            background: var(--gradientPrimary);
             color: white;
+            padding: 40px 0;
+            margin-bottom: 30px;
+            border-radius: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(79, 70, 229, 0.2);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
 
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
         }
 
         .header p {
             font-size: 1.1rem;
             opacity: 0.9;
+            position: relative;
+            z-index: 1;
         }
 
-        .search-box {
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
+        /* 搜索框样式 */
+        .search-section {
+            background: var(--cardBackground);
             border-radius: 15px;
-            padding: 20px;
+            padding: 25px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 20px var(--shadowColor);
             text-align: center;
         }
 
-        .filter-bar {
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            align-items: center;
-            justify-content: flex-start;
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
-        .filter-label {
+        .search-input {
+            width: 100%;
+            padding: 15px 50px 15px 20px;
+            border: 2px solid var(--borderColor);
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--mainColor);
+            box-shadow: 0 0 0 3px var(--hoverShadow);
+        }
+
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--gradientSecondary);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
             color: white;
-            font-weight: 500;
-            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
         }
 
-        .filter-tags-container {
+        .search-btn:hover {
+            background: var(--mainColor);
+            transform: translateY(-50%) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+        }
+
+
+
+        /* 分类样式 */
+        .category {
+            background: var(--cardBackground);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px var(--shadowColor);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px var(--shadowColor);
+        }
+
+        .category-header {
+            background: var(--gradientSecondary);
+            color: white;
+            padding: 20px 25px;
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            align-items: center;
+            gap: 15px;
+            box-shadow: 0 2px 10px rgba(79, 70, 229, 0.1);
+            position: relative;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .category-content {
+            padding: 20px;
+        }
+
+        .bookmarks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+
+        /* 书签卡片样式 */
+        .bookmark {
+            background: var(--cardBackground);
+            border: 1px solid var(--borderColor);
+            border-radius: 12px;
+            padding: 12px 15px;
+            text-decoration: none;
+            color: var(--textColor);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            overflow: hidden;
+            min-height: 60px;
+            box-shadow: 0 1px 3px var(--shadowColor);
+        }
+
+        .bookmark::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--mainColor);
+            transform: scaleY(0);
+            transition: transform 0.3s ease;
+        }
+
+        .bookmark:hover {
+            background: white;
+            border-color: var(--mainColor);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px var(--hoverShadow);
+            text-decoration: none;
+            color: var(--textColor);
+        }
+
+        .bookmark:hover::before {
+            transform: scaleY(1);
+        }
+
+        .bookmark-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            background: var(--gradientSecondary);
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bookmark-icon img {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .bookmark-icon .fallback-icon {
+            font-size: 1.2rem;
+            color: white;
+        }
+
+        .bookmark-main {
+            display: flex;
+            align-items: center;
+            gap: 12px;
             flex: 1;
             min-width: 0;
         }
 
-        .filter-tag {
+        .bookmark-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .bookmark-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+            color: var(--textColor);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .bookmark-url {
+            font-size: 0.8rem;
+            color: var(--textSecondary);
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* 按钮样式 */
+        .btn {
             padding: 8px 16px;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 20px;
-            color: white;
+            border: none;
+            border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
             font-size: 14px;
-            display: flex;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
-            -webkit-user-select: none;
-            user-select: none;
+            gap: 5px;
         }
 
-        .filter-tag:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
+        .btn-primary {
+            background: var(--mainColor);
+            color: white;
         }
 
-        .filter-tag.active {
-            background: rgba(102, 126, 234, 0.8);
-            border-color: rgba(102, 126, 234, 1);
-            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        .btn-primary:hover {
+            background: #a02030;
+            transform: translateY(-1px);
         }
 
-        .filter-tag.hidden {
-            background: rgba(255, 107, 107, 0.6);
-            border-color: rgba(255, 107, 107, 0.8);
-            opacity: 0.7;
+        .btn-secondary {
+            background: #6c757d;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #545b62;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .bookmarks-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 12px;
+            }
+
+
+
+            .sync-status-bar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .bookmark {
+                padding: 10px 12px;
+                gap: 10px;
+                min-height: 55px;
+            }
+
+            .bookmark-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .bookmark {
+                padding: 10px 12px;
+                gap: 10px;
+                min-height: 50px;
+            }
+
+            .bookmark-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+            }
+
+            .category-header {
+                padding: 15px 20px;
+            }
+
+            .category-content {
+                padding: 15px;
+            }
+
+            .bookmarks-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+
+        /* 隐藏类 */
+        .hidden {
+            display: none !important;
+        }
+
+        /* 加载动画 */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--mainColor);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         .category-controls {
-            position: absolute;
-            top: 15px;
-            right: 15px;
             display: flex;
-            gap: 5px;
+            gap: 8px;
+            margin-left: auto;
             opacity: 0;
             transition: all 0.3s ease;
         }
@@ -176,38 +474,40 @@
 
         /* 同步状态栏样式 */
         .sync-status-bar {
-            background: rgba(255, 255, 255, 0.1);
-            -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 15px 20px;
-            margin-bottom: 20px;
+            background: var(--cardBackground);
+            border: 1px solid var(--borderColor);
+            border-radius: 16px;
+            padding: 16px 24px;
+            margin-bottom: 24px;
             display: flex;
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
-            gap: 15px;
+            gap: 16px;
+            box-shadow: 0 4px 20px var(--shadowColor);
         }
 
         .sync-status {
             display: flex;
             align-items: center;
-            gap: 10px;
-            color: white;
+            gap: 12px;
+            color: var(--textColor);
             font-size: 14px;
+            font-weight: 500;
         }
 
         .sync-indicator {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             display: inline-block;
+            box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8);
         }
 
-        .sync-indicator.local { background: #ffd93d; }
-        .sync-indicator.synced { background: #6bcf7f; }
-        .sync-indicator.error { background: #ff6b6b; }
-        .sync-indicator.unconfigured { background: #a0a0a0; }
+        .sync-indicator.local { background: var(--warningColor); }
+        .sync-indicator.synced { background: var(--successColor); }
+        .sync-indicator.error { background: var(--errorColor); }
+        .sync-indicator.unconfigured { background: var(--textSecondary); }
 
         .sync-actions {
             display: flex;
@@ -216,43 +516,61 @@
         }
 
         .sync-btn, .config-btn, .backup-btn, .edit-btn {
-            padding: 8px 16px;
+            padding: 10px 16px;
             border: none;
-            border-radius: 20px;
+            border-radius: 12px;
             color: white;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 13px;
+            font-weight: 500;
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
             gap: 6px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .edit-btn {
-            background: rgba(255, 107, 107, 0.8);
+            background: var(--errorColor);
         }
 
         .edit-btn.active {
-            background: rgba(255, 107, 107, 1);
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+            background: var(--errorColor);
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+            transform: translateY(-1px);
         }
 
         .sync-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: var(--gradientSecondary);
         }
 
         .config-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background: var(--textSecondary);
         }
 
         .backup-btn {
-            background: rgba(255, 193, 7, 0.8);
+            background: var(--warningColor);
         }
 
         .sync-btn:hover, .config-btn:hover, .backup-btn:hover, .edit-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .sync-btn:hover {
+            background: var(--mainColor);
+        }
+
+        .config-btn:hover {
+            background: var(--mainColor);
+        }
+
+        .backup-btn:hover {
+            background: #d97706;
+        }
+
+        .edit-btn:hover {
+            background: #dc2626;
         }
 
         .sync-btn:disabled {
@@ -276,15 +594,16 @@
         }
 
         .modal-content {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--cardBackground);
             margin: 5% auto;
-            padding: 30px;
+            padding: 32px;
             border-radius: 20px;
             width: 90%;
             max-width: 500px;
-            color: white;
+            color: var(--textColor);
             position: relative;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.15);
+            border: 1px solid var(--borderColor);
         }
 
         .modal-header {
@@ -297,17 +616,18 @@
         .modal-title {
             font-size: 1.5rem;
             font-weight: 600;
+            color: var(--textColor);
         }
 
         .close-btn {
             background: none;
             border: none;
-            color: white;
+            color: var(--textSecondary);
             font-size: 24px;
             cursor: pointer;
             padding: 0;
-            width: 30px;
-            height: 30px;
+            width: 32px;
+            height: 32px;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -316,7 +636,8 @@
         }
 
         .close-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            background: var(--borderColor);
+            color: var(--textColor);
         }
 
         .form-group {
@@ -332,17 +653,18 @@
         .form-input {
             width: 100%;
             padding: 12px 16px;
-            border: none;
-            border-radius: 10px;
+            border: 2px solid var(--borderColor);
+            border-radius: 12px;
             font-size: 14px;
-            background: rgba(255, 255, 255, 0.9);
+            background: var(--cardBackground);
+            color: var(--textColor);
             outline: none;
             transition: all 0.3s ease;
         }
 
         .form-input:focus {
-            background: white;
-            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+            border-color: var(--mainColor);
+            box-shadow: 0 0 0 3px var(--hoverShadow);
         }
 
         .form-actions {
@@ -353,27 +675,37 @@
         }
 
         .btn-primary, .btn-secondary {
-            padding: 10px 20px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 10px;
+            border-radius: 12px;
             cursor: pointer;
             font-size: 14px;
+            font-weight: 500;
             transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .btn-primary {
-            background: rgba(255, 255, 255, 0.9);
-            color: #333;
+            background: var(--gradientSecondary);
+            color: white;
         }
 
         .btn-secondary {
-            background: rgba(255, 255, 255, 0.2);
+            background: var(--textSecondary);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .btn-primary:hover, .btn-secondary:hover {
             transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary:hover {
+            background: var(--mainColor);
+        }
+
+        .btn-secondary:hover {
+            background: var(--mainColor);
         }
 
         /* 进度模态框样式 */
@@ -397,7 +729,7 @@
 
         .progress-fill {
             height: 100%;
-            background: linear-gradient(90deg, #6bcf7f, #4facfe);
+            background: var(--gradientPrimary);
             border-radius: 4px;
             transition: width 0.3s ease;
             width: 0%;
@@ -435,8 +767,8 @@
             margin-bottom: 20px;
         }
 
-        .result-icon.success { color: #6bcf7f; }
-        .result-icon.error { color: #ff6b6b; }
+        .result-icon.success { color: var(--successColor); }
+        .result-icon.error { color: var(--errorColor); }
 
         .result-title {
             font-size: 1.3rem;
@@ -583,6 +915,20 @@
             border-radius: 8px;
             font-size: 18px;
             margin-bottom: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .favorite-bookmark-icon img {
+            width: 18px;
+            height: 18px;
+            border-radius: 3px;
+            object-fit: cover;
+        }
+
+        .favorite-bookmark-icon .fallback-icon {
+            font-size: 18px;
+            color: white;
         }
 
         .favorite-bookmark-title {
@@ -911,15 +1257,448 @@
             display: none;
         }
 
-        .bookmark:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: translateX(5px);
+        /* ==================== 侧边栏样式 ==================== */
+        .sidebar-menu {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 320px;
+            height: 100vh;
+            background: var(--cardBackground);
+            border-right: 1px solid var(--borderColor);
+            box-shadow: 4px 0 20px rgba(15, 23, 42, 0.1);
+            z-index: 1000;
+            transition: left 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
+
+        .sidebar-menu.open {
+            left: 0;
+        }
+
+        .sidebar-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--borderColor);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--gradientSecondary);
+            color: white;
+        }
+
+        .sidebar-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            font-size: 1.5rem;
+        }
+
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .sidebar-close {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sidebar-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .sidebar-content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px 0;
+        }
+
+        .sidebar-section {
+            margin-bottom: 24px;
+        }
+
+        .sidebar-section-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--textSecondary);
+            margin: 0 24px 12px 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .sidebar-menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sidebar-menu-list li {
+            margin: 0;
+        }
+
+        .sidebar-menu-list a {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 24px;
+            color: var(--textColor);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar-menu-list a:hover {
+            background: var(--backgroundColor);
+            border-left-color: var(--mainColor);
+            color: var(--mainColor);
+        }
+
+        .menu-icon {
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+
+        .menu-text {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .sidebar-footer {
+            padding: 20px 24px;
+            border-top: 1px solid var(--borderColor);
+            background: var(--backgroundColor);
+        }
+
+        .sidebar-stats {
+            display: flex;
+            gap: 20px;
+        }
+
+        .stat-item {
+            text-align: center;
+            flex: 1;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--mainColor);
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--textSecondary);
+            margin-top: 4px;
+        }
+
+        /* 侧边栏遮罩 */
+        .sidebar-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(15, 23, 42, 0.5);
+            -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .sidebar-overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* ==================== 浮动操作按钮样式 ==================== */
+        .floating-actions {
+            position: fixed;
+            bottom: 24px;
+            left: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            z-index: 998;
+        }
+
+        .fab-menu-btn, .fab-add-btn {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(15, 23, 42, 0.15);
+            color: white;
+        }
+
+        .fab-menu-btn {
+            background: var(--gradientSecondary);
+        }
+
+        .fab-add-btn {
+            background: var(--gradientPrimary);
+        }
+
+        .fab-menu-btn:hover, .fab-add-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 30px rgba(15, 23, 42, 0.25);
+        }
+
+        .fab-menu-btn:active, .fab-add-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .sidebar-menu {
+                width: 280px;
+                left: -280px;
+            }
+
+            .floating-actions {
+                bottom: 20px;
+                left: 20px;
+            }
+
+            .fab-menu-btn, .fab-add-btn {
+                width: 48px;
+                height: 48px;
+            }
+
+            .sidebar-header {
+                padding: 16px 20px;
+            }
+
+            .sidebar-section-title {
+                margin: 0 20px 10px 20px;
+            }
+
+            .sidebar-menu-list a {
+                padding: 10px 20px;
+            }
+
+                         .sidebar-footer {
+                 padding: 16px 20px;
+             }
+         }
+
+         /* ==================== 悬浮分类导航样式 ==================== */
+         .floating-nav {
+             position: fixed;
+             top: 50%;
+             right: 20px;
+             transform: translateY(-50%);
+             width: 160px;
+             background: var(--cardBackground);
+             border: 1px solid var(--borderColor);
+             border-radius: 12px;
+             box-shadow: 0 8px 32px rgba(15, 23, 42, 0.15);
+             z-index: 997;
+             transition: all 0.3s ease;
+             backdrop-filter: blur(10px);
+             -webkit-backdrop-filter: blur(10px);
+         }
+
+         .floating-nav.collapsed .floating-nav-content {
+             display: none;
+         }
+
+         .floating-nav.collapsed .nav-toggle svg {
+             transform: rotate(180deg);
+         }
+
+         .floating-nav-header {
+             padding: 12px 16px;
+             border-bottom: 1px solid var(--borderColor);
+             display: flex;
+             align-items: center;
+             justify-content: space-between;
+             background: var(--gradientSecondary);
+             color: white;
+             border-radius: 12px 12px 0 0;
+         }
+
+         .nav-title {
+             font-size: 0.85rem;
+             font-weight: 600;
+         }
+
+         .nav-toggle {
+             background: none;
+             border: none;
+             color: white;
+             cursor: pointer;
+             padding: 4px;
+             border-radius: 4px;
+             transition: all 0.3s ease;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+
+         .nav-toggle:hover {
+             background: rgba(255, 255, 255, 0.2);
+         }
+
+         .nav-toggle svg {
+             transition: transform 0.3s ease;
+         }
+
+         .floating-nav-content {
+             padding: 8px 0;
+             max-height: 400px;
+             overflow-y: auto;
+         }
+
+         .floating-nav-item {
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             padding: 10px 16px;
+             color: var(--textColor);
+             text-decoration: none;
+             transition: all 0.3s ease;
+             border-left: 3px solid transparent;
+             cursor: pointer;
+         }
+
+         .floating-nav-item:hover {
+             background: var(--backgroundColor);
+             border-left-color: var(--mainColor);
+             color: var(--mainColor);
+         }
+
+         .floating-nav-item.active {
+             background: var(--backgroundColor);
+             border-left-color: var(--mainColor);
+             color: var(--mainColor);
+         }
+
+         .nav-item-icon {
+             font-size: 1rem;
+             width: 18px;
+             text-align: center;
+             flex-shrink: 0;
+         }
+
+         .nav-item-text {
+             font-size: 0.85rem;
+             font-weight: 500;
+             flex: 1;
+             overflow: hidden;
+             text-overflow: ellipsis;
+             white-space: nowrap;
+         }
+
+         .nav-item-count {
+             font-size: 0.75rem;
+             color: var(--textSecondary);
+             background: var(--borderColor);
+             padding: 2px 6px;
+             border-radius: 10px;
+             min-width: 20px;
+             text-align: center;
+         }
+
+         /* 滚动条样式 */
+         .floating-nav-content::-webkit-scrollbar {
+             width: 4px;
+         }
+
+         .floating-nav-content::-webkit-scrollbar-track {
+             background: transparent;
+         }
+
+         .floating-nav-content::-webkit-scrollbar-thumb {
+             background: var(--borderColor);
+             border-radius: 2px;
+         }
+
+         .floating-nav-content::-webkit-scrollbar-thumb:hover {
+             background: var(--textSecondary);
+         }
+
+         /* 响应式设计 */
+         @media (max-width: 1200px) {
+             .floating-nav {
+                 right: 15px;
+                 width: 140px;
+             }
+
+             .nav-item-text {
+                 font-size: 0.8rem;
+             }
+         }
+
+         @media (max-width: 768px) {
+             .floating-nav {
+                 right: 10px;
+                 width: 120px;
+                 top: 40%;
+             }
+
+             .nav-item-text {
+                 font-size: 0.75rem;
+             }
+
+             .nav-item-count {
+                 font-size: 0.7rem;
+                 padding: 1px 4px;
+             }
+
+             .floating-nav-header {
+                 padding: 8px 12px;
+             }
+
+             .nav-title {
+                 font-size: 0.8rem;
+             }
+         }
+
+         @media (max-width: 480px) {
+             .floating-nav {
+                 width: 100px;
+                 right: 8px;
+             }
+
+             .nav-item-text {
+                 font-size: 0.7rem;
+             }
+
+             .floating-nav-item {
+                 padding: 8px 12px;
+                 gap: 8px;
+             }
+         }
+
+        /* 编辑模式下的悬停效果 */
 
         /* 编辑模式样式 */
         .edit-mode .bookmark {
             cursor: grab;
             padding-right: 80px;
+            position: relative;
         }
 
         .edit-mode .bookmark:active {
@@ -1014,28 +1793,7 @@
             display: block;
         }
 
-        .bookmark-icon {
-            width: 20px;
-            height: 20px;
-            margin-right: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-        }
-
-        .bookmark-title {
-            font-weight: 500;
-            flex-grow: 1;
-        }
-
-        .bookmark-url {
-            font-size: 0.9rem;
-            opacity: 0.7;
-            margin-left: 10px;
-        }
+        /* 编辑模式下的图标标题样式 */
 
         .floating-menu {
             position: fixed;
@@ -1210,26 +1968,7 @@
                 bottom: 70px;
             }
             
-            .filter-bar {
-                flex-direction: column;
-                align-items: stretch;
-                text-align: center;
-            }
-            
-            .filter-label {
-                margin-right: 0;
-                margin-bottom: 10px;
-            }
-            
-            .filter-tags-container {
-                justify-content: center !important;
-            }
-            
-            .filter-actions {
-                margin-left: 0;
-                margin-top: 10px;
-                justify-content: center;
-            }
+
             
             /* 常用书签手机端样式 */
             .favorite-bookmark {
@@ -1256,97 +1995,238 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>🔖 我的书签导航</h1>
-            <p>快速访问您最喜爱的网站</p>
+        <!-- 头部 -->
+        <header class="header">
+            <h1>我的导航</h1>
+            <p>发现更大的世界，探索无限可能</p>
+        </header>
+
+        <!-- 搜索区域 -->
+        <section class="search-section">
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="搜索网站、工具、资源..." id="searchInput">
+                <button class="search-btn" onclick="performSearch()" title="搜索">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
         </div>
+        </section>
 
         <!-- 同步状态栏 -->
         <div class="sync-status-bar">
             <div class="sync-status">
-                <span class="sync-indicator unconfigured" id="syncIndicator"></span>
-                <span id="syncStatusText">未配置 GitHub 同步</span>
+                <div class="sync-indicator" id="syncIndicator"></div>
+                <span>同步状态: <span id="syncStatus">已同步</span></span>
+                <span>最后更新: <span id="lastUpdated">-</span></span>
+                <span>总计: <span id="totalBookmarks">0</span> 个网站</span>
             </div>
             <div class="sync-actions">
-                <button class="config-btn" onclick="openConfigModal()">
-                    ⚙️ 配置
+                <button class="sync-btn" id="syncBtn" onclick="syncToGitHub()" title="同步到GitHub">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.3"/>
+                    </svg>
+                    同步
                 </button>
-                <button class="sync-btn" id="syncBtn" onclick="syncToGitHub()" disabled>
-                    🔄 同步到 GitHub
+                <button class="config-btn" onclick="openConfigModal()" title="GitHub配置">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M12 1v6M12 17v6M4.22 4.22l4.24 4.24M15.54 15.54l4.24 4.24M1 12h6M17 12h6M4.22 19.78l4.24-4.24M15.54 8.46l4.24-4.24"/>
+                    </svg>
+                    配置
                 </button>
-                <button class="backup-btn" onclick="openBackupModal()">
-                    💾 备份/恢复
+                <button class="backup-btn" onclick="openBackupModal()" title="备份与恢复">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14,2 14,8 20,8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10,9 9,9 8,9"></polyline>
+                    </svg>
+                    备份
                 </button>
-                <button class="backup-btn" onclick="openImportModal()" style="background: rgba(76, 175, 80, 0.8);">
-                    📥 导入书签
+                <button class="edit-btn" id="editBtn" onclick="toggleEditMode()" title="编辑模式">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                    编辑
                 </button>
-                <button class="backup-btn" onclick="startLinkValidation()" style="background: rgba(156, 39, 176, 0.8);">
-                    🔍 检测失效链接
+                <button class="config-btn" onclick="openImportModal()" title="导入书签">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                        <polyline points="7,10 12,15 17,10"></polyline>
+                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    导入
                 </button>
-                <button class="edit-btn" id="editBtn" onclick="toggleEditMode()">
-                    ✏️ 编辑模式
+                <button class="config-btn" onclick="startLinkValidation()" title="检测失效链接">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9 12l2 2 4-4"></path>
+                    </svg>
+                    检测
+                </button>
+                <button class="config-btn" onclick="updateAllFavicons()" title="更新所有书签图标">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                    </svg>
+                    图标
                 </button>
             </div>
         </div>
 
-        <!-- 编辑模式指示器 -->
-        <div class="edit-mode-indicator">
-            📝 编辑模式已开启 - 可以删除和拖拽移动书签
+
+
+        <!-- 书签内容 -->
+        <main id="bookmarksContainer">
+            <div class="loading">
+                <div class="spinner"></div>
+        </div>
+        </main>
+    </div>
+
+    <!-- 侧边栏菜单 -->
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="logo-icon">🌟</span>
+                <span class="logo-text">导航菜单</span>
+            </div>
+            <button class="sidebar-close" onclick="toggleSidebar()" title="关闭菜单">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="sidebar-section">
+                <h3 class="sidebar-section-title">📚 书签管理</h3>
+                <ul class="sidebar-menu-list">
+                    <li><a href="#" onclick="openBookmarkModal()">
+                        <span class="menu-icon">➕</span>
+                        <span class="menu-text">添加书签</span>
+                    </a></li>
+                    <li><a href="#" onclick="openCategoryModal()">
+                        <span class="menu-icon">📁</span>
+                        <span class="menu-text">新建分类</span>
+                    </a></li>
+                    <li><a href="#" onclick="toggleEditMode()">
+                        <span class="menu-icon">✏️</span>
+                        <span class="menu-text">编辑模式</span>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-section-title">🔄 数据同步</h3>
+                <ul class="sidebar-menu-list">
+                    <li><a href="#" onclick="syncToGitHub()">
+                        <span class="menu-icon">☁️</span>
+                        <span class="menu-text">同步到云端</span>
+                    </a></li>
+                    <li><a href="#" onclick="openConfigModal()">
+                        <span class="menu-icon">⚙️</span>
+                        <span class="menu-text">同步配置</span>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-section-title">🛠️ 工具箱</h3>
+                <ul class="sidebar-menu-list">
+                    <li><a href="#" onclick="openImportModal()">
+                        <span class="menu-icon">📥</span>
+                        <span class="menu-text">导入书签</span>
+                    </a></li>
+                    <li><a href="#" onclick="openBackupModal()">
+                        <span class="menu-icon">💾</span>
+                        <span class="menu-text">备份恢复</span>
+                    </a></li>
+                    <li><a href="#" onclick="startLinkValidation()">
+                        <span class="menu-icon">🔍</span>
+                        <span class="menu-text">检测链接</span>
+                    </a></li>
+                    <li><a href="#" onclick="updateAllFavicons()">
+                        <span class="menu-icon">🎨</span>
+                        <span class="menu-text">更新图标</span>
+                    </a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-section-title">🎨 个性化</h3>
+                <ul class="sidebar-menu-list">
+                    <li><a href="#" onclick="setViewMode('card')">
+                        <span class="menu-icon">🃏</span>
+                        <span class="menu-text">卡片视图</span>
+                    </a></li>
+                    <li><a href="#" onclick="setViewMode('list')">
+                        <span class="menu-icon">📋</span>
+                        <span class="menu-text">列表视图</span>
+                    </a></li>
+                    <li><a href="#" onclick="setViewMode('compact')">
+                        <span class="menu-icon">📱</span>
+                        <span class="menu-text">紧凑视图</span>
+                    </a></li>
+                </ul>
+            </div>
         </div>
 
-        <div class="search-box">
-            <input type="text" class="search-input" placeholder="搜索书签..." id="searchInput">
-        </div>
-
-        <!-- 常用书签区域 -->
-        <div class="favorite-bookmarks-section" id="favoriteSection">
-            <div class="favorite-header">
-                <div class="favorite-title">
-                    <span class="favorite-icon">⭐</span>
-                    <span>常用书签</span>
+        <div class="sidebar-footer">
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <span class="stat-number" id="sidebarTotalBookmarks">0</span>
+                    <span class="stat-label">书签总数</span>
                 </div>
-            </div>
-            <div class="favorite-bookmarks" id="favoriteBookmarks">
-                <div class="favorite-drop-zone" id="favoriteDropZone">
-                    拖拽书签到此处添加到常用
+                <div class="stat-item">
+                    <span class="stat-number" id="sidebarTotalCategories">0</span>
+                    <span class="stat-label">分类数量</span>
                 </div>
-                <div class="favorite-empty" id="favoriteEmpty">
-                    <span>暂无常用书签，在编辑模式下可添加</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="filter-bar">
-            <div class="filter-label">📂 分类筛选：</div>
-            <div id="filterTags" class="filter-tags-container" style="display: flex; flex-wrap: wrap; gap: 10px; flex: 1;"></div>
-            <div class="filter-actions">
-                <button class="filter-btn" onclick="showAllCategories()">显示全部</button>
-                <button class="filter-btn" onclick="hideAllCategories()">隐藏全部</button>
-                <button class="filter-btn" onclick="resetFilters()">重置筛选</button>
-            </div>
-            <div class="view-mode-controls">
-                <span style="color: white; font-size: 12px;">视图：</span>
-                <button class="view-mode-btn active" onclick="setViewMode('card')" data-view="card">卡片</button>
-                <button class="view-mode-btn" onclick="setViewMode('list')" data-view="list">列表</button>
-                <button class="view-mode-btn" onclick="setViewMode('compact')" data-view="compact">紧凑</button>
-            </div>
-        </div>
-
-        <div class="categories" id="categories">
-            <div style="text-align: center; padding: 50px; color: white; font-size: 18px;">
-                <div class="progress-spinner" style="display: inline-block; margin-right: 10px;"></div>
-                正在加载书签数据...
             </div>
         </div>
     </div>
 
-    <div class="floating-menu">
-        <div class="quick-actions" id="quickActions">
-            <button class="quick-action quick-bookmark" onclick="openBookmarkModal()" title="添加书签">🔖</button>
-            <button class="quick-action quick-category" onclick="openCategoryModal()" title="新增分类">📁</button>
-            <button class="quick-action quick-import" onclick="quickAddFromClipboard()" title="从剪贴板添加">📋</button>
+    <!-- 浮动操作按钮 -->
+    <div class="floating-actions">
+        <!-- 侧边栏切换按钮 -->
+        <button class="fab-menu-btn" onclick="toggleSidebar()" title="打开菜单">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+        
+        <!-- 添加书签按钮 -->
+        <button class="fab-add-btn" onclick="openBookmarkModal()" title="添加书签">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+        </button>
+    </div>
+
+    <!-- 侧边栏遮罩 -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+    <!-- 悬浮分类导航 -->
+    <div class="floating-nav" id="floatingNav">
+        <div class="floating-nav-header">
+            <span class="nav-title">快速导航</span>
+            <button class="nav-toggle" onclick="toggleFloatingNav()" title="收起/展开">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6,9 12,15 18,9"></polyline>
+                </svg>
+            </button>
         </div>
-        <button class="add-bookmark" onclick="toggleQuickActions()" id="mainButton">+</button>
+        <div class="floating-nav-content" id="floatingNavContent">
+            <!-- 动态生成的分类导航项 -->
+        </div>
     </div>
 
     <div class="modal" id="bookmarkModal">
@@ -1602,7 +2482,6 @@
         let isQuickActionsOpen = false;
         let customCategories = [];
         let hiddenCategories = new Set();
-        let activeFilters = new Set();
         let syncInProgress = false;
         let currentFileSHA = null;
         let editMode = false;
@@ -2119,6 +2998,9 @@
             }
 
             updateSyncStatus();
+            
+            // 初始化悬浮导航
+            initFloatingNav();
         }
 
         function renderBookmarks() {
@@ -2127,7 +3009,7 @@
             // 确保所有书签都有ID
             ensureBookmarkIds();
 
-            const categoriesContainer = document.getElementById('categories');
+            const categoriesContainer = document.getElementById('bookmarksContainer');
             categoriesContainer.innerHTML = '';
 
             bookmarksData.categories.forEach(category => {
@@ -2141,8 +3023,20 @@
             // 渲染常用书签
             renderFavoriteBookmarks();
             
-            // 重新初始化筛选
-            initializeFilterTags();
+            // 更新侧边栏统计
+            updateSidebarStats();
+            
+            // 渲染悬浮导航
+            renderFloatingNav();
+            
+            // 如果当前处于编辑模式，重新设置编辑模式
+            if (editMode) {
+                setTimeout(() => {
+                    document.body.classList.add('edit-mode');
+                    setupBookmarkDragAndDrop();
+                    showEditModeIndicator();
+                }, 50);
+            }
         }
 
         function ensureBookmarkIds() {
@@ -2181,16 +3075,18 @@
             categoryDiv.setAttribute('data-category', category.name);
             
             categoryDiv.innerHTML = `
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                    <button class="control-btn" onclick="deleteCategory(this)" title="删除分类">🗑️</button>
-                </div>
-                <div class="category-title">
+                <div class="category-header">
                     <div class="category-icon">${category.icon}</div>
-                    ${category.name}
+                    <div class="category-title">${category.name}</div>
+                    <div class="category-controls">
+                        <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
+                        <button class="control-btn" onclick="deleteCategory(this)" title="删除分类">🗑️</button>
+                    </div>
                 </div>
-                <div class="bookmarks">
-                    ${category.bookmarks.map(bookmark => createBookmarkHTML(bookmark)).join('')}
+                <div class="category-content">
+                    <div class="bookmarks-grid">
+                        ${category.bookmarks.map(bookmark => createBookmarkHTML(bookmark)).join('')}
+                    </div>
                 </div>
             `;
             
@@ -2210,6 +3106,7 @@
             
             const isFavorite = bookmark.isFavorite || false;
             const favoriteIcon = isFavorite ? '⭐' : '☆';
+            const iconHTML = createIconHTML(bookmark);
             
             return `
                 <a href="${bookmark.url}" class="bookmark" target="_blank" rel="noopener" 
@@ -2217,14 +3114,11 @@
                    draggable="false"
                    onclick="handleBookmarkClick(event, this)">
                     <div class="bookmark-main">
-                        <div class="bookmark-icon">${bookmark.icon}</div>
+                        <div class="bookmark-icon">${iconHTML}</div>
                         <div class="bookmark-info">
                             <div class="bookmark-title">${bookmark.title}</div>
                             <div class="bookmark-url">${hostname}</div>
                         </div>
-                    </div>
-                    <div class="bookmark-meta">
-                        <span class="bookmark-domain">${hostname}</span>
                     </div>
                     <button class="bookmark-favorite" onclick="toggleBookmarkFavorite(event, '${bookmark.id}')" title="${isFavorite ? '取消收藏' : '添加到常用'}">${favoriteIcon}</button>
                     <button class="bookmark-delete" onclick="deleteBookmark(event, '${bookmark.id}')" title="删除书签">×</button>
@@ -2232,92 +3126,7 @@
             `;
         }
 
-        // 初始化筛选标签
-        function initializeFilterTags() {
-            // 默认全部选中
-            const categories = document.querySelectorAll('.category');
-            categories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                if (categoryName) {
-                    activeFilters.add(categoryName);
-                }
-            });
-            updateFilterTags();
-        }
 
-        // 更新筛选标签
-        function updateFilterTags() {
-            const filterContainer = document.getElementById('filterTags');
-            const categories = document.querySelectorAll('.category');
-            
-            filterContainer.innerHTML = '';
-            
-            categories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                const iconElement = category.querySelector('.category-icon');
-                const categoryIcon = iconElement ? iconElement.textContent.trim() : '📁';
-                
-                const filterTag = document.createElement('div');
-                filterTag.className = 'filter-tag';
-                filterTag.setAttribute('data-category', categoryName);
-                
-                const isHidden = hiddenCategories.has(categoryName);
-                const isActive = activeFilters.has(categoryName);
-                
-                if (isHidden) {
-                    filterTag.classList.add('hidden');
-                }
-                if (isActive) {
-                    filterTag.classList.add('active');
-                }
-                
-                filterTag.innerHTML = `<span>${categoryName}</span>`;
-                
-                filterTag.onclick = () => toggleCategoryFilter(categoryName);
-                filterContainer.appendChild(filterTag);
-            });
-        }
-
-        // 切换分类筛选
-        function toggleCategoryFilter(categoryName) {
-            if (activeFilters.has(categoryName)) {
-                activeFilters.delete(categoryName);
-            } else {
-                activeFilters.add(categoryName);
-            }
-            
-            applyFilters();
-            updateFilterTags();
-        }
-
-        // 应用筛选
-        function applyFilters() {
-            const categories = document.querySelectorAll('.category');
-            
-            if (activeFilters.size === 0) {
-                // 如果没有激活的筛选，显示所有非隐藏的分类
-                categories.forEach(category => {
-                    const categoryName = category.getAttribute('data-category');
-                    
-                    if (hiddenCategories.has(categoryName)) {
-                        category.style.display = 'none';
-                    } else {
-                        category.style.display = 'block';
-                    }
-                });
-            } else {
-                // 只显示被筛选的分类
-                categories.forEach(category => {
-                    const categoryName = category.getAttribute('data-category');
-                    
-                    if (activeFilters.has(categoryName) && !hiddenCategories.has(categoryName)) {
-                        category.style.display = 'block';
-                    } else {
-                        category.style.display = 'none';
-                    }
-                });
-            }
-        }
 
         // 切换分类可见性
         function toggleCategoryVisibility(button) {
@@ -2328,79 +3137,16 @@
                 hiddenCategories.delete(categoryName);
                 button.textContent = '👁️';
                 button.title = '隐藏分类';
+                category.style.display = 'block';
             } else {
                 hiddenCategories.add(categoryName);
                 button.textContent = '🙈';
                 button.title = '显示分类';
-                // 如果分类被隐藏，从激活筛选中移除
-                activeFilters.delete(categoryName);
+                category.style.display = 'none';
             }
-            
-            applyFilters();
-            updateFilterTags();
         }
 
-        // 显示所有分类
-        function showAllCategories() {
-            hiddenCategories.clear();
-            
-            // 默认全部选中
-            const categories = document.querySelectorAll('.category');
-            activeFilters.clear();
-            categories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                if (categoryName) {
-                    activeFilters.add(categoryName);
-                }
-            });
-            
-            // 更新所有控制按钮
-            document.querySelectorAll('.control-btn').forEach(btn => {
-                btn.textContent = '👁️';
-                btn.title = '隐藏分类';
-            });
-            
-            applyFilters();
-            updateFilterTags();
-        }
 
-        // 隐藏所有分类
-        function hideAllCategories() {
-            const categories = document.querySelectorAll('.category');
-            hiddenCategories.clear();
-            activeFilters.clear();
-            
-            categories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                if (categoryName) {
-                    hiddenCategories.add(categoryName);
-                }
-            });
-            
-            // 更新所有控制按钮
-            document.querySelectorAll('.control-btn').forEach(btn => {
-                btn.textContent = '🙈';
-                btn.title = '显示分类';
-            });
-            
-            applyFilters();
-            updateFilterTags();
-        }
-
-        // 重置筛选
-        function resetFilters() {
-            // 默认全部选中
-            const categories = document.querySelectorAll('.category');
-            activeFilters.clear();
-            categories.forEach(category => {
-                const categoryName = category.getAttribute('data-category');
-                if (categoryName) {
-                    activeFilters.add(categoryName);
-                }
-            });
-            applyFilters();
-            updateFilterTags();
-        }
 
         // 搜索功能
         document.getElementById('searchInput').addEventListener('input', function(e) {
@@ -2476,6 +3222,18 @@
             document.getElementById('bookmarkUrl').value = '';
             document.getElementById('bookmarkIcon').value = '';
             document.getElementById('bookmarkCategory').value = '搜索引擎';
+            
+            // 清除favicon预览
+            const previewContainer = document.getElementById('faviconPreview');
+            if (previewContainer) {
+                previewContainer.remove();
+            }
+            
+            // 清除分类建议
+            const suggestionsDiv = document.getElementById('categorySuggestions');
+            if (suggestionsDiv) {
+                suggestionsDiv.textContent = '';
+            }
         }
 
         // 分类模态框控制
@@ -2715,19 +3473,30 @@
         // ==================== 常用书签功能 ====================
         
         function renderFavoriteBookmarks() {
+            // 检查常用书签相关的DOM元素是否存在
             const favoriteContainer = document.getElementById('favoriteBookmarks');
             const favoriteEmpty = document.getElementById('favoriteEmpty');
             const favoriteDropZone = document.getElementById('favoriteDropZone');
             
+            // 如果常用书签相关的DOM元素不存在，直接返回
+            if (!favoriteContainer) {
+                console.log('Favorite bookmarks container not found, skipping favorite bookmarks rendering');
+                return;
+            }
+            
             if (!bookmarksData || !bookmarksData.favoriteBookmarks || bookmarksData.favoriteBookmarks.length === 0) {
-                favoriteEmpty.style.display = 'flex';
+                if (favoriteEmpty) {
+                    favoriteEmpty.style.display = 'flex';
+                }
                 // 清除现有的常用书签
                 const existingFavorites = favoriteContainer.querySelectorAll('.favorite-bookmark');
                 existingFavorites.forEach(fav => fav.remove());
                 return;
             }
             
-            favoriteEmpty.style.display = 'none';
+            if (favoriteEmpty) {
+                favoriteEmpty.style.display = 'none';
+            }
             
             // 清除现有的常用书签
             const existingFavorites = favoriteContainer.querySelectorAll('.favorite-bookmark');
@@ -2738,8 +3507,12 @@
                 const bookmark = findBookmarkById(bookmarkId);
                 if (bookmark) {
                     const favoriteElement = createFavoriteBookmarkElement(bookmark.bookmark);
-                    // 插入到拖拽区域之后
-                    favoriteContainer.insertBefore(favoriteElement, favoriteEmpty);
+                    // 插入到容器中
+                    if (favoriteEmpty) {
+                        favoriteContainer.insertBefore(favoriteElement, favoriteEmpty);
+                    } else {
+                        favoriteContainer.appendChild(favoriteElement);
+                    }
                 }
             });
             
@@ -2764,8 +3537,10 @@
                 }
             };
             
+            const iconHTML = createIconHTML(bookmark);
+            
             favoriteDiv.innerHTML = `
-                <div class="favorite-bookmark-icon">${bookmark.icon}</div>
+                <div class="favorite-bookmark-icon">${iconHTML}</div>
                 <div class="favorite-bookmark-title">${bookmark.title}</div>
                 <button class="favorite-bookmark-delete" onclick="removeFavoriteBookmark(event, '${bookmark.id}')" title="从常用中移除">×</button>
             `;
@@ -2880,6 +3655,12 @@
         function setupFavoriteBookmarkDragAndDrop() {
             const favoriteBookmarks = document.querySelectorAll('.favorite-bookmark');
             const favoriteDropZone = document.getElementById('favoriteDropZone');
+            const favoriteContainer = document.getElementById('favoriteBookmarks');
+            
+            // 如果相关元素不存在，直接返回
+            if (!favoriteContainer) {
+                return;
+            }
             
             favoriteBookmarks.forEach(bookmark => {
                 bookmark.draggable = true;
@@ -2888,15 +3669,16 @@
             });
             
             // 设置常用书签容器的拖拽事件
-            const favoriteContainer = document.getElementById('favoriteBookmarks');
             favoriteContainer.addEventListener('dragover', handleFavoriteDragOver);
             favoriteContainer.addEventListener('drop', handleFavoriteDrop);
             
-            // 设置拖拽区域
-            favoriteDropZone.addEventListener('dragover', handleFavoriteDropZoneDragOver);
-            favoriteDropZone.addEventListener('drop', handleFavoriteDropZoneDrop);
-            favoriteDropZone.addEventListener('dragenter', handleFavoriteDropZoneDragEnter);
-            favoriteDropZone.addEventListener('dragleave', handleFavoriteDropZoneDragLeave);
+            // 设置拖拽区域（如果存在）
+            if (favoriteDropZone) {
+                favoriteDropZone.addEventListener('dragover', handleFavoriteDropZoneDragOver);
+                favoriteDropZone.addEventListener('drop', handleFavoriteDropZoneDrop);
+                favoriteDropZone.addEventListener('dragenter', handleFavoriteDropZoneDragEnter);
+                favoriteDropZone.addEventListener('dragleave', handleFavoriteDropZoneDragLeave);
+            }
         }
         
         function handleFavoriteDragStart(event) {
@@ -3020,6 +3802,8 @@
             const editBtn = document.getElementById('editBtn');
             const searchInput = document.getElementById('searchInput');
             
+            console.log('切换编辑模式:', editMode ? '开启' : '关闭');
+            
             if (editMode) {
                 body.classList.add('edit-mode');
                 editBtn.classList.add('active');
@@ -3027,7 +3811,9 @@
                 searchInput.placeholder = '编辑模式下搜索功能已禁用';
                 searchInput.value = '';
                 searchInput.disabled = true;
-                setupBookmarkDragAndDrop();
+                
+                // 显示编辑模式指示器
+                showEditModeIndicator();
                 
                 // 确保所有书签都显示
                 document.querySelectorAll('.bookmark').forEach(bookmark => {
@@ -3038,25 +3824,36 @@
                         category.style.display = 'block';
                     }
                 });
+                
+                // 设置拖拽功能
+                console.log('准备设置书签拖拽功能');
+                setTimeout(() => {
+                    setupBookmarkDragAndDrop();
+                }, 100);
             } else {
                 body.classList.remove('edit-mode');
                 editBtn.classList.remove('active');
                 editBtn.innerHTML = '✏️ 编辑模式';
                 searchInput.placeholder = '搜索书签...';
                 searchInput.disabled = false;
+                
+                // 移除拖拽功能
                 removeBookmarkDragAndDrop();
                 
-                // 重新应用筛选
-                applyFilters();
+                // 隐藏编辑模式指示器
+                hideEditModeIndicator();
             }
         }
 
         function setupBookmarkDragAndDrop() {
             const bookmarks = document.querySelectorAll('.bookmark');
+            console.log('找到书签元素数量:', bookmarks.length);
+            
             bookmarks.forEach(bookmark => {
                 bookmark.draggable = true;
                 bookmark.addEventListener('dragstart', handleDragStart);
                 bookmark.addEventListener('dragend', handleDragEnd);
+                console.log('设置书签拖拽:', bookmark.querySelector('.bookmark-title')?.textContent);
             });
             
             // 同时设置常用书签的拖拽功能
@@ -3073,12 +3870,20 @@
         }
 
         function setupCategoryDropZone(categoryElement) {
-            const bookmarksContainer = categoryElement.querySelector('.bookmarks');
+            // 确保分类元素有正确的data-category属性
+            const categoryName = categoryElement.getAttribute('data-category');
+            if (!categoryName) {
+                console.error('分类元素缺少data-category属性');
+                return;
+            }
             
+            // 添加拖拽事件监听器
             categoryElement.addEventListener('dragover', handleDragOver);
             categoryElement.addEventListener('drop', handleDrop);
             categoryElement.addEventListener('dragenter', handleDragEnter);
             categoryElement.addEventListener('dragleave', handleDragLeave);
+            
+            console.log('为分类设置拖拽区域:', categoryName);
         }
 
         function handleBookmarkClick(event, bookmarkElement) {
@@ -3089,10 +3894,28 @@
         }
 
         function handleDragStart(event) {
-            if (!editMode) return;
+            if (!editMode) {
+                console.log('编辑模式未启用，忽略拖拽');
+                return;
+            }
             
             draggedBookmark = event.target;
-            draggedFromCategory = event.target.closest('.category').getAttribute('data-category');
+            const categoryElement = event.target.closest('.category');
+            
+            if (!categoryElement) {
+                console.error('找不到书签所属的分类元素');
+                return;
+            }
+            
+            draggedFromCategory = categoryElement.getAttribute('data-category');
+            
+            if (!draggedFromCategory) {
+                console.error('分类元素缺少data-category属性');
+                return;
+            }
+            
+            console.log('开始拖拽书签:', draggedBookmark.querySelector('.bookmark-title')?.textContent);
+            console.log('从分类:', draggedFromCategory);
             
             event.target.classList.add('dragging');
             event.dataTransfer.effectAllowed = 'move';
@@ -3144,20 +3967,43 @@
         }
 
         function handleDrop(event) {
-            if (!editMode || !draggedBookmark) return;
+            if (!editMode) {
+                console.log('编辑模式未启用，忽略放置');
+                return;
+            }
+            
+            if (!draggedBookmark) {
+                console.log('没有被拖拽的书签');
+                return;
+            }
             
             event.preventDefault();
             
             const targetCategory = event.currentTarget;
             const targetCategoryName = targetCategory.getAttribute('data-category');
             
+            if (!targetCategoryName) {
+                console.error('目标分类缺少data-category属性');
+                return;
+            }
+            
+            console.log('放置到分类:', targetCategoryName);
+            
             // 如果拖拽到同一个分类，不做任何操作
             if (targetCategoryName === draggedFromCategory) {
+                console.log('相同分类，忽略放置');
                 targetCategory.classList.remove('drag-over');
                 return;
             }
             
             const bookmarkId = draggedBookmark.getAttribute('data-bookmark-id');
+            
+            if (!bookmarkId) {
+                console.error('书签缺少data-bookmark-id属性');
+                return;
+            }
+            
+            console.log('移动书签:', bookmarkId, '从', draggedFromCategory, '到', targetCategoryName);
             
             // 移动书签数据
             moveBookmarkToCategory(bookmarkId, draggedFromCategory, targetCategoryName);
@@ -3203,10 +4049,30 @@
                 setTimeout(() => {
                     document.body.classList.add('edit-mode');
                     setupBookmarkDragAndDrop();
+                    showEditModeIndicator();
                 }, 100);
             }
             
             console.log(`书签 "${bookmark.title}" 已从 "${fromCategoryName}" 移动到 "${toCategoryName}"`);
+        }
+
+        function showEditModeIndicator() {
+            let indicator = document.getElementById('editModeIndicator');
+            if (!indicator) {
+                indicator = document.createElement('div');
+                indicator.id = 'editModeIndicator';
+                indicator.className = 'edit-mode-indicator';
+                indicator.textContent = '🔧 编辑模式 - 可拖拽书签和删除内容';
+                document.body.appendChild(indicator);
+            }
+            indicator.style.display = 'block';
+        }
+
+        function hideEditModeIndicator() {
+            const indicator = document.getElementById('editModeIndicator');
+            if (indicator) {
+                indicator.style.display = 'none';
+            }
         }
 
         function deleteBookmark(event, bookmarkId) {
@@ -3261,6 +4127,7 @@
                         setTimeout(() => {
                             document.body.classList.add('edit-mode');
                             setupBookmarkDragAndDrop();
+                            showEditModeIndicator();
                         }, 100);
                     }
                     
@@ -3286,6 +4153,99 @@
             return null;
         }
 
+        // 获取网站图标
+        function getFaviconUrl(url) {
+            try {
+                const urlObj = new URL(url);
+                const domain = urlObj.hostname;
+                
+                // 多个favicon服务，提供备选方案
+                const faviconServices = [
+                    `https://www.google.com/s2/favicons?domain=${domain}&sz=32`,
+                    `https://favicon.yandex.net/favicon/${domain}`,
+                    `https://icons.duckduckgo.com/ip3/${domain}.ico`,
+                    `${urlObj.protocol}//${domain}/favicon.ico`
+                ];
+                
+                return faviconServices[0]; // 默认使用Google的服务
+            } catch (error) {
+                return null;
+            }
+        }
+
+        // 创建图标HTML，支持真实favicon和备用emoji
+        function createIconHTML(bookmark) {
+            const faviconUrl = getFaviconUrl(bookmark.url);
+            const fallbackIcon = bookmark.icon || getDefaultIcon(bookmark.url);
+            
+            if (faviconUrl) {
+                return `
+                    <img src="${faviconUrl}" 
+                         alt="${bookmark.title}" 
+                         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                         onload="this.nextElementSibling.style.display='none';">
+                    <span class="fallback-icon" style="display: none;">${fallbackIcon}</span>
+                `;
+            } else {
+                return `<span class="fallback-icon">${fallbackIcon}</span>`;
+            }
+        }
+
+        // 根据URL获取默认图标
+        function getDefaultIcon(url) {
+            try {
+                const domain = new URL(url).hostname.toLowerCase();
+                
+                // 常见网站图标映射
+                const iconMap = {
+                    'google.com': '🔍',
+                    'baidu.com': '🔍',
+                    'bing.com': '🔍',
+                    'github.com': '🐙',
+                    'stackoverflow.com': '📚',
+                    'youtube.com': '📺',
+                    'twitter.com': '🐦',
+                    'facebook.com': '📘',
+                    'instagram.com': '📷',
+                    'linkedin.com': '💼',
+                    'reddit.com': '🤖',
+                    'zhihu.com': '🤔',
+                    'weibo.com': '📱',
+                    'taobao.com': '🛍️',
+                    'jd.com': '🛒',
+                    'amazon.com': '📦',
+                    'netflix.com': '🎬',
+                    'spotify.com': '🎵',
+                    'bilibili.com': '📺',
+                    'douyin.com': '🎵',
+                    'tiktok.com': '🎵',
+                    'qq.com': '🐧',
+                    'wechat.com': '💬',
+                    'alipay.com': '💰',
+                    'apple.com': '🍎',
+                    'microsoft.com': '🪟',
+                    'adobe.com': '🎨',
+                    'dropbox.com': '📦',
+                    'gmail.com': '📧',
+                    'outlook.com': '📧'
+                };
+                
+                // 检查是否有匹配的图标
+                for (const [site, icon] of Object.entries(iconMap)) {
+                    if (domain.includes(site)) {
+                        return icon;
+                    }
+                }
+                
+                // 根据域名首字母生成图标
+                const siteName = domain.replace('www.', '').split('.')[0];
+                return siteName.charAt(0).toUpperCase();
+                
+            } catch (error) {
+                return '🔗';
+            }
+        }
+
         // 2. 自动获取网站图标
         async function autoGetFavicon() {
             const urlInput = document.getElementById('bookmarkUrl');
@@ -3303,31 +4263,61 @@
                     formattedUrl = 'https://' + url;
                 }
                 
-                const domain = new URL(formattedUrl).hostname;
+                // 使用我们的默认图标获取函数
+                const defaultIcon = getDefaultIcon(formattedUrl);
+                iconInput.value = defaultIcon;
                 
-                // 尝试获取favicon
-                const faviconUrl = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
-                
-                // 创建一个临时图片元素来测试favicon是否可用
-                const img = new Image();
-                img.onload = function() {
-                    // 如果能加载favicon，使用网站首字母作为图标
-                    const siteName = domain.replace('www.', '').split('.')[0];
-                    iconInput.value = siteName.charAt(0).toUpperCase();
-                };
-                img.onerror = function() {
-                    // 如果无法加载favicon，使用默认图标
-                    iconInput.value = '🔗';
-                };
-                img.src = faviconUrl;
-                
-                // 立即设置一个默认值
-                const siteName = domain.replace('www.', '').split('.')[0];
-                iconInput.value = siteName.charAt(0).toUpperCase();
+                // 显示预览
+                showFaviconPreview(formattedUrl, defaultIcon);
                 
             } catch (error) {
                 iconInput.value = '🔗';
                 console.error('获取favicon失败:', error);
+            }
+        }
+
+        // 显示favicon预览
+        function showFaviconPreview(url, fallbackIcon) {
+            const iconInput = document.getElementById('bookmarkIcon');
+            const faviconUrl = getFaviconUrl(url);
+            
+            // 创建预览容器
+            let previewContainer = document.getElementById('faviconPreview');
+            if (!previewContainer) {
+                previewContainer = document.createElement('div');
+                previewContainer.id = 'faviconPreview';
+                previewContainer.style.cssText = `
+                    margin-top: 8px;
+                    padding: 8px;
+                    border: 1px solid var(--borderColor);
+                    border-radius: 8px;
+                    background: var(--backgroundColor);
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    font-size: 12px;
+                `;
+                iconInput.parentNode.appendChild(previewContainer);
+            }
+            
+            if (faviconUrl) {
+                previewContainer.innerHTML = `
+                    <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; background: var(--gradientSecondary); border-radius: 4px; color: white;">
+                        <img src="${faviconUrl}" 
+                             style="width: 16px; height: 16px; border-radius: 2px;" 
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                             onload="this.nextElementSibling.style.display='none';">
+                        <span style="display: none; font-size: 12px;">${fallbackIcon}</span>
+                    </div>
+                    <span style="color: var(--textSecondary);">预览效果（如果图标加载失败会显示备用图标）</span>
+                `;
+            } else {
+                previewContainer.innerHTML = `
+                    <div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center; background: var(--gradientSecondary); border-radius: 4px; color: white; font-size: 12px;">
+                        ${fallbackIcon}
+                    </div>
+                    <span style="color: var(--textSecondary);">将使用备用图标</span>
+                `;
             }
         }
 
@@ -3412,28 +4402,38 @@
 
         // 5. 删除分类功能
         function deleteCategory(button) {
+            console.log('删除分类按钮被点击');
+            
             if (!editMode) {
                 alert('请先进入编辑模式');
+                console.log('编辑模式未启用，无法删除分类');
                 return;
             }
             
             const category = button.closest('.category');
-            // 从data属性获取分类名称，如果没有则从DOM解析
-            let categoryName = category.getAttribute('data-category');
-            let originalText = '';
+            if (!category) {
+                console.error('找不到分类元素');
+                return;
+            }
             
+            // 从data属性获取分类名称
+            let categoryName = category.getAttribute('data-category');
             if (!categoryName) {
+                console.error('分类元素缺少data-category属性');
+                
+                // 尝试从DOM解析
                 const titleElement = category.querySelector('.category-title');
                 if (titleElement) {
-                    originalText = titleElement.textContent.trim();
+                    const originalText = titleElement.textContent.trim();
                     // 获取分类名称，排除图标部分
                     categoryName = originalText.replace(/^[^\w\s]+\s*/, '');
+                    console.log('从DOM解析得到分类名称:', categoryName);
+                } else {
+                    console.error('找不到分类标题元素');
+                    return;
                 }
             } else {
-                const titleElement = category.querySelector('.category-title');
-                if (titleElement) {
-                    originalText = titleElement.textContent.trim();
-                }
+                console.log('从data-category获取分类名称:', categoryName);
             }
             
             console.log('尝试删除分类:', categoryName); // 调试信息
@@ -3496,6 +4496,7 @@
                         document.body.classList.add('edit-mode');
                         setupBookmarkDragAndDrop();
                         setupFavoriteBookmarkDragAndDrop();
+                        showEditModeIndicator();
                     }, 100);
                 }
                 
@@ -3753,6 +4754,75 @@
 
             closeBookmarkModal();
             alert('书签添加成功！');
+        }
+
+        // ==================== 图标更新功能 ====================
+        
+        async function updateAllFavicons() {
+            if (!bookmarksData) {
+                alert('没有可更新的书签数据');
+                return;
+            }
+            
+            const totalBookmarks = getTotalBookmarks();
+            if (totalBookmarks === 0) {
+                alert('没有找到任何书签');
+                return;
+            }
+            
+            if (!confirm(`确定要更新所有 ${totalBookmarks} 个书签的图标吗？这可能需要一些时间。`)) {
+                return;
+            }
+            
+            // 显示进度
+            showProgressModal();
+            updateProgress(0, '开始更新图标...');
+            
+            let updatedCount = 0;
+            let totalCount = 0;
+            
+            try {
+                for (const category of bookmarksData.categories) {
+                    for (const bookmark of category.bookmarks) {
+                        totalCount++;
+                        
+                        // 获取智能图标
+                        const newIcon = getDefaultIcon(bookmark.url);
+                        if (newIcon !== bookmark.icon) {
+                            bookmark.icon = newIcon;
+                            updatedCount++;
+                        }
+                        
+                        // 更新进度
+                        const progress = Math.round((totalCount / totalBookmarks) * 100);
+                        updateProgress(progress, `已处理 ${totalCount}/${totalBookmarks} 个书签...`);
+                        
+                        // 添加小延迟避免界面卡顿
+                        if (totalCount % 10 === 0) {
+                            await new Promise(resolve => setTimeout(resolve, 50));
+                        }
+                    }
+                }
+                
+                // 保存更新
+                bookmarksData.metadata.syncStatus = 'local';
+                saveToLocal(bookmarksData);
+                
+                // 重新渲染
+                renderBookmarks();
+                
+                updateProgress(100, '图标更新完成！');
+                
+                setTimeout(() => {
+                    hideProgressModal();
+                    showResultModal(true, '图标更新完成！', `成功更新了 ${updatedCount} 个书签的图标\n总共处理了 ${totalCount} 个书签`);
+                }, 500);
+                
+            } catch (error) {
+                console.error('更新图标失败:', error);
+                hideProgressModal();
+                showResultModal(false, '更新失败', `错误信息：${error.message}`);
+            }
         }
 
         // ==================== 链接检测功能 ====================
@@ -4115,20 +5185,432 @@
             }
         }
 
+        // 这部分代码已经在上面定义过了，移除重复的全局变量声明
+
+        // ==================== 侧边栏功能 ====================
+        let sidebarOpen = false;
+        let floatingNavCollapsed = false;
+
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebarMenu');
+            const overlay = document.getElementById('sidebarOverlay');
+            
+            sidebarOpen = !sidebarOpen;
+            
+            if (sidebarOpen) {
+                sidebar.classList.add('open');
+                overlay.classList.add('show');
+                document.body.style.overflow = 'hidden'; // 防止背景滚动
+                updateSidebarStats();
+            } else {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('show');
+                document.body.style.overflow = '';
+            }
+        }
+
+        function updateSidebarStats() {
+            if (!bookmarksData) return;
+            
+            const totalBookmarks = getTotalBookmarks();
+            const totalCategories = bookmarksData.categories.length;
+            
+            document.getElementById('sidebarTotalBookmarks').textContent = totalBookmarks;
+            document.getElementById('sidebarTotalCategories').textContent = totalCategories;
+        }
+
+        // ==================== 悬浮分类导航功能 ====================
+        
+        function toggleFloatingNav() {
+            const floatingNav = document.getElementById('floatingNav');
+            floatingNavCollapsed = !floatingNavCollapsed;
+            
+            if (floatingNavCollapsed) {
+                floatingNav.classList.add('collapsed');
+            } else {
+                floatingNav.classList.remove('collapsed');
+            }
+            
+            // 保存状态到本地存储
+            localStorage.setItem('floatingNavCollapsed', floatingNavCollapsed);
+        }
+
+        function renderFloatingNav() {
+            if (!bookmarksData) {
+                return;
+            }
+            
+            const navContent = document.getElementById('floatingNavContent');
+            if (!navContent) {
+                return;
+            }
+            
+            navContent.innerHTML = '';
+            
+            // 添加"回到顶部"选项
+            const topItem = document.createElement('div');
+            topItem.className = 'floating-nav-item';
+            topItem.onclick = () => scrollToTop();
+            topItem.innerHTML = `
+                <span class="nav-item-icon">🔝</span>
+                <span class="nav-item-text">回到顶部</span>
+            `;
+            navContent.appendChild(topItem);
+            
+            // 为每个分类创建导航项
+            bookmarksData.categories.forEach((category, index) => {
+                const navItem = document.createElement('div');
+                navItem.className = 'floating-nav-item';
+                navItem.onclick = () => scrollToCategory(category.name);
+                navItem.innerHTML = `
+                    <span class="nav-item-icon">${category.icon}</span>
+                    <span class="nav-item-text">${category.name}</span>
+                    <span class="nav-item-count">${category.bookmarks.length}</span>
+                `;
+                navContent.appendChild(navItem);
+            });
+        }
+
+        function scrollToCategory(categoryName) {
+            const categoryElement = document.querySelector(`[data-category="${categoryName}"]`);
+            if (categoryElement) {
+                categoryElement.scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+                
+                // 高亮当前分类
+                highlightActiveCategory(categoryName);
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ 
+                top: 0, 
+                behavior: 'smooth' 
+            });
+            
+            // 清除所有高亮
+            document.querySelectorAll('.floating-nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+        }
+
+        function highlightActiveCategory(categoryName) {
+            // 清除所有高亮
+            document.querySelectorAll('.floating-nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // 高亮当前分类
+            const navItems = document.querySelectorAll('.floating-nav-item');
+            navItems.forEach(item => {
+                const textElement = item.querySelector('.nav-item-text');
+                if (textElement && textElement.textContent === categoryName) {
+                    item.classList.add('active');
+                }
+            });
+        }
+
+        function initFloatingNav() {
+            // 恢复折叠状态
+            const savedState = localStorage.getItem('floatingNavCollapsed');
+            if (savedState === 'true') {
+                floatingNavCollapsed = true;
+                document.getElementById('floatingNav').classList.add('collapsed');
+            }
+            
+            // 监听滚动事件，自动高亮当前可见的分类
+            let ticking = false;
+            window.addEventListener('scroll', () => {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        updateActiveNavItem();
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        }
+
+        function updateActiveNavItem() {
+            if (!bookmarksData) return;
+            
+            const categories = document.querySelectorAll('.category');
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const windowHeight = window.innerHeight;
+            
+            let activeCategory = null;
+            
+            // 如果在页面顶部，不高亮任何分类
+            if (scrollTop < 200) {
+                document.querySelectorAll('.floating-nav-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                return;
+            }
+            
+            // 找到当前可见的分类
+            categories.forEach(category => {
+                const rect = category.getBoundingClientRect();
+                const categoryTop = rect.top + scrollTop;
+                const categoryBottom = categoryTop + rect.height;
+                
+                // 如果分类在视窗中可见
+                if (categoryTop <= scrollTop + windowHeight / 2 && categoryBottom >= scrollTop + windowHeight / 2) {
+                    activeCategory = category.getAttribute('data-category');
+                }
+            });
+            
+            if (activeCategory) {
+                highlightActiveCategory(activeCategory);
+            }
+        }
+
+        // 键盘快捷键支持
+        document.addEventListener('keydown', function(e) {
+            // ESC 键关闭侧边栏
+            if (e.key === 'Escape' && sidebarOpen) {
+                toggleSidebar();
+            }
+            // Ctrl+M 切换侧边栏
+            if (e.ctrlKey && e.key === 'm') {
+                e.preventDefault();
+                toggleSidebar();
+            }
+        });
+
+        // 设置事件监听器
+        function setupEventListeners() {
+            // 搜索功能
+            const searchInput = document.getElementById('searchInput');
+            searchInput.addEventListener('input', debounce(handleSearch, 300));
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        }
+
+        // 加载书签数据
+        async function loadBookmarks() {
+            try {
+                const response = await fetch('bookmarks.json');
+                bookmarksData = await response.json();
+                updateSyncStatus();
+                renderBookmarks();
+                
+                // 确保悬浮导航渲染
+                setTimeout(() => {
+                    renderFloatingNav();
+                    initFloatingNav();
+                }, 100);
+    
+            } catch (error) {
+                console.error('加载书签失败:', error);
+                document.getElementById('bookmarksContainer').innerHTML = 
+                    '<div style="text-align: center; padding: 40px; color: #666;">加载失败，请检查网络连接</div>';
+            }
+        }
+
+        // 更新同步状态
+        function updateSyncStatus() {
+            if (!bookmarksData) return;
+            
+            const config = getGitHubConfig();
+            const indicator = document.getElementById('syncIndicator');
+            const statusText = document.getElementById('syncStatus');
+            const syncBtn = document.getElementById('syncBtn');
+            const metadata = bookmarksData.metadata;
+
+            if (!config.configured) {
+                indicator.className = 'sync-indicator unconfigured';
+                statusText.textContent = '未配置 GitHub 同步';
+                if (syncBtn) syncBtn.disabled = true;
+            } else if (metadata.syncStatus === 'synced') {
+                indicator.className = 'sync-indicator synced';
+                statusText.textContent = '已同步';
+                if (syncBtn) syncBtn.disabled = false;
+            } else if (metadata.syncStatus === 'error') {
+                indicator.className = 'sync-indicator error';
+                statusText.textContent = '同步失败';
+                if (syncBtn) syncBtn.disabled = false;
+            } else {
+                indicator.className = 'sync-indicator local';
+                statusText.textContent = '有未同步的更改';
+                if (syncBtn) syncBtn.disabled = false;
+            }
+            
+            document.getElementById('lastUpdated').textContent = new Date(metadata.lastUpdated).toLocaleString('zh-CN');
+            document.getElementById('totalBookmarks').textContent = getTotalBookmarks();
+        }
+
+
+
+        // 渲染分类
+        function renderCategories() {
+            if (!bookmarksData) return;
+            
+            const container = document.getElementById('bookmarksContainer');
+            container.innerHTML = '';
+            
+            bookmarksData.categories.forEach(category => {
+                const categoryElement = createCategoryElement(category);
+                container.appendChild(categoryElement);
+            });
+        }
+
+        // 创建分类元素
+        function createCategoryElement(category) {
+            const categoryDiv = document.createElement('div');
+            categoryDiv.className = 'category';
+            categoryDiv.dataset.category = category.name;
+            
+            categoryDiv.innerHTML = `
+                <div class="category-header">
+                    <span class="category-icon">${category.icon}</span>
+                    <span class="category-title">${category.name}</span>
+                </div>
+                <div class="category-content">
+                    <div class="bookmarks-grid">
+                        ${category.bookmarks.map(bookmark => createBookmarkCard(bookmark)).join('')}
+                    </div>
+                </div>
+            `;
+            
+            return categoryDiv;
+        }
+
+        // 创建书签卡片
+        function createBookmarkCard(bookmark) {
+            const domain = extractDomain(bookmark.url);
+            const iconHTML = createIconHTML(bookmark);
+            return `
+                <a href="${bookmark.url}" class="bookmark-card" target="_blank" data-title="${bookmark.title.toLowerCase()}" data-url="${bookmark.url.toLowerCase()}">
+                    <div class="bookmark-icon">${iconHTML}</div>
+                    <div class="bookmark-info">
+                        <div class="bookmark-title">${bookmark.title}</div>
+                        <div class="bookmark-url">${domain}</div>
+                    </div>
+                </a>
+            `;
+        }
+
+        // 提取域名
+        function extractDomain(url) {
+            try {
+                return new URL(url).hostname.replace('www.', '');
+            } catch {
+                return url;
+            }
+        }
+
+        // 搜索功能
+        function handleSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const bookmarkCards = document.querySelectorAll('.bookmark-card');
+            const categories = document.querySelectorAll('.category');
+            
+            if (!query) {
+                // 显示所有书签和分类
+                bookmarkCards.forEach(card => card.style.display = 'flex');
+                categories.forEach(cat => cat.style.display = 'block');
+                return;
+            }
+            
+            categories.forEach(category => {
+                const cards = category.querySelectorAll('.bookmark-card');
+                let hasVisibleCards = false;
+                
+                cards.forEach(card => {
+                    const title = card.dataset.title;
+                    const url = card.dataset.url;
+                    
+                    if (title.includes(query) || url.includes(query)) {
+                        card.style.display = 'flex';
+                        hasVisibleCards = true;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                category.style.display = hasVisibleCards ? 'block' : 'none';
+            });
+        }
+
+        // 执行搜索
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (query) {
+                // 这里可以添加更复杂的搜索逻辑
+                handleSearch();
+            }
+        }
+
+        // 同步书签 - 重定向到GitHub同步
+        async function syncBookmarks() {
+            await syncToGitHub();
+        }
+
+
+
+        // 显示通知
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 20px;
+                border-radius: 8px;
+                color: white;
+                font-weight: 500;
+                z-index: 1000;
+                animation: slideIn 0.3s ease;
+                background: ${type === 'success' ? '#28a745' : type === 'error' ? '#dc3545' : '#17a2b8'};
+            `;
+            notification.textContent = message;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // 防抖函数
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        }
+
+        // 添加动画样式
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
         // 页面加载完成后初始化
-        document.addEventListener('DOMContentLoaded', async function() {
-            // 设置文件拖拽功能
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeData();
             setupFileDrop();
-            
-            // 初始化数据
-            await initializeData();
-            
-            // 初始化筛选标签
-            initializeFilterTags();
-            
-            // 恢复视图模式
-            const savedViewMode = localStorage.getItem('viewMode') || 'card';
-            setViewMode(savedViewMode);
+            setupEventListeners();
         });
     </script>
 </body>
