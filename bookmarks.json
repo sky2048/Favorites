@@ -3,7 +3,7 @@
   "metadata": {
     "lastUpdated": "2025-05-25T04:33:50.431Z",
     "lastSynced": "2025-05-25T04:33:54.748Z",
-    "totalBookmarks": 17,
+    "totalBookmarks": 16,
     "syncStatus": "synced"
   },
   "favoriteBookmarks": [],
@@ -18,14 +18,7 @@
           "url": "https://www.google.com",
           "icon": "🔍",
           "isFavorite": false
-        },
-        {
-          "id": "baidu",
-          "title": "百度",
-          "url": "https://www.baidu.com",
-          "icon": "🔍",
-          "isFavorite": false
-        },
+        },      
         {
           "id": "bing",
           "title": "Bing",
