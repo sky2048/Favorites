@@ -1,0 +1,146 @@
+{
+  "version": "1.0",
+  "metadata": {
+    "lastUpdated": "2024-01-01T12:00:00Z",
+    "lastSynced": null,
+    "totalBookmarks": 20,
+    "syncStatus": "local"
+  },
+  "categories": [
+    {
+      "name": "搜索引擎",
+      "icon": "🔍",
+      "bookmarks": [
+        {
+          "id": "google",
+          "title": "Google",
+          "url": "https://www.google.com",
+          "icon": "🔍"
+        },
+        {
+          "id": "baidu",
+          "title": "百度",
+          "url": "https://www.baidu.com",
+          "icon": "🔍"
+        },
+        {
+          "id": "bing",
+          "title": "Bing",
+          "url": "https://www.bing.com",
+          "icon": "🔍"
+        }
+      ]
+    },
+    {
+      "name": "开发工具",
+      "icon": "⚙️",
+      "bookmarks": [
+        {
+          "id": "github",
+          "title": "GitHub",
+          "url": "https://github.com",
+          "icon": "🐙"
+        },
+        {
+          "id": "stackoverflow",
+          "title": "Stack Overflow",
+          "url": "https://stackoverflow.com",
+          "icon": "📚"
+        },
+        {
+          "id": "codepen",
+          "title": "CodePen",
+          "url": "https://codepen.io",
+          "icon": "✏️"
+        },
+        {
+          "id": "vscode",
+          "title": "VS Code",
+          "url": "https://code.visualstudio.com",
+          "icon": "💻"
+        }
+      ]
+    },
+    {
+      "name": "新闻资讯",
+      "icon": "📰",
+      "bookmarks": [
+        {
+          "id": "zhihu",
+          "title": "知乎",
+          "url": "https://www.zhihu.com",
+          "icon": "🤔"
+        },
+        {
+          "id": "weibo",
+          "title": "微博",
+          "url": "https://weibo.com",
+          "icon": "📱"
+        },
+        {
+          "id": "reddit",
+          "title": "Reddit",
+          "url": "https://www.reddit.com",
+          "icon": "🤖"
+        }
+      ]
+    },
+    {
+      "name": "购物网站",
+      "icon": "🛒",
+      "bookmarks": [
+        {
+          "id": "taobao",
+          "title": "淘宝",
+          "url": "https://www.taobao.com",
+          "icon": "🛍️"
+        },
+        {
+          "id": "jd",
+          "title": "京东",
+          "url": "https://www.jd.com",
+          "icon": "🛒"
+        },
+        {
+          "id": "amazon",
+          "title": "Amazon",
+          "url": "https://www.amazon.com",
+          "icon": "📦"
+        }
+      ]
+    },
+    {
+      "name": "其他",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "youtube",
+          "title": "YouTube",
+          "url": "https://www.youtube.com",
+          "icon": "📺"
+        },
+        {
+          "id": "netflix",
+          "title": "Netflix",
+          "url": "https://www.netflix.com",
+          "icon": "🎬"
+        },
+        {
+          "id": "spotify",
+          "title": "Spotify",
+          "url": "https://www.spotify.com",
+          "icon": "🎵"
+        }
+      ]
+    }
+  ],
+  "customCategories": [],
+  "settings": {
+    "github": {
+      "username": "",
+      "repository": "",
+      "token": "",
+      "configured": false
+    }
+  }
+} 
