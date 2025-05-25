@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-25T04:33:50.431Z",
+    "lastUpdated": "2025-05-25T23:37:33.106Z",
     "lastSynced": "2025-05-25T04:33:54.748Z",
     "totalBookmarks": 17,
-    "syncStatus": "synced"
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [],
   "categories": [
@@ -31,6 +31,20 @@
           "title": "Bing",
           "url": "https://www.bing.com",
           "icon": "🔍",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216225530_ydrmkssv4",
+          "title": "aizex",
+          "url": "https://aizex.net/proPool",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216236596_zmlbnr60f",
+          "title": "carrot",
+          "url": "https://github.com/xx025/carrot",
+          "description": "",
           "isFavorite": false
         }
       ]
