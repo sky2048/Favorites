@@ -211,7 +211,7 @@
             flex-wrap: wrap;
         }
 
-        .sync-btn, .config-btn, .backup-btn {
+        .sync-btn, .config-btn, .backup-btn, .edit-btn {
             padding: 8px 16px;
             border: none;
             border-radius: 20px;
@@ -222,6 +222,15 @@
             display: flex;
             align-items: center;
             gap: 6px;
+        }
+
+        .edit-btn {
+            background: rgba(255, 107, 107, 0.8);
+        }
+
+        .edit-btn.active {
+            background: rgba(255, 107, 107, 1);
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
         }
 
         .sync-btn {
@@ -237,7 +246,7 @@
             background: rgba(255, 193, 7, 0.8);
         }
 
-        .sync-btn:hover, .config-btn:hover, .backup-btn:hover {
+        .sync-btn:hover, .config-btn:hover, .backup-btn:hover, .edit-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
@@ -473,6 +482,12 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
+        .search-input:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            background: rgba(255, 255, 255, 0.5);
+        }
+
         .categories {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -531,11 +546,82 @@
             color: white;
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
         }
 
         .bookmark:hover {
             background: rgba(255, 255, 255, 0.2);
             transform: translateX(5px);
+        }
+
+        /* 编辑模式样式 */
+        .edit-mode .bookmark {
+            cursor: grab;
+            padding-right: 50px;
+        }
+
+        .edit-mode .bookmark:active {
+            cursor: grabbing;
+        }
+
+        .edit-mode .bookmark.dragging {
+            opacity: 0.5;
+            transform: rotate(5deg);
+            z-index: 1000;
+        }
+
+        .bookmark-delete {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: rgba(255, 107, 107, 0.8);
+            border: none;
+            border-radius: 50%;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .edit-mode .bookmark-delete {
+            display: flex;
+        }
+
+        .bookmark-delete:hover {
+            background: rgba(255, 107, 107, 1);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .category.drag-over {
+            background: rgba(102, 126, 234, 0.3) !important;
+            border: 2px dashed rgba(102, 126, 234, 0.8) !important;
+            transform: scale(1.02);
+        }
+
+        .edit-mode-indicator {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 107, 107, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            z-index: 999;
+            display: none;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .edit-mode .edit-mode-indicator {
+            display: block;
         }
 
         .bookmark-icon {
@@ -780,7 +866,15 @@
                 <button class="backup-btn" onclick="openBackupModal()">
                     💾 备份/恢复
                 </button>
+                <button class="edit-btn" id="editBtn" onclick="toggleEditMode()">
+                    ✏️ 编辑模式
+                </button>
             </div>
+        </div>
+
+        <!-- 编辑模式指示器 -->
+        <div class="edit-mode-indicator">
+            📝 编辑模式已开启 - 可以删除和拖拽移动书签
         </div>
 
         <div class="search-box">
@@ -798,112 +892,9 @@
         </div>
 
         <div class="categories" id="categories">
-            <div class="category">
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                </div>
-                <div class="category-title">
-                    <div class="category-icon">🔍</div>
-                    搜索引擎
-                </div>
-                <div class="bookmarks">
-                    <a href="https://www.google.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">G</div>
-                        <div class="bookmark-title">Google</div>
-                        <div class="bookmark-url">google.com</div>
-                    </a>
-                    <a href="https://www.baidu.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">百</div>
-                        <div class="bookmark-title">百度</div>
-                        <div class="bookmark-url">baidu.com</div>
-                    </a>
-                    <a href="https://www.bing.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">B</div>
-                        <div class="bookmark-title">必应</div>
-                        <div class="bookmark-url">bing.com</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                </div>
-                <div class="category-title">
-                    <div class="category-icon">💻</div>
-                    开发工具
-                </div>
-                <div class="bookmarks">
-                    <a href="https://github.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">📂</div>
-                        <div class="bookmark-title">GitHub</div>
-                        <div class="bookmark-url">github.com</div>
-                    </a>
-                    <a href="https://stackoverflow.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">📚</div>
-                        <div class="bookmark-title">Stack Overflow</div>
-                        <div class="bookmark-url">stackoverflow.com</div>
-                    </a>
-                    <a href="https://codepen.io" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">✏️</div>
-                        <div class="bookmark-title">CodePen</div>
-                        <div class="bookmark-url">codepen.io</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                </div>
-                <div class="category-title">
-                    <div class="category-icon">📰</div>
-                    新闻资讯
-                </div>
-                <div class="bookmarks">
-                    <a href="https://news.qq.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">Q</div>
-                        <div class="bookmark-title">腾讯新闻</div>
-                        <div class="bookmark-url">news.qq.com</div>
-                    </a>
-                    <a href="https://www.163.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">网</div>
-                        <div class="bookmark-title">网易</div>
-                        <div class="bookmark-url">163.com</div>
-                    </a>
-                    <a href="https://www.sina.com.cn" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">新</div>
-                        <div class="bookmark-title">新浪</div>
-                        <div class="bookmark-url">sina.com.cn</div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="category">
-                <div class="category-controls">
-                    <button class="control-btn" onclick="toggleCategoryVisibility(this)" title="隐藏/显示分类">👁️</button>
-                </div>
-                <div class="category-title">
-                    <div class="category-icon">🛒</div>
-                    购物网站
-                </div>
-                <div class="bookmarks">
-                    <a href="https://www.taobao.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">淘</div>
-                        <div class="bookmark-title">淘宝</div>
-                        <div class="bookmark-url">taobao.com</div>
-                    </a>
-                    <a href="https://www.jd.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">京</div>
-                        <div class="bookmark-title">京东</div>
-                        <div class="bookmark-url">jd.com</div>
-                    </a>
-                    <a href="https://www.tmall.com" class="bookmark" target="_blank" rel="noopener">
-                        <div class="bookmark-icon">天</div>
-                        <div class="bookmark-title">天猫</div>
-                        <div class="bookmark-url">tmall.com</div>
-                    </a>
-                </div>
+            <div style="text-align: center; padding: 50px; color: white; font-size: 18px;">
+                <div class="progress-spinner" style="display: inline-block; margin-right: 10px;"></div>
+                正在加载书签数据...
             </div>
         </div>
     </div>
@@ -991,6 +982,7 @@
             </div>
             <div class="form-actions">
                 <button class="btn-secondary" onclick="closeConfigModal()">取消</button>
+                <button class="btn-secondary" onclick="testGitHubConnection()">测试连接</button>
                 <button class="btn-primary" onclick="saveGitHubConfig()">保存配置</button>
             </div>
         </div>
@@ -1077,6 +1069,9 @@
         let activeFilters = new Set();
         let syncInProgress = false;
         let currentFileSHA = null;
+        let editMode = false;
+        let draggedBookmark = null;
+        let draggedFromCategory = null;
 
         // ==================== 数据管理模块 ====================
         
@@ -1251,6 +1246,73 @@
 
         function closeConfigModal() {
             document.getElementById('configModal').style.display = 'none';
+        }
+
+        async function testGitHubConnection() {
+            const username = document.getElementById('githubUsername').value.trim();
+            const repository = document.getElementById('githubRepository').value.trim();
+            const token = document.getElementById('githubToken').value.trim();
+
+            if (!username || !repository || !token) {
+                alert('请先填写完整的配置信息');
+                return;
+            }
+
+            try {
+                // 测试仓库访问权限
+                const repoUrl = `https://api.github.com/repos/${username}/${repository}`;
+                const repoResponse = await fetch(repoUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                if (!repoResponse.ok) {
+                    if (repoResponse.status === 404) {
+                        alert('❌ 测试失败：仓库不存在或无访问权限\n\n请检查：\n1. 仓库名称是否正确\n2. 仓库是否为 public 或 token 有访问权限\n3. Token 是否有 repo 权限');
+                        return;
+                    } else if (repoResponse.status === 401) {
+                        alert('❌ 测试失败：Token 无效\n\n请检查 Token 是否正确');
+                        return;
+                    } else {
+                        alert(`❌ 测试失败：HTTP ${repoResponse.status}\n\n请检查网络连接和配置信息`);
+                        return;
+                    }
+                }
+
+                const repoData = await repoResponse.json();
+                
+                // 检查写入权限
+                if (!repoData.permissions || !repoData.permissions.push) {
+                    alert('❌ 测试失败：没有写入权限\n\n请确保：\n1. 你是仓库的 owner 或 collaborator\n2. Token 有 repo 权限');
+                    return;
+                }
+
+                // 测试文件访问
+                const fileUrl = `https://api.github.com/repos/${username}/${repository}/contents/bookmarks.json`;
+                const fileResponse = await fetch(fileUrl, {
+                    headers: {
+                        'Authorization': `token ${token}`,
+                        'Accept': 'application/vnd.github.v3+json'
+                    }
+                });
+
+                let fileStatus = '';
+                if (fileResponse.ok) {
+                    fileStatus = '✅ bookmarks.json 文件已存在';
+                } else if (fileResponse.status === 404) {
+                    fileStatus = '📝 bookmarks.json 文件不存在（同步时会自动创建）';
+                } else {
+                    fileStatus = `⚠️ 无法访问 bookmarks.json 文件 (${fileResponse.status})`;
+                }
+
+                alert(`✅ 连接测试成功！\n\n仓库信息：\n- 名称：${repoData.full_name}\n- 可见性：${repoData.private ? 'Private' : 'Public'}\n- 权限：${repoData.permissions.admin ? 'Admin' : repoData.permissions.push ? 'Write' : 'Read'}\n\n文件状态：\n${fileStatus}\n\n可以正常使用同步功能！`);
+
+            } catch (error) {
+                console.error('测试连接失败:', error);
+                alert(`❌ 连接测试失败：${error.message}\n\n请检查：\n1. 网络连接\n2. Token 权限\n3. 仓库设置`);
+            }
         }
 
         // ==================== 同步状态管理 ====================
@@ -1524,6 +1586,9 @@
         function renderBookmarks() {
             if (!bookmarksData) return;
 
+            // 确保所有书签都有ID
+            ensureBookmarkIds();
+
             const categoriesContainer = document.getElementById('categories');
             categoriesContainer.innerHTML = '';
 
@@ -1539,9 +1604,29 @@
             initializeFilterTags();
         }
 
+        function ensureBookmarkIds() {
+            if (!bookmarksData) return;
+            
+            let hasChanges = false;
+            
+            bookmarksData.categories.forEach(category => {
+                category.bookmarks.forEach(bookmark => {
+                    if (!bookmark.id) {
+                        bookmark.id = 'bookmark_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+                        hasChanges = true;
+                    }
+                });
+            });
+            
+            if (hasChanges) {
+                saveToLocal(bookmarksData);
+            }
+        }
+
         function createCategoryElement(category) {
             const categoryDiv = document.createElement('div');
             categoryDiv.className = 'category';
+            categoryDiv.setAttribute('data-category', category.name);
             
             categoryDiv.innerHTML = `
                 <div class="category-controls">
@@ -1552,17 +1637,35 @@
                     ${category.name}
                 </div>
                 <div class="bookmarks">
-                    ${category.bookmarks.map(bookmark => `
-                        <a href="${bookmark.url}" class="bookmark" target="_blank" rel="noopener">
-                            <div class="bookmark-icon">${bookmark.icon}</div>
-                            <div class="bookmark-title">${bookmark.title}</div>
-                            <div class="bookmark-url">${new URL(bookmark.url).hostname}</div>
-                        </a>
-                    `).join('')}
+                    ${category.bookmarks.map(bookmark => createBookmarkHTML(bookmark)).join('')}
                 </div>
             `;
             
+            // 添加拖拽事件监听器
+            setupCategoryDropZone(categoryDiv);
+            
             return categoryDiv;
+        }
+
+        function createBookmarkHTML(bookmark) {
+            let hostname;
+            try {
+                hostname = new URL(bookmark.url).hostname;
+            } catch (e) {
+                hostname = bookmark.url;
+            }
+            
+            return `
+                <a href="${bookmark.url}" class="bookmark" target="_blank" rel="noopener" 
+                   data-bookmark-id="${bookmark.id}" 
+                   draggable="false"
+                   onclick="handleBookmarkClick(event, this)">
+                    <div class="bookmark-icon">${bookmark.icon}</div>
+                    <div class="bookmark-title">${bookmark.title}</div>
+                    <div class="bookmark-url">${hostname}</div>
+                    <button class="bookmark-delete" onclick="deleteBookmark(event, '${bookmark.id}')" title="删除书签">×</button>
+                </a>
+            `;
         }
 
         // 初始化筛选标签
@@ -1737,6 +1840,12 @@
 
         // 搜索功能
         document.getElementById('searchInput').addEventListener('input', function(e) {
+            // 在编辑模式下禁用搜索
+            if (editMode) {
+                e.target.value = '';
+                return;
+            }
+            
             const searchTerm = e.target.value.toLowerCase();
             const bookmarks = document.querySelectorAll('.bookmark');
             const categories = document.querySelectorAll('.category');
@@ -2065,8 +2174,14 @@
             if (e.key === 'Escape') {
                 closeBookmarkModal();
                 closeCategoryModal();
+                closeConfigModal();
+                closeBackupModal();
                 if (isQuickActionsOpen) {
                     toggleQuickActions();
+                }
+                // 如果在编辑模式，按ESC退出编辑模式
+                if (editMode) {
+                    toggleEditMode();
                 }
             }
             if (e.ctrlKey && e.key === 'k') {
@@ -2081,6 +2196,10 @@
                 e.preventDefault();
                 openCategoryModal();
             }
+            if (e.ctrlKey && e.key === 'e') {
+                e.preventDefault();
+                toggleEditMode();
+            }
         });
 
         // 点击页面其他地方关闭快捷菜单
@@ -2090,6 +2209,261 @@
                 toggleQuickActions();
             }
         });
+
+        // ==================== 编辑模式功能 ====================
+        
+        function toggleEditMode() {
+            editMode = !editMode;
+            const body = document.body;
+            const editBtn = document.getElementById('editBtn');
+            const searchInput = document.getElementById('searchInput');
+            
+            if (editMode) {
+                body.classList.add('edit-mode');
+                editBtn.classList.add('active');
+                editBtn.innerHTML = '✅ 完成编辑';
+                searchInput.placeholder = '编辑模式下搜索功能已禁用';
+                searchInput.value = '';
+                searchInput.disabled = true;
+                setupBookmarkDragAndDrop();
+                
+                // 确保所有书签都显示
+                document.querySelectorAll('.bookmark').forEach(bookmark => {
+                    bookmark.style.display = 'flex';
+                });
+                document.querySelectorAll('.category').forEach(category => {
+                    if (!hiddenCategories.has(category.getAttribute('data-category'))) {
+                        category.style.display = 'block';
+                    }
+                });
+            } else {
+                body.classList.remove('edit-mode');
+                editBtn.classList.remove('active');
+                editBtn.innerHTML = '✏️ 编辑模式';
+                searchInput.placeholder = '搜索书签...';
+                searchInput.disabled = false;
+                removeBookmarkDragAndDrop();
+                
+                // 重新应用筛选
+                applyFilters();
+            }
+        }
+
+        function setupBookmarkDragAndDrop() {
+            const bookmarks = document.querySelectorAll('.bookmark');
+            bookmarks.forEach(bookmark => {
+                bookmark.draggable = true;
+                bookmark.addEventListener('dragstart', handleDragStart);
+                bookmark.addEventListener('dragend', handleDragEnd);
+            });
+        }
+
+        function removeBookmarkDragAndDrop() {
+            const bookmarks = document.querySelectorAll('.bookmark');
+            bookmarks.forEach(bookmark => {
+                bookmark.draggable = false;
+                bookmark.removeEventListener('dragstart', handleDragStart);
+                bookmark.removeEventListener('dragend', handleDragEnd);
+            });
+        }
+
+        function setupCategoryDropZone(categoryElement) {
+            const bookmarksContainer = categoryElement.querySelector('.bookmarks');
+            
+            categoryElement.addEventListener('dragover', handleDragOver);
+            categoryElement.addEventListener('drop', handleDrop);
+            categoryElement.addEventListener('dragenter', handleDragEnter);
+            categoryElement.addEventListener('dragleave', handleDragLeave);
+        }
+
+        function handleBookmarkClick(event, bookmarkElement) {
+            if (editMode) {
+                event.preventDefault();
+                return false;
+            }
+        }
+
+        function handleDragStart(event) {
+            if (!editMode) return;
+            
+            draggedBookmark = event.target;
+            draggedFromCategory = event.target.closest('.category').getAttribute('data-category');
+            
+            event.target.classList.add('dragging');
+            event.dataTransfer.effectAllowed = 'move';
+            event.dataTransfer.setData('text/html', event.target.outerHTML);
+        }
+
+        function handleDragEnd(event) {
+            event.target.classList.remove('dragging');
+            
+            // 清理所有拖拽状态
+            document.querySelectorAll('.category').forEach(cat => {
+                cat.classList.remove('drag-over');
+            });
+            
+            draggedBookmark = null;
+            draggedFromCategory = null;
+        }
+
+        function handleDragOver(event) {
+            if (!editMode || !draggedBookmark) return;
+            
+            event.preventDefault();
+            event.dataTransfer.dropEffect = 'move';
+        }
+
+        function handleDragEnter(event) {
+            if (!editMode || !draggedBookmark) return;
+            
+            const category = event.currentTarget;
+            const targetCategoryName = category.getAttribute('data-category');
+            
+            if (targetCategoryName !== draggedFromCategory) {
+                category.classList.add('drag-over');
+            }
+        }
+
+        function handleDragLeave(event) {
+            if (!editMode || !draggedBookmark) return;
+            
+            // 只有当鼠标真正离开分类区域时才移除样式
+            const category = event.currentTarget;
+            const rect = category.getBoundingClientRect();
+            const x = event.clientX;
+            const y = event.clientY;
+            
+            if (x < rect.left || x > rect.right || y < rect.top || y > rect.bottom) {
+                category.classList.remove('drag-over');
+            }
+        }
+
+        function handleDrop(event) {
+            if (!editMode || !draggedBookmark) return;
+            
+            event.preventDefault();
+            
+            const targetCategory = event.currentTarget;
+            const targetCategoryName = targetCategory.getAttribute('data-category');
+            
+            // 如果拖拽到同一个分类，不做任何操作
+            if (targetCategoryName === draggedFromCategory) {
+                targetCategory.classList.remove('drag-over');
+                return;
+            }
+            
+            const bookmarkId = draggedBookmark.getAttribute('data-bookmark-id');
+            
+            // 移动书签数据
+            moveBookmarkToCategory(bookmarkId, draggedFromCategory, targetCategoryName);
+            
+            // 清理拖拽状态
+            targetCategory.classList.remove('drag-over');
+        }
+
+        function moveBookmarkToCategory(bookmarkId, fromCategoryName, toCategoryName) {
+            if (!bookmarksData) return;
+            
+            // 找到源分类和目标分类
+            const fromCategory = bookmarksData.categories.find(cat => cat.name === fromCategoryName);
+            const toCategory = bookmarksData.categories.find(cat => cat.name === toCategoryName);
+            
+            if (!fromCategory || !toCategory) {
+                console.error('找不到分类:', fromCategoryName, toCategoryName);
+                return;
+            }
+            
+            // 找到要移动的书签
+            const bookmarkIndex = fromCategory.bookmarks.findIndex(bookmark => bookmark.id === bookmarkId);
+            if (bookmarkIndex === -1) {
+                console.error('找不到书签:', bookmarkId);
+                return;
+            }
+            
+            // 移动书签
+            const bookmark = fromCategory.bookmarks.splice(bookmarkIndex, 1)[0];
+            toCategory.bookmarks.push(bookmark);
+            
+            // 更新元数据
+            bookmarksData.metadata.syncStatus = 'local';
+            
+            // 保存到本地存储
+            saveToLocal(bookmarksData);
+            
+            // 重新渲染页面
+            renderBookmarks();
+            
+            // 重新设置编辑模式
+            if (editMode) {
+                setTimeout(() => {
+                    document.body.classList.add('edit-mode');
+                    setupBookmarkDragAndDrop();
+                }, 100);
+            }
+            
+            console.log(`书签 "${bookmark.title}" 已从 "${fromCategoryName}" 移动到 "${toCategoryName}"`);
+        }
+
+        function deleteBookmark(event, bookmarkId) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            if (!editMode) return;
+            
+            const bookmark = findBookmarkById(bookmarkId);
+            if (!bookmark) {
+                console.error('找不到书签:', bookmarkId);
+                return;
+            }
+            
+            if (confirm(`确定要删除书签 "${bookmark.title}" 吗？`)) {
+                removeBookmarkById(bookmarkId);
+            }
+        }
+
+        function findBookmarkById(bookmarkId) {
+            if (!bookmarksData) return null;
+            
+            for (const category of bookmarksData.categories) {
+                const bookmark = category.bookmarks.find(b => b.id === bookmarkId);
+                if (bookmark) {
+                    return { bookmark, category: category.name };
+                }
+            }
+            return null;
+        }
+
+        function removeBookmarkById(bookmarkId) {
+            if (!bookmarksData) return;
+            
+            for (const category of bookmarksData.categories) {
+                const bookmarkIndex = category.bookmarks.findIndex(b => b.id === bookmarkId);
+                if (bookmarkIndex !== -1) {
+                    const removedBookmark = category.bookmarks.splice(bookmarkIndex, 1)[0];
+                    
+                    // 更新元数据
+                    bookmarksData.metadata.totalBookmarks = getTotalBookmarks();
+                    bookmarksData.metadata.syncStatus = 'local';
+                    
+                    // 保存到本地存储
+                    saveToLocal(bookmarksData);
+                    
+                    // 重新渲染页面
+                    renderBookmarks();
+                    
+                    // 重新设置编辑模式
+                    if (editMode) {
+                        setTimeout(() => {
+                            document.body.classList.add('edit-mode');
+                            setupBookmarkDragAndDrop();
+                        }, 100);
+                    }
+                    
+                    console.log(`书签 "${removedBookmark.title}" 已删除`);
+                    return;
+                }
+            }
+        }
 
         // 页面加载完成后初始化
         document.addEventListener('DOMContentLoaded', async function() {
