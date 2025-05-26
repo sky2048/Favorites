@@ -106,7 +106,79 @@ function initializeSidebar(categories) {
         }
         
         sidebarItem.appendChild(sidebarIcon);
-        sidebarItem.appendChild(document.createTextNode(category.name));
+        
+        // 创建分类名称容器
+        const nameContainer = document.createElement('div');
+        nameContainer.className = 'sidebar-name-container';
+        nameContainer.style.flex = '1';
+        nameContainer.style.display = 'flex';
+        nameContainer.style.justifyContent = 'space-between';
+        nameContainer.style.alignItems = 'center';
+        
+        // 添加分类名称
+        nameContainer.appendChild(document.createTextNode(category.name));
+        
+        // 创建删除按钮
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'category-delete-btn';
+        deleteBtn.id = `delete-category-${index}`;
+        deleteBtn.innerHTML = '×';
+        deleteBtn.title = '删除分类';
+        deleteBtn.style.display = 'none'; // 默认隐藏
+        deleteBtn.style.background = 'transparent';
+        deleteBtn.style.border = 'none';
+        deleteBtn.style.color = '#E74C3C';
+        deleteBtn.style.fontSize = '16px';
+        deleteBtn.style.cursor = 'pointer';
+        deleteBtn.style.padding = '0 5px';
+        deleteBtn.style.marginLeft = '5px';
+        
+        // 添加删除按钮点击事件
+        deleteBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // 阻止事件冒泡
+            
+            // 确认删除
+            if (confirm(`确定要删除分类"${category.name}"吗？\n该分类下的所有书签都将被删除。`)) {
+                // 找到对应的分类区域
+                const sectionId = `category-${category.name.replace(/\s+/g, '-').toLowerCase()}`;
+                const section = document.getElementById(sectionId);
+                
+                if (section) {
+                    // 添加删除动画
+                    section.style.opacity = '0';
+                    section.style.transform = 'scale(0.9)';
+                    
+                    // 动画结束后移除元素
+                    setTimeout(() => {
+                        section.remove();
+                        sidebarItem.remove();
+                        
+                        // 如果有bookmarksData，更新数据
+                        if (bookmarksData) {
+                            // 找到分类索引
+                            const categoryIndex = bookmarksData.categories.findIndex(cat => cat.name === category.name);
+                            
+                            if (categoryIndex !== -1) {
+                                // 从数组中删除
+                                bookmarksData.categories.splice(categoryIndex, 1);
+                                
+                                // 保存书签数据
+                                saveBookmarksData();
+                            }
+                        }
+                        
+                        // 调整侧边栏高度
+                        adjustSidebarHeight();
+                        
+                        // 显示成功提示
+                        showToast(`已删除分类"${category.name}"`);
+                    }, 300);
+                }
+            }
+        });
+        
+        nameContainer.appendChild(deleteBtn);
+        sidebarItem.appendChild(nameContainer);
         
         // 添加点击事件
         sidebarItem.addEventListener('click', function() {
@@ -161,11 +233,82 @@ function initializeContent(categories) {
         const sectionHeader = document.createElement('div');
         sectionHeader.className = 'section-header';
         
+        // 创建标题容器以便于添加按钮
+        const titleContainer = document.createElement('div');
+        titleContainer.className = 'section-title-container';
+        titleContainer.style.display = 'flex';
+        titleContainer.style.alignItems = 'center';
+        titleContainer.style.justifyContent = 'space-between';
+        titleContainer.style.width = '100%';
+        
         const sectionTitle = document.createElement('div');
         sectionTitle.className = 'section-title';
         sectionTitle.textContent = category.name;
         
-        sectionHeader.appendChild(sectionTitle);
+        // 创建删除按钮
+        const deleteBtn = document.createElement('button');
+        deleteBtn.className = 'section-delete-btn';
+        deleteBtn.id = `section-delete-${category.name.replace(/\s+/g, '-').toLowerCase()}`;
+        deleteBtn.innerHTML = '删除';
+        deleteBtn.title = '删除分类';
+        deleteBtn.style.display = 'none'; // 默认隐藏
+        deleteBtn.style.background = '#E74C3C';
+        deleteBtn.style.border = 'none';
+        deleteBtn.style.color = 'white';
+        deleteBtn.style.fontSize = '14px';
+        deleteBtn.style.padding = '5px 10px';
+        deleteBtn.style.borderRadius = '4px';
+        deleteBtn.style.cursor = 'pointer';
+        deleteBtn.style.marginLeft = '10px';
+        
+        // 添加删除按钮点击事件
+        deleteBtn.addEventListener('click', function(e) {
+            e.stopPropagation(); // 阻止事件冒泡
+            
+            // 确认删除
+            if (confirm(`确定要删除分类"${category.name}"吗？\n该分类下的所有书签都将被删除。`)) {
+                // 添加删除动画
+                section.style.opacity = '0';
+                section.style.transform = 'scale(0.9)';
+                
+                // 动画结束后移除元素
+                setTimeout(() => {
+                    section.remove();
+                    
+                    // 同时移除侧边栏对应项
+                    const sidebarItems = document.querySelectorAll('.sidebar-item');
+                    sidebarItems.forEach(item => {
+                        if (item.textContent.includes(category.name)) {
+                            item.remove();
+                        }
+                    });
+                    
+                    // 如果有bookmarksData，更新数据
+                    if (bookmarksData) {
+                        // 找到分类索引
+                        const categoryIndex = bookmarksData.categories.findIndex(cat => cat.name === category.name);
+                        
+                        if (categoryIndex !== -1) {
+                            // 从数组中删除
+                            bookmarksData.categories.splice(categoryIndex, 1);
+                            
+                            // 保存书签数据
+                            saveBookmarksData();
+                        }
+                    }
+                    
+                    // 调整侧边栏高度
+                    adjustSidebarHeight();
+                    
+                    // 显示成功提示
+                    showToast(`已删除分类"${category.name}"`);
+                }, 300);
+            }
+        });
+        
+        titleContainer.appendChild(sectionTitle);
+        titleContainer.appendChild(deleteBtn);
+        sectionHeader.appendChild(titleContainer);
         
         const websiteGrid = document.createElement('div');
         websiteGrid.className = 'website-grid';
@@ -257,7 +400,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
     
     // 获取编辑模式按钮
-    const editModeBtn = document.querySelector('.header-btn:last-child');
+    const editModeBtn = document.getElementById('edit-mode-btn');
     
     // 添加点击事件
     editModeBtn.addEventListener('click', () => {
@@ -280,6 +423,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                 // 确保卡片有按钮组
                 createCardButtonGroup(card);
             });
+            
+            // 显示分类删除按钮（侧边栏）
+            document.querySelectorAll('.category-delete-btn').forEach(btn => {
+                btn.style.display = 'inline-block';
+            });
+            
+            // 显示分类删除按钮（内容区域）
+            document.querySelectorAll('.section-delete-btn').forEach(btn => {
+                btn.style.display = 'inline-block';
+            });
         } else {
             editModeBtn.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
             editIcon.textContent = '✏️';
@@ -288,6 +441,16 @@ document.addEventListener('DOMContentLoaded', async () => {
             // 隐藏所有卡片的按钮组
             document.querySelectorAll('.card-btn-group').forEach(btnGroup => {
                 btnGroup.style.display = 'none';
+            });
+            
+            // 隐藏分类删除按钮（侧边栏）
+            document.querySelectorAll('.category-delete-btn').forEach(btn => {
+                btn.style.display = 'none';
+            });
+            
+            // 隐藏分类删除按钮（内容区域）
+            document.querySelectorAll('.section-delete-btn').forEach(btn => {
+                btn.style.display = 'none';
             });
         }
     });
@@ -3091,4 +3254,199 @@ function createCardButtonGroup(card) {
     
     // 添加到卡片
     card.appendChild(btnGroup);
-} 
+}
+
+// 初始化搜索功能
+function initializeSearch() {
+    const searchInput = document.getElementById('search-input');
+    const searchBtn = document.getElementById('search-btn');
+    
+    // 添加搜索按钮点击事件
+    searchBtn.addEventListener('click', function() {
+        performSearch(searchInput.value);
+    });
+    
+    // 添加输入框回车事件
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            performSearch(this.value);
+        }
+    });
+    
+    // 添加输入框实时搜索事件（可选）
+    searchInput.addEventListener('input', function() {
+        if (this.value.length > 1) {
+            performSearch(this.value);
+        } else if (this.value.length === 0) {
+            // 如果搜索框被清空，恢复所有内容
+            resetSearch();
+        }
+    });
+}
+
+// 执行搜索
+function performSearch(query) {
+    if (!query || query.trim() === '') {
+        resetSearch();
+        return;
+    }
+    
+    query = query.toLowerCase().trim();
+    
+    // 获取所有网站卡片
+    const allCards = document.querySelectorAll('.website-card');
+    
+    // 标记是否有匹配的结果
+    let hasResults = false;
+    
+    // 遍历所有卡片，检查是否匹配搜索词
+    allCards.forEach(card => {
+        if (card.classList.contains('add-website-card')) {
+            // 跳过"添加网站"卡片
+            card.style.display = 'none';
+            return;
+        }
+        
+        // 获取卡片内容
+        const name = card.querySelector('.website-name').textContent.toLowerCase();
+        const desc = card.querySelector('.website-desc').textContent.toLowerCase();
+        const url = card.dataset.url ? card.dataset.url.toLowerCase() : '';
+        
+        // 检查是否匹配搜索词
+        const isMatch = name.includes(query) || 
+                        desc.includes(query) || 
+                        url.includes(query);
+        
+        // 显示或隐藏卡片
+        if (isMatch) {
+            card.style.display = 'flex';
+            card.style.animation = 'highlight-card 1s';
+            hasResults = true;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+    
+    // 获取所有分类区域
+    const allSections = document.querySelectorAll('.section');
+    
+    // 处理每个分类区域
+    allSections.forEach(section => {
+        // 获取该分类下的所有可见卡片（不包括"添加网站"卡片）
+        const visibleCards = section.querySelectorAll('.website-card:not(.add-website-card)[style*="display: flex"]');
+        
+        // 如果该分类下没有匹配的卡片，隐藏整个分类
+        if (visibleCards.length === 0) {
+            section.style.display = 'none';
+        } else {
+            section.style.display = 'block';
+            
+            // 显示"添加网站"卡片
+            const addCard = section.querySelector('.add-website-card');
+            if (addCard) {
+                addCard.style.display = 'flex';
+            }
+        }
+    });
+    
+    // 显示搜索结果提示
+    if (!hasResults) {
+        showToast(`未找到与"${query}"相关的书签`);
+    } else {
+        // 移除之前的搜索提示（如果有）
+        const existingNotice = document.querySelector('.search-notice');
+        if (existingNotice) {
+            existingNotice.remove();
+        }
+        
+        // 添加搜索提示
+        const searchNotice = document.createElement('div');
+        searchNotice.className = 'search-notice';
+        searchNotice.innerHTML = `
+            <div style="display: flex; align-items: center; justify-content: center; padding: 10px; background-color: #f5f5f5; border-radius: 4px; margin-bottom: 15px;">
+                <span style="margin-right: 10px;">🔍 搜索"${query}"的结果</span>
+                <button id="reset-search" style="padding: 5px 10px; border: none; border-radius: 4px; background-color: #e0e0e0; cursor: pointer;">清除</button>
+            </div>
+        `;
+        
+        // 插入到第一个可见的分类区域之前
+        const firstVisibleSection = document.querySelector('.section[style*="display: block"]');
+        if (firstVisibleSection) {
+            firstVisibleSection.parentNode.insertBefore(searchNotice, firstVisibleSection);
+            
+            // 添加清除按钮点击事件
+            document.getElementById('reset-search').addEventListener('click', resetSearch);
+        }
+    }
+}
+
+// 重置搜索，恢复所有内容
+function resetSearch() {
+    // 恢复所有卡片显示
+    document.querySelectorAll('.website-card').forEach(card => {
+        card.style.display = 'flex';
+        card.style.animation = 'none';
+    });
+    
+    // 恢复所有分类区域显示
+    document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'block';
+    });
+    
+    // 清空搜索框
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) {
+        searchInput.value = '';
+    }
+    
+    // 移除搜索提示
+    const searchNotice = document.querySelector('.search-notice');
+    if (searchNotice) {
+        searchNotice.remove();
+    }
+}
+
+// 在页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', async function() {
+    try {
+        // 加载书签数据
+        const data = await loadBookmarks();
+        
+        if (data) {
+            // 初始化侧边栏
+            initializeSidebar(data.categories);
+            
+            // 初始化内容区域
+            initializeContent(data.categories);
+            
+            // 设置侧边栏滚动效果
+            setupSidebarScroll();
+            
+            // 调整侧边栏高度
+            adjustSidebarHeight();
+            
+            // 设置添加网站模态框
+            setupAddWebsiteModal();
+            
+            // 初始化搜索功能
+            initializeSearch();
+            
+            // 注意：添加分类按钮的事件已在前面代码中设置（第296行左右），这里不再重复添加
+            
+            // GitHub配置按钮
+            document.getElementById('github-config-btn').addEventListener('click', showGitHubConfigModal);
+            
+            // 设置导入书签按钮点击事件
+            document.querySelector('.header-btn:nth-child(4)').addEventListener('click', importBookmarksFromHTML);
+            
+            // 设置检测失效链接按钮点击事件
+            document.querySelector('.header-btn:nth-child(5)').addEventListener('click', checkDeadLinks);
+            
+            // 设置更新图标按钮点击事件
+            document.querySelector('.header-btn:nth-child(6)').addEventListener('click', updateAllIcons);
+        }
+    } catch (error) {
+        console.error('初始化失败:', error);
+        showToast('加载数据失败，请刷新页面重试');
+    }
+}); 

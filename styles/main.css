@@ -743,4 +743,83 @@ body.edit-mode .website-card {
 
 .modal.active {
     display: flex;
+}
+
+/* 搜索结果高亮动画 */
+@keyframes highlight-card {
+    0% { 
+        box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.7); 
+        transform: scale(1.03);
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(52, 152, 219, 0); 
+        transform: scale(1);
+    }
+}
+
+/* 搜索提示样式 */
+.search-notice {
+    width: 100%;
+    margin-bottom: 15px;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#reset-search:hover {
+    background-color: #d0d0d0;
+}
+
+/* 搜索框焦点样式 */
+.search-input:focus {
+    border-color: #3498DB;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* 分类删除按钮样式 */
+.category-delete-btn {
+    opacity: 0.7;
+    transition: all 0.2s;
+}
+
+.category-delete-btn:hover {
+    opacity: 1;
+    transform: scale(1.2);
+}
+
+.sidebar-name-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+body.edit-mode .category-delete-btn {
+    display: inline-block !important;
+}
+
+/* 分类删除按钮样式 */
+.section-delete-btn {
+    opacity: 0.7;
+    transition: all 0.2s;
+    display: none;
+}
+
+.section-delete-btn:hover {
+    opacity: 1;
+    background-color: #c0392b !important;
+}
+
+.section-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+body.edit-mode .section-delete-btn {
+    display: inline-block !important;
 } 

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>福吧导航</title>
+    <title>我的书签</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
@@ -11,8 +11,8 @@
     <header class="header">
         <div style="display: flex; align-items: center;">
             <span style="display: flex; align-items: center; margin-right: 15px;">
-                <span style="display: inline-block; width: 16px; height: 16px; background-color: #FFEB3B; border-radius: 50%; margin-right: 8px;"></span>
-                有未同步的更改
+                <span style="display: inline-block; width: 16px; height: 16px; background-color: #4CAF50; border-radius: 50%; margin-right: 8px;"></span>
+                我的书签
             </span>
         </div>
         <div style="display: flex; gap: 10px;">
@@ -37,7 +37,7 @@
             <button class="header-btn" id="add-category-btn">
                 <span style="margin-right: 5px;">➕</span> 添加分类
             </button>
-            <button class="header-btn">
+            <button class="header-btn" id="edit-mode-btn">
                 <span style="margin-right: 5px;">✏️</span> 编辑模式
             </button>
         </div>
@@ -47,8 +47,8 @@
     <section class="search-section">
         <div class="search-container">
             <div class="search-box">
-                <input type="text" class="search-input" placeholder="站内搜索">
-                <button class="search-btn">🔍</button>
+                <input type="text" class="search-input" id="search-input" placeholder="书签搜索">
+                <button class="search-btn" id="search-btn">🔍</button>
             </div>
         </div>
     </section>
@@ -68,7 +68,7 @@
 
     <!-- Footer -->
     <footer class="footer">
-        Copyright © 2025 福利吧导航
+        Copyright © 2025 我的书签
     </footer>
 
     <!-- 添加网站弹窗 -->
