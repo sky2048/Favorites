@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-26T03:31:41.837Z",
-    "lastSynced": "2025-05-25T23:47:35.713Z",
+    "lastUpdated": "2025-05-26T05:21:54.974Z",
+    "lastSynced": "2025-05-25T23:57:25.109Z",
     "totalBookmarks": 486,
-    "syncStatus": "synced"
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [],
   "categories": [
@@ -3587,6 +3587,26 @@
           "url": "https://everia.club/",
           "icon": "🔗",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748236823857_u7hvca8qk",
+          "title": "missav",
+          "url": "https://missav.live/dm22/en",
+          "description": "",
+          "isFavorite": false
+        }
+      ]
+    },
+    {
+      "name": "Github项目收藏",
+      "icon": "📁",
+      "bookmarks": [
+        {
+          "id": "bookmark_1748236746553_vxbzbgow8",
+          "title": "提示词优化",
+          "url": "https://github.com/linshenkx/prompt-optimizer",
+          "description": "开源提示词优化",
+          "isFavorite": false
         }
       ]
     }
@@ -3690,6 +3710,10 @@
     },
     {
       "name": "特殊",
+      "icon": "📁"
+    },
+    {
+      "name": "Github项目收藏",
       "icon": "📁"
     }
   ],
