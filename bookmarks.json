@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-26T05:21:54.974Z",
-    "lastSynced": "2025-05-25T23:57:25.109Z",
+    "lastUpdated": "2025-05-26T05:26:40.766Z",
+    "lastSynced": "2025-05-26T05:21:57.536Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -127,33 +127,6 @@
           "title": "Godot: The open source game engine",
           "url": "https://www.reddit.com/r/godot/?f=flair_name%3A%22Tutorial%22",
           "icon": "🔗",
-          "isFavorite": false
-        }
-      ]
-    },
-    {
-      "name": "购物网站",
-      "icon": "🛒",
-      "bookmarks": [
-        {
-          "id": "taobao",
-          "title": "淘宝",
-          "url": "https://www.taobao.com",
-          "icon": "🛍️",
-          "isFavorite": false
-        },
-        {
-          "id": "jd",
-          "title": "京东",
-          "url": "https://www.jd.com",
-          "icon": "🛒",
-          "isFavorite": false
-        },
-        {
-          "id": "amazon",
-          "title": "Amazon",
-          "url": "https://www.amazon.com",
-          "icon": "📦",
           "isFavorite": false
         }
       ]
@@ -2434,6 +2407,13 @@
           "title": "论坛 - 远景论坛 - 前沿科技与智慧生态的极客社区",
           "url": "https://bbs.pcbeta.com/",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748237193239_ofrcadj0l",
+          "title": "吾爱论坛",
+          "url": "https://www.52pojie.cn/",
+          "description": "",
           "isFavorite": false
         }
       ]
