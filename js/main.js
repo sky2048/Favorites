@@ -691,38 +691,36 @@ function createWebsiteCard(grid, name, desc, url, iconText, iconColor) {
     const icon = document.createElement('div');
     icon.className = 'website-icon';
     
-    // 尝试使用网站favicon
+    // 尝试使用缓存中的favicon或默认图标
     try {
         const domain = new URL(url).hostname;
-        const faviconUrl = `https://${domain}/favicon.ico`;
+        // 尝试从localStorage获取缓存的图标
+        const cachedIcon = getIconFromCache(domain);
         
-        // 创建图片元素
-        const img = document.createElement('img');
-        img.className = 'favicon-img';
-        img.alt = name.charAt(0);
-        
-        // 设置加载失败的回调
-        img.onerror = function() {
-            // 如果加载失败，使用文字图标作为备用
-            this.style.display = 'none';
+        if (cachedIcon) {
+            // 使用缓存的图标
+            if (cachedIcon.type === 'url') {
+                // 创建图片元素
+                const img = document.createElement('img');
+                img.className = 'favicon-img';
+                img.alt = name.charAt(0);
+                img.src = cachedIcon.data;
+                img.style.display = 'block';
+                icon.style.background = 'white';
+                icon.dataset.useDefault = 'false';
+                icon.appendChild(img);
+            } else {
+                // 使用默认文字图标
+                icon.style.background = iconColor || '#4285F4';
+                icon.textContent = iconText || name.charAt(0);
+                icon.dataset.useDefault = 'true';
+            }
+        } else {
+            // 如果没有缓存，使用默认文字图标
             icon.style.background = iconColor || '#4285F4';
             icon.textContent = iconText || name.charAt(0);
             icon.dataset.useDefault = 'true';
-        };
-        
-        // 设置加载成功的回调
-        img.onload = function() {
-            icon.textContent = '';
-            this.style.display = 'block';
-            icon.style.background = 'white';
-            icon.dataset.useDefault = 'false';
-        };
-        
-        // 设置图片源
-        img.src = faviconUrl;
-        
-        // 添加到图标容器
-        icon.appendChild(img);
+        }
     } catch (error) {
         // 如果URL解析失败，使用文字图标
         icon.style.background = iconColor || '#4285F4';
@@ -777,9 +775,6 @@ function createWebsiteCard(grid, name, desc, url, iconText, iconColor) {
     
     // 调整侧边栏高度
     adjustSidebarHeight();
-    
-    // 立即更新卡片图标
-    updateCardIcon(card);
     
     return card;
 }
@@ -870,9 +865,6 @@ function addToMyNavigation(name, desc, url, iconText, iconColor) {
     
     // 调整侧边栏高度
     adjustSidebarHeight();
-    
-    // 立即更新卡片图标
-    updateCardIcon(card);
 }
 
 // 显示提示信息
@@ -2208,14 +2200,10 @@ function updateCardIcon(card) {
         iconElement.textContent = '';
         iconElement.appendChild(imgElement);
         
-        // 添加时间戳参数，避免缓存
-        const timestamp = new Date().getTime();
-        imgElement.src = `${faviconUrl}?t=${timestamp}`;
-        
         // 设置加载失败的回调
         imgElement.onerror = function() {
             // 如果加载失败，尝试使用Google的favicon服务
-            this.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=64&t=${timestamp}`;
+            this.src = `https://www.google.com/s2/favicons?domain=${domain}&sz=64`;
             
             // 如果Google的服务也失败，使用文字图标
             this.onerror = function() {
@@ -2223,6 +2211,9 @@ function updateCardIcon(card) {
                 iconElement.style.background = '#4285F4';
                 iconElement.textContent = card.querySelector('.website-name').textContent.charAt(0);
                 iconElement.dataset.useDefault = 'true';
+                
+                // 保存默认图标到缓存
+                saveIconToCache(domain, '', 'default');
             };
         };
         
@@ -2231,7 +2222,27 @@ function updateCardIcon(card) {
             this.style.display = 'block';
             iconElement.style.background = 'white';
             iconElement.dataset.useDefault = 'false';
+            
+            // 保存图标URL到缓存
+            saveIconToCache(domain, this.src, 'url');
         };
+        
+        // 尝试从缓存加载
+        const cachedIcon = getIconFromCache(domain);
+        if (cachedIcon) {
+            if (cachedIcon.type === 'url') {
+                imgElement.src = cachedIcon.data;
+            } else {
+                // 使用默认文字图标
+                imgElement.style.display = 'none';
+                iconElement.style.background = '#4285F4';
+                iconElement.textContent = card.querySelector('.website-name').textContent.charAt(0);
+                iconElement.dataset.useDefault = 'true';
+            }
+        } else {
+            // 如果没有缓存，从网络加载
+            imgElement.src = faviconUrl;
+        }
     } catch (error) {
         console.error('更新图标失败:', error);
     }
@@ -3409,6 +3420,9 @@ function resetSearch() {
 // 在页面加载完成后初始化
 document.addEventListener('DOMContentLoaded', async function() {
     try {
+        // 清理过期的图标缓存
+        cleanupIconCache();
+        
         // 加载书签数据
         const data = await loadBookmarks();
         
@@ -3449,4 +3463,70 @@ document.addEventListener('DOMContentLoaded', async function() {
         console.error('初始化失败:', error);
         showToast('加载数据失败，请刷新页面重试');
     }
-}); 
+});
+
+// 图标缓存相关函数
+// 从缓存中获取图标
+function getIconFromCache(domain) {
+    try {
+        // 获取缓存数据
+        const iconCache = JSON.parse(localStorage.getItem('iconCache') || '{}');
+        
+        // 检查是否有该域名的缓存
+        if (iconCache[domain] && iconCache[domain].expires > Date.now()) {
+            return iconCache[domain];
+        }
+        
+        return null;
+    } catch (error) {
+        console.error('获取图标缓存失败:', error);
+        return null;
+    }
+}
+
+// 将图标保存到缓存
+function saveIconToCache(domain, iconData, type = 'url') {
+    try {
+        // 获取现有缓存
+        const iconCache = JSON.parse(localStorage.getItem('iconCache') || '{}');
+        
+        // 添加或更新缓存
+        iconCache[domain] = {
+            data: iconData,
+            type: type, // 'url' 或 'default'
+            expires: Date.now() + (30 * 24 * 60 * 60 * 1000) // 30天过期
+        };
+        
+        // 保存缓存
+        localStorage.setItem('iconCache', JSON.stringify(iconCache));
+        
+        return true;
+    } catch (error) {
+        console.error('保存图标缓存失败:', error);
+        return false;
+    }
+}
+
+// 清除过期的图标缓存
+function cleanupIconCache() {
+    try {
+        const iconCache = JSON.parse(localStorage.getItem('iconCache') || '{}');
+        const now = Date.now();
+        let changed = false;
+        
+        // 检查每个缓存项
+        Object.keys(iconCache).forEach(domain => {
+            if (iconCache[domain].expires < now) {
+                delete iconCache[domain];
+                changed = true;
+            }
+        });
+        
+        // 如果有变化，保存更新后的缓存
+        if (changed) {
+            localStorage.setItem('iconCache', JSON.stringify(iconCache));
+        }
+    } catch (error) {
+        console.error('清理图标缓存失败:', error);
+    }
+}
