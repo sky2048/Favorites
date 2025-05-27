@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-27T05:21:12.781Z",
-    "lastSynced": "2025-05-26T05:21:57.536Z",
+    "lastUpdated": "2025-05-27T11:33:22.297Z",
+    "lastSynced": "2025-05-26T08:00:47.769Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -431,6 +431,13 @@
           "title": "英雄榜2.0-SniiBow-流放之路官方网站-腾讯游戏",
           "url": "https://poe.qq.com/act/a202010118poena/challenge/rwdata.html?%E5%AF%92%E9%9C%9Ci&SniiBow&i=0&search=skill%3D%E5%85%89%E8%B0%B1%E4%B9%8B%E5%85%83%E7%B4%A0%E6%89%93%E5%87%BB&sai=s25_normal",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748345454730_38zy11crd",
+          "title": "忍者网",
+          "url": "https://poe2.ninja/",
+          "description": "玩流放之路的辅助工具",
           "isFavorite": false
         }
       ]
@@ -2104,13 +2111,6 @@
           "title": "getman.cn",
           "url": "https://getman.cn/",
           "icon": "🔗",
-          "isFavorite": false
-        },
-        {
-          "id": "bookmark_1748323259784_i7lkbh5bi",
-          "title": "Markdown海报生成器",
-          "url": "https://md.hi-dhl.com/",
-          "description": "Markdown海报生成器",
           "isFavorite": false
         }
       ]
