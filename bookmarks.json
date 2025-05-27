@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-26T08:00:31.160Z",
+    "lastUpdated": "2025-05-27T05:21:12.781Z",
     "lastSynced": "2025-05-26T05:21:57.536Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
@@ -2104,6 +2104,13 @@
           "title": "getman.cn",
           "url": "https://getman.cn/",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748323259784_i7lkbh5bi",
+          "title": "Markdown海报生成器",
+          "url": "https://md.hi-dhl.com/",
+          "description": "Markdown海报生成器",
           "isFavorite": false
         }
       ]
