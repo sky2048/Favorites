@@ -219,6 +219,68 @@ function initializeContent(categories) {
     const myNavigationGrid = document.createElement('div');
     myNavigationGrid.className = 'website-grid';
     
+    // 检查并显示收藏的书签
+    if (bookmarksData && bookmarksData.favoriteBookmarks && bookmarksData.favoriteBookmarks.length > 0) {
+        // 遍历收藏书签
+        bookmarksData.favoriteBookmarks.forEach(bookmark => {
+            // 创建网站卡片
+            const card = document.createElement('div');
+            card.className = 'website-card';
+            card.dataset.url = bookmark.url;
+            card.dataset.id = bookmark.id;
+            
+            // 创建图标
+            const icon = document.createElement('div');
+            icon.className = 'website-icon';
+            icon.style.background = bookmark.iconColor || '#4285F4';
+            icon.textContent = bookmark.icon || '🔗';
+            
+            // 创建信息区域
+            const info = document.createElement('div');
+            info.className = 'website-info';
+            
+            const nameElement = document.createElement('div');
+            nameElement.className = 'website-name';
+            nameElement.textContent = bookmark.title;
+            
+            const descElement = document.createElement('div');
+            descElement.className = 'website-desc';
+            descElement.textContent = bookmark.desc || '';
+            
+            // 组装卡片
+            info.appendChild(nameElement);
+            info.appendChild(descElement);
+            
+            card.appendChild(icon);
+            card.appendChild(info);
+            
+            // 创建按钮组
+            createCardButtonGroup(card);
+            
+            // 添加点击事件
+            card.addEventListener('click', function(e) {
+                // 如果点击的是按钮，则不触发卡片点击事件
+                if (e.target.classList.contains('delete-btn') || e.target.closest('.delete-btn') ||
+                    e.target.classList.contains('favorite-btn') || e.target.closest('.favorite-btn') ||
+                    e.target.classList.contains('move-btn') || e.target.closest('.move-btn') ||
+                    e.target.classList.contains('card-btn-group') || e.target.closest('.card-btn-group')) {
+                    return;
+                }
+                
+                // 如果在编辑模式下，不执行卡片点击操作
+                if (document.body.classList.contains('edit-mode')) {
+                    return;
+                }
+                
+                // 打开链接
+                window.open(this.dataset.url, '_blank');
+            });
+            
+            // 添加到网格
+            myNavigationGrid.appendChild(card);
+        });
+    }
+    
     myNavigationSection.appendChild(myNavigationHeader);
     myNavigationSection.appendChild(myNavigationGrid);
     
@@ -813,6 +875,10 @@ function addToMyNavigation(name, desc, url, iconText, iconColor) {
     card.className = 'website-card';
     card.dataset.url = url;
     
+    // 生成唯一ID
+    const bookmarkId = `bookmark_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    card.dataset.id = bookmarkId;
+    
     // 创建图标
     const icon = document.createElement('div');
     icon.className = 'website-icon';
@@ -865,6 +931,32 @@ function addToMyNavigation(name, desc, url, iconText, iconColor) {
     
     // 调整侧边栏高度
     adjustSidebarHeight();
+    
+    // 保存到 bookmarksData.favoriteBookmarks
+    if (bookmarksData) {
+        // 确保 favoriteBookmarks 存在
+        if (!bookmarksData.favoriteBookmarks) {
+            bookmarksData.favoriteBookmarks = [];
+        }
+        
+        // 添加书签数据
+        bookmarksData.favoriteBookmarks.push({
+            id: bookmarkId,
+            title: name,
+            url: url,
+            desc: desc || '',
+            icon: iconText,
+            iconColor: iconColor
+        });
+        
+        // 更新同步状态
+        if (bookmarksData.metadata) {
+            bookmarksData.metadata.syncStatus = "unsaved";
+        }
+        
+        // 保存书签数据
+        saveBookmarksData();
+    }
 }
 
 // 显示提示信息
@@ -3244,8 +3336,30 @@ function createCardButtonGroup(card) {
             card.style.opacity = '0';
             card.style.transform = 'scale(0.8)';
             
+            // 获取卡片ID
+            const cardId = card.dataset.id;
+            
             // 动画结束后移除元素
             setTimeout(() => {
+                // 检查是否是我的导航区域的卡片
+                const isInMyNavigation = card.closest('#category-我的导航') !== null;
+                
+                // 如果是我的导航区域，且有卡片ID和bookmarksData，从favoriteBookmarks中删除
+                if (isInMyNavigation && cardId && bookmarksData && bookmarksData.favoriteBookmarks) {
+                    const index = bookmarksData.favoriteBookmarks.findIndex(bookmark => bookmark.id === cardId);
+                    if (index !== -1) {
+                        bookmarksData.favoriteBookmarks.splice(index, 1);
+                        
+                        // 更新同步状态
+                        if (bookmarksData.metadata) {
+                            bookmarksData.metadata.syncStatus = "unsaved";
+                        }
+                        
+                        // 保存书签数据
+                        saveBookmarksData();
+                    }
+                }
+                
                 card.remove();
                 // 调整侧边栏高度
                 adjustSidebarHeight();
