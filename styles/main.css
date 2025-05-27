@@ -99,8 +99,40 @@ body {
 
 .search-container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin-bottom: 10px;
+}
+
+/* 搜索页签样式 */
+.search-tabs {
+    display: flex;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-tab {
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 14px;
+    margin: 0 5px;
+}
+
+.search-tab:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.search-tab.active {
+    background: white;
+    color: #8B4B6B;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .search-box {
@@ -474,6 +506,12 @@ body {
 .form-group input:focus, .form-group select:focus {
     outline: none;
     border-color: #E74C3C;
+}
+
+.form-group input:disabled {
+    background-color: #f9f9f9;
+    color: #999;
+    cursor: wait;
 }
 
 .color-preview {

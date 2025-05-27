@@ -659,9 +659,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         importBookmarksFromHTML();
     });
 
-    // 设置添加网站弹窗相关事件
-    setupAddWebsiteModal();
-
     // Header 滚动悬浮效果
     const header = document.querySelector('.header');
     const headerHeight = header.offsetHeight;
@@ -1202,6 +1199,22 @@ function setupAddWebsiteModal() {
     const closeBtn = modal.querySelector('.close-modal');
     const cancelBtn = modal.querySelector('.cancel-btn');
     const submitBtn = modal.querySelector('.submit-btn');
+    const urlInput = document.getElementById('website-url');
+    
+    // 添加URL输入框失去焦点事件，自动获取网站描述
+    urlInput.addEventListener('blur', function() {
+        const url = this.value.trim();
+        if (url) {
+            // 如果URL不包含协议，添加https://
+            let finalUrl = url;
+            if (!finalUrl.startsWith('http://') && !finalUrl.startsWith('https://')) {
+                finalUrl = 'https://' + finalUrl;
+            }
+            
+            // 获取网站描述
+            getWebsiteDescription(finalUrl);
+        }
+    });
     
     // 关闭按钮事件
     closeBtn.addEventListener('click', () => {
@@ -3428,28 +3441,94 @@ function createCardButtonGroup(card) {
 function initializeSearch() {
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
+    const searchTabs = document.querySelectorAll('.search-tab');
+    
+    // 当前搜索模式
+    let currentSearchMode = 'bookmark';
+    
+    // 添加页签切换事件
+    searchTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+            // 移除所有激活状态
+            searchTabs.forEach(t => t.classList.remove('active'));
+            
+            // 激活当前页签
+            this.classList.add('active');
+            
+            // 更新搜索模式
+            currentSearchMode = this.dataset.tab;
+            
+            // 更新输入框提示文本
+            switch(currentSearchMode) {
+                case 'bookmark':
+                    searchInput.placeholder = '书签搜索';
+                    break;
+                case 'google':
+                    searchInput.placeholder = '谷歌搜索';
+                    break;
+                case 'baidu':
+                    searchInput.placeholder = '百度搜索';
+                    break;
+            }
+            
+            // 清空搜索框
+            searchInput.value = '';
+            
+            // 如果当前是书签搜索模式且有搜索结果，则重置搜索
+            if (currentSearchMode === 'bookmark' && document.querySelector('.search-notice')) {
+                resetSearch();
+            }
+        });
+    });
     
     // 添加搜索按钮点击事件
     searchBtn.addEventListener('click', function() {
-        performSearch(searchInput.value);
+        handleSearch(searchInput.value, currentSearchMode);
     });
     
     // 添加输入框回车事件
     searchInput.addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-            performSearch(this.value);
+            handleSearch(this.value, currentSearchMode);
         }
     });
     
-    // 添加输入框实时搜索事件（可选）
+    // 添加输入框实时搜索事件（仅适用于书签搜索模式）
     searchInput.addEventListener('input', function() {
-        if (this.value.length > 1) {
-            performSearch(this.value);
-        } else if (this.value.length === 0) {
-            // 如果搜索框被清空，恢复所有内容
-            resetSearch();
+        if (currentSearchMode === 'bookmark') {
+            if (this.value.length > 1) {
+                performSearch(this.value);
+            } else if (this.value.length === 0) {
+                // 如果搜索框被清空，恢复所有内容
+                resetSearch();
+            }
         }
     });
+}
+
+// 处理搜索功能
+function handleSearch(query, mode) {
+    if (!query || query.trim() === '') {
+        if (mode === 'bookmark') {
+            resetSearch();
+        }
+        return;
+    }
+    
+    switch(mode) {
+        case 'bookmark':
+            // 书签搜索
+            performSearch(query);
+            break;
+        case 'google':
+            // 谷歌搜索
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            break;
+        case 'baidu':
+            // 百度搜索
+            window.open(`https://www.baidu.com/s?wd=${encodeURIComponent(query)}`, '_blank');
+            break;
+    }
 }
 
 // 执行搜索
@@ -3685,5 +3764,84 @@ function cleanupIconCache() {
         }
     } catch (error) {
         console.error('清理图标缓存失败:', error);
+    }
+}
+
+// 获取网站描述
+async function getWebsiteDescription(url) {
+    try {
+        // 显示加载状态
+        const descInput = document.getElementById('website-desc');
+        if (descInput) {
+            descInput.placeholder = "正在获取网站描述...";
+            descInput.disabled = true;
+        }
+        
+        // 使用代理服务或CORS代理获取网站内容
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+        const response = await fetch(proxyUrl);
+        
+        if (!response.ok) {
+            throw new Error('无法获取网站内容');
+        }
+        
+        const data = await response.json();
+        const html = data.contents;
+        
+        // 创建DOM解析器
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // 尝试获取meta description
+        let description = '';
+        const metaDesc = doc.querySelector('meta[name="description"]');
+        if (metaDesc) {
+            description = metaDesc.getAttribute('content');
+        }
+        
+        // 如果没有meta description，尝试获取og:description
+        if (!description) {
+            const ogDesc = doc.querySelector('meta[property="og:description"]');
+            if (ogDesc) {
+                description = ogDesc.getAttribute('content');
+            }
+        }
+        
+        // 如果仍然没有描述，尝试从页面内容提取
+        if (!description) {
+            // 获取第一段文本作为描述
+            const firstParagraph = doc.querySelector('p');
+            if (firstParagraph) {
+                description = firstParagraph.textContent.trim();
+                // 限制长度
+                if (description.length > 100) {
+                    description = description.substring(0, 100) + '...';
+                }
+            }
+        }
+        
+        // 恢复输入框状态
+        if (descInput) {
+            descInput.placeholder = "请输入网站描述";
+            descInput.disabled = false;
+            
+            // 填入获取到的描述
+            if (description) {
+                descInput.value = description;
+            }
+        }
+        
+        return description;
+    } catch (error) {
+        console.error('获取网站描述失败:', error);
+        
+        // 恢复输入框状态
+        const descInput = document.getElementById('website-desc');
+        if (descInput) {
+            descInput.placeholder = "请输入网站描述";
+            descInput.disabled = false;
+        }
+        
+        return '';
     }
 }
