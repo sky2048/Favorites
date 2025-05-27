@@ -39,6 +39,26 @@ async function loadBookmarks() {
     }
 }
 
+// 统计所有书签总数
+function getTotalBookmarksCount() {
+    let total = 0;
+    if (bookmarksData) {
+        // 收藏夹
+        if (bookmarksData.favoriteBookmarks && Array.isArray(bookmarksData.favoriteBookmarks)) {
+            total += bookmarksData.favoriteBookmarks.length;
+        }
+        // 分类
+        if (bookmarksData.categories && Array.isArray(bookmarksData.categories)) {
+            bookmarksData.categories.forEach(cat => {
+                if (cat.bookmarks && Array.isArray(cat.bookmarks)) {
+                    total += cat.bookmarks.length;
+                }
+            });
+        }
+    }
+    return total;
+}
+
 // 初始化侧边栏
 function initializeSidebar(categories) {
     const sidebar = document.querySelector('.sidebar');
@@ -62,7 +82,15 @@ function initializeSidebar(categories) {
     myNavIcon.textContent = '★';
     
     myNavItem.appendChild(myNavIcon);
+    // "我的导航"后面加数量
+    const favCountSpan = document.createElement('span');
+    favCountSpan.className = 'category-count';
+    favCountSpan.style.color = '#888';
+    favCountSpan.style.marginLeft = '4px';
+    favCountSpan.textContent =
+        bookmarksData && bookmarksData.favoriteBookmarks ? `（${bookmarksData.favoriteBookmarks.length}）` : '（0）';
     myNavItem.appendChild(document.createTextNode('我的导航'));
+    myNavItem.appendChild(favCountSpan);
     
     // 添加点击事件
     myNavItem.addEventListener('click', function() {
@@ -117,6 +145,15 @@ function initializeSidebar(categories) {
         
         // 添加分类名称
         nameContainer.appendChild(document.createTextNode(category.name));
+        
+        // 分类数量统计
+        const catCountSpan = document.createElement('span');
+        catCountSpan.className = 'category-count';
+        catCountSpan.style.color = '#888';
+        catCountSpan.style.marginLeft = '4px';
+        catCountSpan.textContent =
+            category.bookmarks && Array.isArray(category.bookmarks) ? `（${category.bookmarks.length}）` : '（0）';
+        nameContainer.appendChild(catCountSpan);
         
         // 创建删除按钮
         const deleteBtn = document.createElement('button');
@@ -459,6 +496,12 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         // 添加侧边栏滚动监听
         setupSidebarScroll();
+        
+        // 显示总书签数
+        const totalCountSpan = document.getElementById('total-count');
+        if (totalCountSpan) {
+            totalCountSpan.textContent = `（${getTotalBookmarksCount()}）`;
+        }
     }
     
     // 获取编辑模式按钮

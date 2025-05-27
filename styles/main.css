@@ -822,4 +822,10 @@ body.edit-mode .category-delete-btn {
 
 body.edit-mode .section-delete-btn {
     display: inline-block !important;
+}
+
+.category-count {
+    color: #888;
+    margin-left: 4px;
+    font-size: 0.95em;
 } 
