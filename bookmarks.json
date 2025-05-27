@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-27T14:54:39.181Z",
-    "lastSynced": "2025-05-27T14:46:17.722Z",
+    "lastUpdated": "2025-05-27T15:53:11.586Z",
+    "lastSynced": "2025-05-27T14:54:41.718Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -14,6 +14,14 @@
       "desc": "",
       "icon": "🔗",
       "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1748358805617_chw8p1l1g",
+      "title": "B站",
+      "url": "https://www.bilibili.com/",
+      "desc": "",
+      "icon": "",
+      "iconColor": "white"
     }
   ],
   "categories": [
@@ -387,6 +395,13 @@
           "title": "GameKee | 游戏百科攻略",
           "url": "https://www.gamekee.com/",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748358782658_d2dryuvx9",
+          "title": "B站",
+          "url": "https://www.bilibili.com/",
+          "description": "",
           "isFavorite": false
         }
       ]
