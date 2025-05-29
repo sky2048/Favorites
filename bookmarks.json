@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-27T15:53:46.866Z",
+    "lastUpdated": "2025-05-29T01:23:47.296Z",
     "lastSynced": "2025-05-27T15:53:28.075Z",
     "totalBookmarks": 486,
-    "syncStatus": "synced"
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [
     {
@@ -22,6 +22,14 @@
       "desc": "",
       "icon": "",
       "iconColor": "white"
+    },
+    {
+      "id": "bookmark_1748402106148_w8z5nk07j",
+      "title": "谷歌AI编辑器",
+      "url": "https://ai.google.dev/",
+      "desc": "",
+      "icon": "谷",
+      "iconColor": "rgb(66, 133, 244)"
     }
   ],
   "categories": [
@@ -489,6 +497,13 @@
           "id": "bookmark_1748216721118_82f9qn8x6",
           "title": "英雄榜2.0-SniiBow-流放之路官方网站-腾讯游戏",
           "url": "https://poe.qq.com/act/a202010118poena/challenge/rwdata.html?%E5%AF%92%E9%9C%9Ci&SniiBow&i=0&search=skill%3D%E5%85%89%E8%B0%B1%E4%B9%8B%E5%85%83%E7%B4%A0%E6%89%93%E5%87%BB&sai=s25_normal",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_sl4vznnpq",
+          "title": "【S21判官正火】萌新向开荒指南",
+          "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
           "icon": "🔗",
           "isFavorite": false
         }
@@ -2713,13 +2728,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_sl4vznnpq",
-          "title": "【S21判官正火】萌新向开荒指南",
-          "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_ffa582cs5",
           "title": "云售",
           "url": "https://yunshou.snscz.com/",
@@ -3529,6 +3537,13 @@
           "title": "图转提示 - 免费快速将图像转换为提示",
           "url": "https://imagetoprompt.org/zh",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748402078595_yenfiomd4",
+          "title": "谷歌AI编辑器",
+          "url": "https://ai.google.dev/",
+          "description": "",
           "isFavorite": false
         }
       ]
