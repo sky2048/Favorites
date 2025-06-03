@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-29T01:23:47.296Z",
+    "lastUpdated": "2025-06-03T00:42:35.028Z",
     "lastSynced": "2025-05-27T15:53:28.075Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
@@ -160,6 +160,13 @@
           "title": "anthropics/anthropic-cookbook: A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
           "url": "https://github.com/anthropics/anthropic-cookbook",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748911350913_ba6te9mzc",
+          "title": "context7",
+          "url": "https://context7.com/",
+          "description": "Generate context with up-to-date documentation for LLMs and AI code editors",
           "isFavorite": false
         }
       ]
