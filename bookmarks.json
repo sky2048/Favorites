@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-03T00:42:35.028Z",
+    "lastUpdated": "2025-06-05T02:49:58.192Z",
     "lastSynced": "2025-05-27T15:53:28.075Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
@@ -29,6 +29,22 @@
       "url": "https://ai.google.dev/",
       "desc": "",
       "icon": "谷",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1749091475988_i9bac7y0l",
+      "title": "Aizex 合租面板",
+      "url": "https://aizex.net/",
+      "desc": "",
+      "icon": "",
+      "iconColor": "white"
+    },
+    {
+      "id": "bookmark_1749091477730_zln7i0fdn",
+      "title": "holopix-图片生成类型的AI",
+      "url": "https://holopix.cn/",
+      "desc": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
+      "icon": "h",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -2199,6 +2215,13 @@
           "url": "https://www.storytrain.info/?page=1",
           "icon": "🔗",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zd2bizvp8",
+          "title": "SMS-Activate是在线接受短信的虚拟号码服务",
+          "url": "https://sms-activate.io/cn",
+          "icon": "🔗",
+          "isFavorite": false
         }
       ]
     },
@@ -3519,13 +3542,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_zd2bizvp8",
-          "title": "SMS-Activate是在线接受短信的虚拟号码服务",
-          "url": "https://sms-activate.io/cn",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_hi0cff8ka",
           "title": "NotebookLM",
           "url": "https://notebooklm.google.com/?_gl=1*6uxom8*_ga*MTc1NTg2NzQ1MS4xNzE5MjM2OTgx*_ga_W0LDH41ZCB*MTcxOTIzNjk4MC4xLjAuMTcxOTIzNjk4MC42MC4wLjA.&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1",
@@ -3551,6 +3567,13 @@
           "title": "谷歌AI编辑器",
           "url": "https://ai.google.dev/",
           "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1749091468400_3bddn6ip6",
+          "title": "holopix-图片生成类型的AI",
+          "url": "https://holopix.cn/",
+          "description": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
           "isFavorite": false
         }
       ]
