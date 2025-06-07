@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-06T01:03:43.320Z",
-    "lastSynced": "2025-06-05T02:50:01.035Z",
+    "lastUpdated": "2025-06-07T03:05:01.747Z",
+    "lastSynced": "2025-06-06T01:03:46.110Z",
     "totalBookmarks": 486,
-    "syncStatus": "synced"
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [
     {
@@ -3242,13 +3242,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_iru192kzk",
-          "title": "GitHub - xx025/carrot: 这儿收集了一些免费好用的ChatGPT镜像站和其他AI站点，当前：76个站点",
-          "url": "https://github.com/xx025/carrot",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_wkjawkpi7",
           "title": "AI音乐",
           "url": "https://app.suno.ai/create/",
@@ -3287,13 +3280,6 @@
           "id": "bookmark_1748216721119_e06gr3d6z",
           "title": "任务学习 - SiKi学院|SiKi学堂 - unity|u3d|虚幻|ue4/5|java|python|人工智能|视频教程|在线课程",
           "url": "https://www.sikiedu.com/course/1379/task/111184/show#",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
-          "id": "bookmark_1748216721119_qjqd2agbp",
-          "title": "GitHub - 非常花式裤子/hs2_blender_export",
-          "url": "https://github.com/veryfancypants/hs2_blender_export",
           "icon": "🔗",
           "isFavorite": false
         },
@@ -3656,6 +3642,27 @@
           "title": "提示词优化",
           "url": "https://github.com/linshenkx/prompt-optimizer",
           "description": "开源提示词优化",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qjqd2agbp",
+          "title": "GitHub - 非常花式裤子/hs2_blender_export",
+          "url": "https://github.com/veryfancypants/hs2_blender_export",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_iru192kzk",
+          "title": "GitHub - xx025/carrot: 这儿收集了一些免费好用的ChatGPT镜像站和其他AI站点，当前：76个站点",
+          "url": "https://github.com/xx025/carrot",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1749265499497_pkku4xz8v",
+          "title": "claude-task-master",
+          "url": "https://github.com/eyaltoledano/claude-task-master",
+          "description": "",
           "isFavorite": false
         }
       ]
