@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-05-27T14:54:39.181Z",
-    "lastSynced": "2025-05-27T14:46:17.722Z",
+    "lastUpdated": "2025-06-14T14:00:05.425Z",
+    "lastSynced": "2025-06-06T01:03:46.110Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -13,6 +13,38 @@
       "url": "https://fuliba2023.net/",
       "desc": "",
       "icon": "🔗",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1748358805617_chw8p1l1g",
+      "title": "B站",
+      "url": "https://www.bilibili.com/",
+      "desc": "",
+      "icon": "",
+      "iconColor": "white"
+    },
+    {
+      "id": "bookmark_1748402106148_w8z5nk07j",
+      "title": "谷歌AI编辑器",
+      "url": "https://ai.google.dev/",
+      "desc": "",
+      "icon": "谷",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1749091475988_i9bac7y0l",
+      "title": "Aizex 合租面板",
+      "url": "https://aizex.net/",
+      "desc": "",
+      "icon": "",
+      "iconColor": "white"
+    },
+    {
+      "id": "bookmark_1749091477730_zln7i0fdn",
+      "title": "holopix-图片生成类型的AI",
+      "url": "https://holopix.cn/",
+      "desc": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
+      "icon": "h",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -144,6 +176,13 @@
           "title": "anthropics/anthropic-cookbook: A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
           "url": "https://github.com/anthropics/anthropic-cookbook",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748911350913_ba6te9mzc",
+          "title": "context7",
+          "url": "https://context7.com/",
+          "description": "Generate context with up-to-date documentation for LLMs and AI code editors",
           "isFavorite": false
         }
       ]
@@ -388,6 +427,13 @@
           "url": "https://www.gamekee.com/",
           "icon": "🔗",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748358782658_d2dryuvx9",
+          "title": "B站",
+          "url": "https://www.bilibili.com/",
+          "description": "",
+          "isFavorite": false
         }
       ]
     },
@@ -474,6 +520,13 @@
           "id": "bookmark_1748216721118_82f9qn8x6",
           "title": "英雄榜2.0-SniiBow-流放之路官方网站-腾讯游戏",
           "url": "https://poe.qq.com/act/a202010118poena/challenge/rwdata.html?%E5%AF%92%E9%9C%9Ci&SniiBow&i=0&search=skill%3D%E5%85%89%E8%B0%B1%E4%B9%8B%E5%85%83%E7%B4%A0%E6%89%93%E5%87%BB&sai=s25_normal",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_sl4vznnpq",
+          "title": "【S21判官正火】萌新向开荒指南",
+          "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
           "icon": "🔗",
           "isFavorite": false
         }
@@ -2162,6 +2215,13 @@
           "url": "https://www.storytrain.info/?page=1",
           "icon": "🔗",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_zd2bizvp8",
+          "title": "SMS-Activate是在线接受短信的虚拟号码服务",
+          "url": "https://sms-activate.io/cn",
+          "icon": "🔗",
+          "isFavorite": false
         }
       ]
     },
@@ -2698,13 +2758,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_sl4vznnpq",
-          "title": "【S21判官正火】萌新向开荒指南",
-          "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_ffa582cs5",
           "title": "云售",
           "url": "https://yunshou.snscz.com/",
@@ -3189,13 +3242,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_iru192kzk",
-          "title": "GitHub - xx025/carrot: 这儿收集了一些免费好用的ChatGPT镜像站和其他AI站点，当前：76个站点",
-          "url": "https://github.com/xx025/carrot",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_wkjawkpi7",
           "title": "AI音乐",
           "url": "https://app.suno.ai/create/",
@@ -3234,13 +3280,6 @@
           "id": "bookmark_1748216721119_e06gr3d6z",
           "title": "任务学习 - SiKi学院|SiKi学堂 - unity|u3d|虚幻|ue4/5|java|python|人工智能|视频教程|在线课程",
           "url": "https://www.sikiedu.com/course/1379/task/111184/show#",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
-          "id": "bookmark_1748216721119_qjqd2agbp",
-          "title": "GitHub - 非常花式裤子/hs2_blender_export",
-          "url": "https://github.com/veryfancypants/hs2_blender_export",
           "icon": "🔗",
           "isFavorite": false
         },
@@ -3489,13 +3528,6 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1748216721119_zd2bizvp8",
-          "title": "SMS-Activate是在线接受短信的虚拟号码服务",
-          "url": "https://sms-activate.io/cn",
-          "icon": "🔗",
-          "isFavorite": false
-        },
-        {
           "id": "bookmark_1748216721119_hi0cff8ka",
           "title": "NotebookLM",
           "url": "https://notebooklm.google.com/?_gl=1*6uxom8*_ga*MTc1NTg2NzQ1MS4xNzE5MjM2OTgx*_ga_W0LDH41ZCB*MTcxOTIzNjk4MC4xLjAuMTcxOTIzNjk4MC42MC4wLjA.&original_referer=https:%2F%2Fnotebooklm.google%23&pli=1",
@@ -3514,6 +3546,20 @@
           "title": "图转提示 - 免费快速将图像转换为提示",
           "url": "https://imagetoprompt.org/zh",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748402078595_yenfiomd4",
+          "title": "谷歌AI编辑器",
+          "url": "https://ai.google.dev/",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1749091468400_3bddn6ip6",
+          "title": "holopix-图片生成类型的AI",
+          "url": "https://holopix.cn/",
+          "description": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
           "isFavorite": false
         }
       ]
@@ -3596,6 +3642,27 @@
           "title": "提示词优化",
           "url": "https://github.com/linshenkx/prompt-optimizer",
           "description": "开源提示词优化",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_qjqd2agbp",
+          "title": "GitHub - 非常花式裤子/hs2_blender_export",
+          "url": "https://github.com/veryfancypants/hs2_blender_export",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1748216721119_iru192kzk",
+          "title": "GitHub - xx025/carrot: 这儿收集了一些免费好用的ChatGPT镜像站和其他AI站点，当前：76个站点",
+          "url": "https://github.com/xx025/carrot",
+          "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1749265499497_pkku4xz8v",
+          "title": "claude-task-master",
+          "url": "https://github.com/eyaltoledano/claude-task-master",
+          "description": "",
           "isFavorite": false
         }
       ]
