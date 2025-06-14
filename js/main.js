@@ -3400,19 +3400,49 @@ function createCardButtonGroup(card) {
                 // 检查是否是我的导航区域的卡片
                 const isInMyNavigation = card.closest('#category-我的导航') !== null;
                 
-                // 如果是我的导航区域，且有卡片ID和bookmarksData，从favoriteBookmarks中删除
-                if (isInMyNavigation && cardId && bookmarksData && bookmarksData.favoriteBookmarks) {
-                    const index = bookmarksData.favoriteBookmarks.findIndex(bookmark => bookmark.id === cardId);
-                    if (index !== -1) {
-                        bookmarksData.favoriteBookmarks.splice(index, 1);
-                        
-                        // 更新同步状态
-                        if (bookmarksData.metadata) {
-                            bookmarksData.metadata.syncStatus = "unsaved";
+                if (cardId && bookmarksData) {
+                    if (isInMyNavigation && bookmarksData.favoriteBookmarks) {
+                        // 从我的导航中删除
+                        const index = bookmarksData.favoriteBookmarks.findIndex(bookmark => bookmark.id === cardId);
+                        if (index !== -1) {
+                            bookmarksData.favoriteBookmarks.splice(index, 1);
                         }
-                        
-                        // 保存书签数据
-                        saveBookmarksData();
+                    } else {
+                        // 从普通分类中删除
+                        // 找到卡片所属的分类
+                        const sectionElement = card.closest('.section');
+                        if (sectionElement) {
+                            const sectionId = sectionElement.id;
+                            const categoryName = sectionId.replace('category-', '');
+                            
+                            // 在bookmarksData.categories中找到对应分类并删除书签
+                            if (bookmarksData.categories) {
+                                const category = bookmarksData.categories.find(cat => cat.name === categoryName);
+                                if (category && category.bookmarks) {
+                                    const bookmarkIndex = category.bookmarks.findIndex(bookmark => bookmark.id === cardId);
+                                    if (bookmarkIndex !== -1) {
+                                        category.bookmarks.splice(bookmarkIndex, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    // 更新同步状态
+                    if (bookmarksData.metadata) {
+                        bookmarksData.metadata.syncStatus = "unsaved";
+                        bookmarksData.metadata.lastUpdated = new Date().toISOString();
+                        // 重新计算总书签数
+                        bookmarksData.metadata.totalBookmarks = getTotalBookmarksCount();
+                    }
+                    
+                    // 保存书签数据
+                    saveBookmarksData();
+                    
+                    // 更新总书签数显示
+                    const totalCountSpan = document.getElementById('total-count');
+                    if (totalCountSpan) {
+                        totalCountSpan.textContent = `（${getTotalBookmarksCount()}）`;
                     }
                 }
                 
