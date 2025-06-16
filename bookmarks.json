@@ -1,10 +1,10 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-14T14:13:08.313Z",
+    "lastUpdated": "2025-06-16T05:25:42.761Z",
     "lastSynced": "2025-06-14T14:00:07.139Z",
     "totalBookmarks": 486,
-    "syncStatus": "synced"
+    "syncStatus": "unsaved"
   },
   "favoriteBookmarks": [
     {
@@ -528,6 +528,13 @@
           "title": "【S21判官正火】萌新向开荒指南",
           "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750051537974_i8gfe0wvi",
+          "title": "steamgg",
+          "url": "https://steamgg.net/",
+          "description": "",
           "isFavorite": false
         }
       ]
