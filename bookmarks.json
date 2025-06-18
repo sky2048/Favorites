@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-16T05:26:05.429Z",
-    "lastSynced": "2025-06-16T05:25:44.047Z",
+    "lastUpdated": "2025-06-18T00:26:05.108Z",
+    "lastSynced": "2025-06-16T05:26:07.797Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -3567,6 +3567,20 @@
           "title": "holopix-图片生成类型的AI",
           "url": "https://holopix.cn/",
           "description": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750206355291_lo3ddwoq5",
+          "title": "image-fx",
+          "url": "https://labs.google/fx/zh/tools/image-fx",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750206301580_wdbqgvr5m",
+          "title": "whisk",
+          "url": "https://labs.google/fx/zh/tools/whisk",
+          "description": "",
           "isFavorite": false
         }
       ]
