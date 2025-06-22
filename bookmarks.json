@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-18T00:46:03.899Z",
-    "lastSynced": "2025-06-12T03:29:43.702Z",
+    "lastUpdated": "2025-06-22T14:35:12.970Z",
+    "lastSynced": "2025-06-18T00:26:07.945Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -45,14 +45,6 @@
       "url": "https://holopix.cn/",
       "desc": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
       "icon": "h",
-      "iconColor": "rgb(66, 133, 244)"
-    },
-    {
-      "id": "bookmark_1750052638406_0gnqylok9",
-      "title": "cursor的更新日志",
-      "url": "https://www.cursor.com/changelog",
-      "desc": "",
-      "icon": "c",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -232,13 +224,6 @@
           "title": "【果壳网】",
           "url": "http://www.guokr.com/",
           "icon": "🔗",
-          "isFavorite": false
-        },
-        {
-          "id": "bookmark_1750052633492_sg07znwdz",
-          "title": "cursor的更新日志",
-          "url": "https://www.cursor.com/changelog",
-          "description": "",
           "isFavorite": false
         }
       ]
@@ -543,6 +528,13 @@
           "title": "【S21判官正火】萌新向开荒指南",
           "url": "https://docs.qq.com/sheet/DU2J6SG5UdWxGSlVl?tab=8ql6be",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750051563549_wu6wbraag",
+          "title": "steamgg",
+          "url": "https://steamgg.net/",
+          "description": "",
           "isFavorite": false
         }
       ]
@@ -3578,9 +3570,16 @@
           "isFavorite": false
         },
         {
-          "id": "bookmark_1749698977563_f76nkq4ng",
-          "title": "AI绘画文档",
-          "url": "https://p3a00do1bm.feishu.cn/wiki/wikcnrbJrdDFweSPbJos1ey4Ejg",
+          "id": "bookmark_1750206355291_lo3ddwoq5",
+          "title": "image-fx",
+          "url": "https://labs.google/fx/zh/tools/image-fx",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750206301580_wdbqgvr5m",
+          "title": "whisk",
+          "url": "https://labs.google/fx/zh/tools/whisk",
           "description": "",
           "isFavorite": false
         }
@@ -3650,6 +3649,13 @@
           "id": "bookmark_1748236823857_u7hvca8qk",
           "title": "missav",
           "url": "https://missav.live/dm22/en",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1750602903294_jl3fsbkxo",
+          "title": "pic",
+          "url": "https://www.xpicvid.com/",
           "description": "",
           "isFavorite": false
         }
