@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-06-22T14:35:12.970Z",
-    "lastSynced": "2025-06-18T00:26:07.945Z",
+    "lastUpdated": "2025-06-28T08:42:46.984Z",
+    "lastSynced": "2025-06-18T00:46:06.678Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -45,6 +45,14 @@
       "url": "https://holopix.cn/",
       "desc": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
       "icon": "h",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1751100164510_sybv533vm",
+      "title": "字节的提示词优化工具",
+      "url": "https://promptpilot.volcengine.com/",
+      "desc": "专为大模型开发，PromptPilot为你提供更精准，专业，可持续迭代提示词！PromptPilot 是一款面向大模型应用的全链路优化平台，覆盖大模型开发从构想、开发部署到迭代优化的全过程。平台提供从创意落地的 Prompt 生成，到基于用户意图与评测数据的智能调优能力，确保大模型输出更贴合真实业务需求。通过 API 接入，用户可低成本获取高质量的实时反馈数据，自动优化 Prompt，构建AI应用与真实数据间的反馈闭环。始于Prompt，PromptPilot助力用户打造可自我进化的大模型应用，加速 AI 能力在实际业务场景中的落地",
+      "icon": "字",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -3582,6 +3590,13 @@
           "url": "https://labs.google/fx/zh/tools/whisk",
           "description": "",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1751100160992_o7x6jm1ly",
+          "title": "字节的提示词优化工具",
+          "url": "https://promptpilot.volcengine.com/",
+          "description": "专为大模型开发，PromptPilot为你提供更精准，专业，可持续迭代提示词！PromptPilot 是一款面向大模型应用的全链路优化平台，覆盖大模型开发从构想、开发部署到迭代优化的全过程。平台提供从创意落地的 Prompt 生成，到基于用户意图与评测数据的智能调优能力，确保大模型输出更贴合真实业务需求。通过 API 接入，用户可低成本获取高质量的实时反馈数据，自动优化 Prompt，构建AI应用与真实数据间的反馈闭环。始于Prompt，PromptPilot助力用户打造可自我进化的大模型应用，加速 AI 能力在实际业务场景中的落地",
+          "isFavorite": false
         }
       ]
     },
@@ -3649,13 +3664,6 @@
           "id": "bookmark_1748236823857_u7hvca8qk",
           "title": "missav",
           "url": "https://missav.live/dm22/en",
-          "description": "",
-          "isFavorite": false
-        },
-        {
-          "id": "bookmark_1750602903294_jl3fsbkxo",
-          "title": "pic",
-          "url": "https://www.xpicvid.com/",
           "description": "",
           "isFavorite": false
         }
