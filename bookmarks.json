@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-04T00:16:49.624Z",
+    "lastUpdated": "2025-08-14T06:06:10.362Z",
     "lastSynced": "2025-07-07T23:52:20.353Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
@@ -45,6 +45,14 @@
       "url": "https://holopix.cn/",
       "desc": "专业独家游戏动漫模型，游戏角色、游戏ICON、场景设计AI创作，支持中文生成。图像风格转换、线稿生成、模型自定义训练、局部细化、局部替换&擦除、一键无损4K画质提升、3D转换视角、智能拆补图层、一键抠图、线稿提取。",
       "icon": "h",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1755151567727_ra4plozvk",
+      "title": "免费AI-im",
+      "url": "https://lmarena.ai/",
+      "desc": "",
+      "icon": "免",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -3601,6 +3609,13 @@
           "id": "bookmark_1750206301580_wdbqgvr5m",
           "title": "whisk",
           "url": "https://labs.google/fx/zh/tools/whisk",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1755151561160_swx2yucax",
+          "title": "免费AI-im",
+          "url": "https://lmarena.ai/",
           "description": "",
           "isFavorite": false
         }
