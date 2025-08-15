@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-14T06:06:10.362Z",
-    "lastSynced": "2025-07-07T23:52:20.353Z",
+    "lastUpdated": "2025-08-15T05:41:01.666Z",
+    "lastSynced": "2025-08-14T06:06:13.508Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -53,6 +53,14 @@
       "url": "https://lmarena.ai/",
       "desc": "",
       "icon": "免",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1755236457582_l7e2lwlkf",
+      "title": "cloudflare",
+      "url": "https://dash.cloudflare.com/login",
+      "desc": "",
+      "icon": "c",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -191,6 +199,13 @@
           "title": "context7",
           "url": "https://context7.com/",
           "description": "Generate context with up-to-date documentation for LLMs and AI code editors",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1755236447829_he90iztdk",
+          "title": "cloudflare",
+          "url": "https://dash.cloudflare.com/login",
+          "description": "",
           "isFavorite": false
         }
       ]
