@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-15T05:41:01.666Z",
-    "lastSynced": "2025-08-14T06:06:13.508Z",
+    "lastUpdated": "2025-08-25T05:44:46.863Z",
+    "lastSynced": "2025-08-15T05:41:04.528Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -476,6 +476,13 @@
           "id": "bookmark_1754266606673_y4ym152a6",
           "title": "检验磁力链接",
           "url": "https://cart.bocchi.vip/",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1756100684052_6ct6n33gh",
+          "title": "风鸟企查",
+          "url": "https://www.riskbird.com/",
           "description": "",
           "isFavorite": false
         }
