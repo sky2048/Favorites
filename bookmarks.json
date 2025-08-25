@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-25T05:44:46.863Z",
-    "lastSynced": "2025-08-15T05:41:04.528Z",
+    "lastUpdated": "2025-08-25T05:44:55.152Z",
+    "lastSynced": "2025-08-25T05:44:49.873Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -61,6 +61,14 @@
       "url": "https://dash.cloudflare.com/login",
       "desc": "",
       "icon": "c",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1756100690099_pkmzirq9q",
+      "title": "风鸟企查",
+      "url": "https://www.riskbird.com/",
+      "desc": "",
+      "icon": "风",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
