@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-25T05:44:55.152Z",
+    "lastUpdated": "2025-08-27T15:10:59.911Z",
     "lastSynced": "2025-08-25T05:44:49.873Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
@@ -215,6 +215,13 @@
           "url": "https://dash.cloudflare.com/login",
           "description": "",
           "isFavorite": false
+        },
+        {
+          "id": "bookmark_1756307456530_66texjiur",
+          "title": "码支付",
+          "url": "https://pay.akwl.net/User/",
+          "description": "",
+          "isFavorite": false
         }
       ]
     },
@@ -255,6 +262,13 @@
           "title": "【果壳网】",
           "url": "http://www.guokr.com/",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1756302826431_z58bam4fe",
+          "title": "查询",
+          "url": "https://www.whoiscx.com/",
+          "description": "免费的域名 Whois 查询工具，快速查询域名注册信息、域名持有者、注册商等详细信息。支持全球1000+主流顶级域名查询。",
           "isFavorite": false
         }
       ]
