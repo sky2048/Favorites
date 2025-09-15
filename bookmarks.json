@@ -1,8 +1,8 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-08-27T15:10:59.911Z",
-    "lastSynced": "2025-08-25T05:44:49.873Z",
+    "lastUpdated": "2025-09-15T00:48:15.701Z",
+    "lastSynced": "2025-08-27T15:11:02.957Z",
     "totalBookmarks": 486,
     "syncStatus": "unsaved"
   },
@@ -69,6 +69,14 @@
       "url": "https://www.riskbird.com/",
       "desc": "",
       "icon": "风",
+      "iconColor": "rgb(66, 133, 244)"
+    },
+    {
+      "id": "bookmark_1756307465954_nbidw2vle",
+      "title": "码支付",
+      "url": "https://pay.akwl.net/User/",
+      "desc": "",
+      "icon": "码",
       "iconColor": "rgb(66, 133, 244)"
     }
   ],
@@ -138,6 +146,13 @@
           "title": "首页-书签地球-中国首家浏览器书签共享搜索引擎平台",
           "url": "https://www.bookmarkearth.com/",
           "icon": "🔗",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1757897293971_bktxu4gb6",
+          "title": "可以查看推特的网站",
+          "url": "https://www.sotwe.com/",
+          "description": "",
           "isFavorite": false
         }
       ]
@@ -221,6 +236,13 @@
           "title": "码支付",
           "url": "https://pay.akwl.net/User/",
           "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1757862911144_nf1hd35ro",
+          "title": "爱下小说网",
+          "url": "https://ixdzs8.com/",
+          "description": "爱下电子书提供热门排行榜，分类榜单小说的在线阅读，一起享受极致阅读乐趣。",
           "isFavorite": false
         }
       ]
