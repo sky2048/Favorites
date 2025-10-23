@@ -1,7 +1,7 @@
 {
   "version": "1.0",
   "metadata": {
-    "lastUpdated": "2025-10-21T06:17:51.960Z",
+    "lastUpdated": "2025-10-23T00:26:10.482Z",
     "lastSynced": "2025-08-25T05:44:49.873Z",
     "totalBookmarks": 516,
     "syncStatus": "unsaved"
@@ -235,6 +235,13 @@
           "id": "bookmark_1757317742408_8itgguj77",
           "title": "网页本地白板",
           "url": "https://excalidraw.com/",
+          "description": "",
+          "isFavorite": false
+        },
+        {
+          "id": "bookmark_1761179166292_ghr8zvgyc",
+          "title": "cursor的卡密",
+          "url": "https://720.wlsj2019.com/links/AD191EC3",
           "description": "",
           "isFavorite": false
         }
