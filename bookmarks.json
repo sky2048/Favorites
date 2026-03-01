@@ -7,14 +7,16 @@
   },
   {
     "category": "工具",
+    "clicks": 1,
+    "lastVisit": 1772348799440,
     "name": "枫叶工具箱",
     "subCategory": "综合",
     "url": "https://fengyetools.pages.dev/#/"
   },
   {
     "category": "特殊",
-    "clicks": 6,
-    "lastVisit": 1771769274127,
+    "clicks": 12,
+    "lastVisit": 1772071409587,
     "name": "福利吧-分享你的福利吧",
     "pinned": true,
     "subCategory": "",
@@ -27,6 +29,8 @@
   },
   {
     "category": "游戏",
+    "clicks": 1,
+    "lastVisit": 1771811082604,
     "name": "GGAC数字艺术平台",
     "subCategory": "资讯",
     "url": "https://www.ggac.com/home"
@@ -552,6 +556,8 @@
   },
   {
     "category": "AI",
+    "clicks": 1,
+    "lastVisit": 1771844787205,
     "name": "DeepSeek - 探索未至之境",
     "subCategory": "对话",
     "url": "https://chat.deepseek.com/"
@@ -654,6 +660,8 @@
   },
   {
     "category": "资源",
+    "clicks": 1,
+    "lastVisit": 1771831584053,
     "name": "克隆窝|助互联网玩家寻找每一条道路",
     "subCategory": "软件",
     "url": "https://www.uy5.net/"
@@ -666,6 +674,8 @@
   },
   {
     "category": "资源",
+    "clicks": 1,
+    "lastVisit": 1771831595924,
     "name": "mefcl'blog - 分享纯净好资源",
     "subCategory": "",
     "url": "https://www.mefcl.com/"
@@ -726,6 +736,8 @@
   },
   {
     "category": "资源",
+    "clicks": 1,
+    "lastVisit": 1771831589849,
     "name": "合集网 | 信息资源大全",
     "subCategory": "",
     "url": "https://233heji.com/"
@@ -1264,6 +1276,8 @@
   },
   {
     "category": "AI",
+    "clicks": 1,
+    "lastVisit": 1771824082412,
     "name": "飞桨AI Studio星河社区-人工智能学习与实训社区",
     "subCategory": "",
     "url": "https://aistudio.baidu.com/overview"
@@ -1295,6 +1309,8 @@
   },
   {
     "category": "特殊",
+    "clicks": 1,
+    "lastVisit": 1772350577102,
     "name": "成人视频内容平台 · 日本AV / 成人动漫 / 短视频精选｜bad.news-热门",
     "subCategory": "视频",
     "url": "https://bad.news/"
@@ -1313,8 +1329,8 @@
   },
   {
     "category": "资讯",
-    "clicks": 1,
-    "lastVisit": 1771635753510,
+    "clicks": 5,
+    "lastVisit": 1772355027774,
     "name": "哔哩哔哩 (゜-゜)つロ 干杯~-bilibili",
     "pinned": true,
     "subCategory": "视频",
@@ -1367,12 +1383,74 @@
   },
   {
     "category": "AI",
-    "clicks": 0,
+    "clicks": 2,
     "createdAt": 1771762683946,
     "id": "1771762683946",
+    "lastVisit": 1772347948991,
     "name": "豆包 - 字节跳动旗下 AI 智能助手",
     "pinned": false,
     "subCategory": "对话",
     "url": "https://www.doubao.com/chat/"
+  },
+  {
+    "category": "没想好",
+    "clicks": 1,
+    "createdAt": 1771772652241,
+    "id": "1771772652241",
+    "lastVisit": 1771821485392,
+    "name": "Microsoft 合作伙伴中心 - 主页",
+    "pinned": false,
+    "subCategory": "",
+    "url": "https://partner.microsoft.com/zh-cn/dashboard/home"
+  },
+  {
+    "category": "AI",
+    "clicks": 0,
+    "createdAt": 1771829837556,
+    "id": "1771829837555",
+    "name": "应用管理 - Cloud Studio - CloudStudio",
+    "pinned": false,
+    "subCategory": "",
+    "url": "https://cloudstudio.net/my-app"
+  },
+  {
+    "category": "特殊",
+    "clicks": 0,
+    "createdAt": 1771830788245,
+    "id": "1771830788245",
+    "name": "A漫-韩漫日漫H漫的天堂",
+    "pinned": false,
+    "subCategory": "漫画",
+    "url": "https://aman7.org/"
+  },
+  {
+    "category": "AI",
+    "clicks": 0,
+    "createdAt": 1771939413220,
+    "id": "1771939413220",
+    "name": "Grok",
+    "pinned": false,
+    "subCategory": "生图",
+    "url": "https://grok.com/?referrer=website"
+  },
+  {
+    "category": "AI",
+    "clicks": 0,
+    "createdAt": 1772072389185,
+    "id": "1772072389185",
+    "name": "Docs",
+    "pinned": false,
+    "subCategory": "",
+    "url": "https://qcnbbxb22zt1.feishu.cn/wiki/AyTWw8OuWix2PGkeHN5ccteBnGe"
+  },
+  {
+    "category": "工具",
+    "clicks": 0,
+    "createdAt": 1772355376390,
+    "id": "1772355376390",
+    "name": "在线精灵图拆分与图片分割工具（透明 PNG/ZIP 导出）| Canny 轮廓检测调试",
+    "pinned": false,
+    "subCategory": "综合",
+    "url": "https://image.rustwindy.com/"
   }
 ]
